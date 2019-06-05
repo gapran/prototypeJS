@@ -1,13 +1,9 @@
 import { Template } from "meteor/templating";
 
-Template.image.helpers({
+Template.badge3.events({
+
+    'click #levelImg': function() {
+        console.log("The badge 3 image is clicked.");
+    },
 
 });
-
-
-function setBox(){}
-function setSize(width,  height){}
-function setHover(text){}
-function setAppear(){}
-function setDisappaer(){}
-function noBorder(){}
