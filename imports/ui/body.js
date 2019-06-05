@@ -11,6 +11,7 @@ import './table/table.js';
 import './progressBar/progressBar.js';
 import './barGraphs/barGraph.js';
 import './tabsHeader/tabs.js';
+import './image/image.js'
 
 
 
