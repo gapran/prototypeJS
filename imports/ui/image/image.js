@@ -5,7 +5,6 @@ Template.image.helpers({
 });
 
 
-function setImage(fileName){}
 function setBox(){}
 function setSize(width,  height){}
 function setHover(text){}
