@@ -1,0 +1,47 @@
+<template name="tableCom">
+    <table id="errorTable">
+        <thead id ="tableHead">
+          {{> headerCom}}
+        </thead>
+        <tbody>
+          {{> bodyCom}}
+        </tbody>
+      </table>
+</template>
+
+<template name="bodyCom">
+        {{#each errorList}}
+          {{> errorResult}}
+        {{/each}}
+</template>
+
+<template name="headerCom">
+    <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Progress</th>
+          <th>Start Date</th>
+          <th>Last Date</th>
+          <th>Description</th>
+          <th>Action</th>
+      </tr>
+</template>
+
+<template name="errorResult">
+      <tr>
+          <td>{{name}}</td>
+          <td>{{Status}}</td>
+          <td>{{Progress}}</td>
+          <td>{{> getStartDate}}</td>
+          <td>{{> getLastDate}}</td>
+          <td>{{Description}}</td>
+          <td>{{Action}}</td>
+      </tr>
+  </template>
+
+  <template name = "getStartDate">
+    03-06-2019
+  </template>
+  <template name = "getLastDate">
+      03-06-2019
+    </template>
