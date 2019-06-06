@@ -12,6 +12,10 @@ import './progressBar/progressBar.js';
 import './barGraphs/barGraph.js';
 import './tabsHeader/tabs.js';
 
+//Image
+import './image/image.html'
+import './image/image.js'
+
 
 
 
