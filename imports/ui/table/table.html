@@ -1,40 +1,42 @@
 <template name="tableElement">
     <table id="bugsTable">
-        <thead id ="tableHead">
-          {{> headerComponent}}
+        <thead id="tableHead">
+        <tr>
+            {{> headerComponent}}
+        </tr>
         </thead>
         <tbody>
-          {{> bodyComponent}}
+        {{> bodyComponent}}
         </tbody>
-      </table>
-</template>
-
-<template name="bodyComponent">
-        {{#each bugsList}}
-          {{> bugsListRow}}
-        {{/each}}
+    </table>
 </template>
 
 <template name="headerComponent">
-    <tr>
-          <th>Name</th>
-          <th>Status</th>
-          <th>Progress</th>
-          <th>Start Date</th>
-          <th>Last Date</th>
-          <th>Description</th>
-          <th>Action</th>
-      </tr>
+    {{#each headersList}}
+    {{> headerEach}}
+    {{/each}}
 </template>
 
+<template name="headerEach">
+    <td>{{header}}</td>
+</template>
+
+
+<template name="bodyComponent">
+    {{#each bugsList}}
+    {{> bugsListRow}}
+    {{/each}}
+</template>
+
+
 <template name="bugsListRow">
-      <tr>
-          <td>{{name}}</td>
-          <td>{{status}}</td>
-          <td>{{progress}}</td>
-          <td>{{startDate}}</td>
-          <td>{{lastDate}}</td>
-          <td>{{description}}</td>
-          <td>{{action}}</td>
-      </tr>
-  </template>
+    <tr>
+        <td>{{name}}</td>
+        <td>{{status}}</td>
+        <td>{{progress}}</td>
+        <td>{{startDate}}</td>
+        <td>{{lastDate}}</td>
+        <td>{{description}}</td>
+        <td>{{action}}</td>
+    </tr>
+</template>

@@ -5,7 +5,8 @@
     <div class="subcontainer">
         <div class="section1">
             <div class="imageComponent">
-                {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 3." label="Bronze"}}
+                {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 3."
+                label="Bronze"}}
             </div>
             <div class="progressComponent">
                 {{> progressBar id="progressBar" min="0" max="100" val="30"}}
@@ -20,7 +21,8 @@
                     {{> myTabs}}
                 </div>
                 <div>
-                    {{> barChart id="proficiencyBarChart" title="Proficiency Level" labels=(array "Bronze" "Silver" "Gold" "Master" "Profesional") data=(array 20 40 50 80 95)}}
+                    {{> barChart id="proficiencyBarChart" title="Proficiency Level" labels=(array "Bronze" "Silver"
+                    "Gold" "Master" "Profesional") data=(array 20 40 50 80 95)}}
                 </div>
             </div>
         </div>
