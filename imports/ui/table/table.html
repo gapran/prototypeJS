@@ -1,21 +1,21 @@
-<template name="tableCom">
-    <table id="errorTable">
+<template name="tableElement">
+    <table id="bugsTable">
         <thead id ="tableHead">
-          {{> headerCom}}
+          {{> headerComponent}}
         </thead>
         <tbody>
-          {{> bodyCom}}
+          {{> bodyComponent}}
         </tbody>
       </table>
 </template>
 
-<template name="bodyCom">
-        {{#each errorList}}
-          {{> errorResult}}
+<template name="bodyComponent">
+        {{#each bugsList}}
+          {{> bugsListRow}}
         {{/each}}
 </template>
 
-<template name="headerCom">
+<template name="headerComponent">
     <tr>
           <th>Name</th>
           <th>Status</th>
@@ -27,21 +27,14 @@
       </tr>
 </template>
 
-<template name="errorResult">
+<template name="bugsListRow">
       <tr>
           <td>{{name}}</td>
-          <td>{{Status}}</td>
-          <td>{{Progress}}</td>
-          <td>{{> getStartDate}}</td>
-          <td>{{> getLastDate}}</td>
-          <td>{{Description}}</td>
-          <td>{{Action}}</td>
+          <td>{{status}}</td>
+          <td>{{progress}}</td>
+          <td>{{startDate}}</td>
+          <td>{{lastDate}}</td>
+          <td>{{description}}</td>
+          <td>{{action}}</td>
       </tr>
   </template>
-
-  <template name = "getStartDate">
-    03-06-2019
-  </template>
-  <template name = "getLastDate">
-      03-06-2019
-    </template>

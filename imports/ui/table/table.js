@@ -1,8 +1,8 @@
 import { Projects } from "../../api/projects.js";
 import { Template } from "meteor/templating";
 
-Template.bodyCom.helpers({
-  errorList()
+Template.bodyComponent.helpers({
+  bugsList()
   {
       return Projects.find({},{sort: {Progress: 1} });
   }
