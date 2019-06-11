@@ -1,5 +1,5 @@
 import {Template} from "meteor/templating";
-import Chart from "./Chart.js"
+import Chart from "./Chart.js";
 
 Template.barChart.rendered = function (){
 
