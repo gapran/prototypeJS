@@ -1,4 +1,5 @@
 import {Template} from "meteor/templating";
+import Chart from "./Chart.js"
 
 Template.barChart.rendered = function (){
 
@@ -45,4 +46,4 @@ Template.barChart.rendered = function (){
                                    }
                    }
        });
-}
+};
