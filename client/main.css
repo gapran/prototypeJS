@@ -47,16 +47,7 @@ body {
 
 }
 
-.badge{
-  height: 30%;
-  width: 100%;
-  position: relative;
-}
-
-.badge{
-  height: 80%;
-  width: 80%;
-}
+/* Table */
 
 table {
   text-align:center; 
@@ -88,6 +79,15 @@ tr:nth-child(even) {
   background: #e8e3f1ed;
 }
 
+/* Badge */
+
+.badge{
+  height: 80%;
+  width: 80%;
+}
+
+/* Progress bar */
+
 .progressFrame{
   border-style: inset;
 }
@@ -108,22 +108,21 @@ tr:nth-child(even) {
     border: none;
 }
 
+/* Bar chart */
+
 .barChart{
   display: block;
-  padding-top:20px;
+  padding:10px;
+  height: 300px;
+  max-height: 300px;
 }
 
-#tabComponents{
-  padding-top: 20px;
-  height: 320px;
-}
+/* Tabs */
 
-/* Style the tab */
 .tab {
   background-color: #e8e3f1ed;
 }
 
-/* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
   float: left;
@@ -134,18 +133,15 @@ tr:nth-child(even) {
   transition: 0.3s;
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #364a94;
   color:white;
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
 }
 
-/* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
