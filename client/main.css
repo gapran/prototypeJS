@@ -119,32 +119,42 @@ tr:nth-child(even) {
 
 /* Tabs */
 
-.tab {
-  background-color: #e8e3f1ed;
+.tabHeaders{
+  overflow: hidden;
 }
 
-.tab button {
+.tabHeader{
   background-color: inherit;
   float: left;
-  border: none;
   outline: none;
   cursor: pointer;
-  padding: 8px 57px;
-  transition: 0.3s;
+  padding: 10px 15px;
+  background-color: #e8e3f1ed;
+  border: 1px solid #ccc;
+  border-bottom: none;
 }
 
-.tab button:hover {
-  background-color: #364a94;
-  color:white;
-}
-
-.tab button.active {
+.tabHeader:hover {
   background-color: #ccc;
 }
 
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
+.tabHeader.active {
+  background-color: #364a94;
+  color: white;
+}
+
+.tabContent {
+  height: 320px;
+  padding: 10px 10px;
   border: 1px solid #ccc;
-  border-top: none;
+  overflow: auto;
+}
+
+.tabElement {
+  display: none;
+}
+
+.demo {
+  height: 500px;
+  width: 900px;
 }

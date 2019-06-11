@@ -1,6 +1,6 @@
 import {Template} from "meteor/templating";
 
-// https://github.com/Progressor/ProgressorMeteor/tree/6b627ea0580324603a70b1303485c6edad6fd26b
+// https://github.com/meteor/meteor/issues/5095#issuecomment-149053809
 
 // This allows us to write inline objects in Blaze templates
 // like so: {{> template param=(object key="value") }}
