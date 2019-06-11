@@ -11,8 +11,8 @@ import "../charts/Chart.js";
 import "../charts/barChart.html";
 import "../charts/barChart.js";
 
-import "../tabsHeader/tabs.html";
-import "../tabsHeader/tabs.js";
+import "../tabs/tabs.html";
+import "../tabs/tabs.js";
 
 import "../image/image.html";
 import "../image/image.js";
