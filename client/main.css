@@ -47,16 +47,7 @@ body {
 
 }
 
-.badge{
-  height: 30%;
-  width: 100%;
-  position: relative;
-}
-
-.badge{
-  height: 80%;
-  width: 80%;
-}
+/* Table */
 
 table {
   text-align:center; 
@@ -88,6 +79,15 @@ tr:nth-child(even) {
   background: #e8e3f1ed;
 }
 
+/* Badge */
+
+.badge{
+  height: 80%;
+  width: 80%;
+}
+
+/* Progress bar */
+
 .progressFrame{
   border-style: inset;
 }
@@ -108,10 +108,16 @@ tr:nth-child(even) {
     border: none;
 }
 
+/* Bar chart */
+
 .barChart{
   display: block;
-  padding-top:20px;
+  padding:10px;
+  height: 300px;
+  max-height: 300px;
 }
+
+/* Tabs */
 
 .tabHeaders{
   overflow: hidden;
