@@ -1,11 +1,15 @@
 <body>
+
+<!-- Notifications (https://s-alert.meteorapp.com/) -->
+{{> sAlert}}
+
 <div class="container">
     <div class="heading">
     </div>
     <div class="subcontainer">
         <div class="section1">
             <div class="imageComponent">
-                {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 3." label="Bronze"}}
+                {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
             </div>
             <div class="progressComponent">
                 {{> progressBar id="progressBar" min="0" max="100" val="30"}}
