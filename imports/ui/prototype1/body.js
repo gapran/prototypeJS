@@ -1,8 +1,6 @@
 // Libraries
 import "../../api/templates.js"; // Always put this one first.
 
-import "./body.html";
-
 import "../progressBar/progressBar.html";
 import "../progressBar/progressBar.js";
 
@@ -22,22 +20,4 @@ import "../image/image.js";
 
 // Data for prototype - Currently: prototype1
 
-import "./proficiencyBarChart.js";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+import "./body.html";
