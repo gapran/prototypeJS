@@ -20,24 +20,4 @@ import "../image/image.js";
 
 // Data for prototype - Currently: prototype1
 
-import "./body.html";  // Always put this one first.
-
-import "./proficiencyBarChart.js";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+import "./body.html";
