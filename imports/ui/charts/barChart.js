@@ -1,4 +1,5 @@
 import {Template} from "meteor/templating";
+import Chart from "chart";
 
 Template.barChart.rendered = function (){
 
