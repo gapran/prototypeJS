@@ -108,10 +108,9 @@ tr:nth-child(even) {
     border: none;
 }
 
-#myChart{
+.barChart{
   display: block;
   padding-top:20px;
-
 }
 
 #tabComponents{
