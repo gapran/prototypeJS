@@ -2,7 +2,7 @@ import {Template} from "meteor/templating";
 
 Template.badge.events({
 
-    click() {
-        alert("Click: " + this.alt);
-    },
+  click() {
+      sAlert.info("Image \"" + this.alt + "\" clicked.", {timeout: 2000});
+   },
 });
