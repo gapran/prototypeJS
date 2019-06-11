@@ -52,7 +52,8 @@ body {
   width: 100%;
   position: relative;
 }
-#levelImg{
+
+.badge{
   height: 80%;
   width: 80%;
 }
@@ -66,9 +67,11 @@ table {
   border-color:#050505;
   font-size: 14px;
 }
+
 tr{
   height: 30px;
 }
+
 td, th {
   border-width:1px;
   padding:3px;
@@ -84,26 +87,38 @@ thead {
 tr:nth-child(even) {
   background: #e8e3f1ed;
 }
-#myProgress{
+
+.progressFrame{
   border-style: inset;
 }
-#myBar {
-  width: 70%;
+
+.progressBar {
   height: 18px;
   background-color: #364a94;
   text-align: center; /* To center it horizontally (if you want) */
   line-height: 18px; /* To center it vertically */
   color: white; 
 }
+
+.progressTable {
+    border: none;
+}
+
+.progressTable td {
+    border: none;
+}
+
 #myChart{
   display: block;
   padding-top:20px;
 
 }
+
 #tabComponents{
   padding-top: 20px;
   height: 320px;
 }
+
 /* Style the tab */
 .tab {
   background-color: #e8e3f1ed;
