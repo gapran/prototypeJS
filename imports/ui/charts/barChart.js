@@ -45,4 +45,4 @@ Template.barChart.rendered = function (){
                                    }
                    }
        });
-}
+};
