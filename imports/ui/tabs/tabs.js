@@ -6,7 +6,8 @@ Template.tabs.events({
 
       // Mark other tabs as inactive.
       var headers = e.target.parentElement.getElementsByClassName("tabHeader");
-      for (var i = 0; i < headers.length; i++) {
+      var i;
+      for (i = 0; i < headers.length; i++) {
         var headerStyle = headers[i].className;
         headers[i].className = headerStyle.replace(" active", "");
       }
@@ -15,9 +16,8 @@ Template.tabs.events({
       e.target.className += " active";
 
       // Make the other contents invisible.
-      for (var i = 0; i < this.tabData.length; i++) {
-        var tabElementId = this.tabData[i].id;
-        var tabElement = document.getElementById(tabElementId);
+      for (i = 0; i < this.tabData.length; i++) {
+        var tabElement = document.getElementById(this.tabData[i].id);
         tabElement.style.display = "none";
       }
 
