@@ -1,6 +1,13 @@
-<template name="progressBar">
+<template name = "progressBar">
+    <table class="progressTable"><tr>
+        <td width="10px">{{min}}</td>
+        <td>
+                <div class="progressFrame" id="{{id}}">
+                    <div class="progressBar" style="width:{{Percent}}%" min="{{min}}" max="{{max}}" val="{{val}}">{{Progress}}
+                  </div>
+                </div>
 
-    <progress id="{{id}}" alt="{{alt}}" title="{{title}}" value="{{value}}" max="100">
-    </progress>
-
+        </td>
+        <td width="10px">{{max}}</td>
+    </tr></table>
 </template>
