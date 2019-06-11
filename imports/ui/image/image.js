@@ -2,7 +2,7 @@ import {Template} from "meteor/templating";
 
 Template.badge.events({
 
-    'click': function () {
+    click() {
         alert("Click: " + this.alt);
     },
 });

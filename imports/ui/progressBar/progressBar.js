@@ -1,11 +1,11 @@
 import { Template } from "meteor/templating";
 
     Template.progressBar.helpers({
-        Progress : function()
+        Progress()
         {
             return this.val;
         },
-        Percent : function()
+        Percent()
         {
             return this.val * 100 / (this.max - this.min);
         },
