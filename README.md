@@ -1,8 +1,8 @@
 Simulation platform for prototyping static analysis interfaces
 
-# Installation manual for meteor 
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/065274f61ddf483da1b93d07660ddc3e)](https://app.codacy.com/app/nguyenLisa/prototypeJS?utm_source=github.com&utm_medium=referral&utm_content=gapran/prototypeJS&utm_campaign=Badge_Grade_Dashboard)
+
+# Installation manual for meteor 
 
 For Windows : 
 
