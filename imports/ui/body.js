@@ -1,20 +1,20 @@
 
  
-import './barGraphs/Chart.js';
-import './tabsHeader/tabs.js';
-import './body.html';
-import './progressBar/progressBar.html';
-import './table/table.html';
-import './tabsHeader/tabs.html';
-import './barGraphs/barGraph.html';
-import './table/table.js';
-import './progressBar/progressBar.js';
-import './barGraphs/barGraph.js';
-import './tabsHeader/tabs.js';
+import "./barGraphs/Chart.js";
+import "./tabsHeader/tabs.js";
+import "./body.html";
+import "./progressBar/progressBar.html";
+import "./table/table.html";
+import "./tabsHeader/tabs.html";
+import "./barGraphs/barGraph.html";
+import "./table/table.js";
+import "./progressBar/progressBar.js";
+import "./barGraphs/barGraph.js";
+import "./tabsHeader/tabs.js";
 
 //Image
-import './image/image.html'
-import './image/image.js'
+import "./image/image.html";
+import "./image/image.js";
 
 
 
