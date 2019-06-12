@@ -5,30 +5,20 @@ import {Template} from "meteor/templating";
 Template.tableHeader.rendered = function () {
 
     console.log(this.data.heads);
-
-    const headerValues = this.data.heads;
-
-    headerValues.forEach(headerFunction);
-
+    console.log(this.data.keys);
 };
 
-function headerFunction() {
-}
 
-Template.bodyComponent.helpers({
-    bugsList() {
+Template.bugsListRow.helpers({
 
-        return Projects.find({name: {$exists: true}}, {sort: {Progress: 1}});
+    bugsListRowKey() {
+        return "{{status}}";
     }
 });
 
-// Template.headerComponent.helpers(
-//     {
-//         // headersList() {
-//         //     return Projects.find({header: {$exists: true}});
-//         // }
-//
-//         headersList(){
-//             return headersConst;
-//         }
-//     });
+Template.bodyComponent.helpers({
+
+    bugsList() {
+        return Projects.find({name: {$exists: true}}, {sort: {Progress: 1}});
+    }
+});

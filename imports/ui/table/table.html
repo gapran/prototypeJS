@@ -17,26 +17,15 @@
     {{/each}}
 </template>
 
-<template name="headerEach">
-    <td>{{header}}</td>
-</template>
-
-
 <template name="bodyComponent">
     {{#each bugsList}}
         {{> bugsListRow}}
     {{/each}}
 </template>
 
-
 <template name="bugsListRow">
     <tr>
-        <td>{{name}}</td>
+        {{ bugsListRowKey }}
         <td>{{status}}</td>
-        <td>{{progress}}</td>
-        <td>{{startDate}}</td>
-        <td>{{lastDate}}</td>
-        <td>{{description}}</td>
-        <td>{{action}}</td>
     </tr>
 </template>
