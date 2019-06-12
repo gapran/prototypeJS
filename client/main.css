@@ -47,16 +47,7 @@ body {
 
 }
 
-.badge{
-  height: 30%;
-  width: 100%;
-  position: relative;
-}
-
-.badge{
-  height: 80%;
-  width: 80%;
-}
+/* Table */
 
 table {
   text-align:center; 
@@ -88,6 +79,15 @@ tr:nth-child(even) {
   background: #e8e3f1ed;
 }
 
+/* Badge */
+
+.badge{
+  height: 80%;
+  width: 80%;
+}
+
+/* Progress bar */
+
 .progressFrame{
   border-style: inset;
 }
@@ -108,47 +108,53 @@ tr:nth-child(even) {
     border: none;
 }
 
+/* Bar chart */
+
 .barChart{
   display: block;
-  padding-top:20px;
+  padding:10px;
+  height: 300px;
+  max-height: 300px;
 }
 
-#tabComponents{
-  padding-top: 20px;
-  height: 320px;
+/* Tabs */
+
+.tabHeaders{
+  overflow: hidden;
 }
 
-/* Style the tab */
-.tab {
-  background-color: #e8e3f1ed;
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab button {
+.tabHeader{
   background-color: inherit;
   float: left;
-  border: none;
   outline: none;
   cursor: pointer;
-  padding: 8px 57px;
-  transition: 0.3s;
+  padding: 10px 15px;
+  background-color: #e8e3f1ed;
+  border: 1px solid #ccc;
+  border-bottom: none;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #364a94;
-  color:white;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
+.tabHeader:hover {
   background-color: #ccc;
 }
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
+.tabHeader.active {
+  background-color: #364a94;
+  color: white;
+}
+
+.tabContent {
+  height: 320px;
+  padding: 10px 10px;
   border: 1px solid #ccc;
-  border-top: none;
+  overflow: auto;
+}
+
+.tabElement {
+  display: none;
+}
+
+.demo {
+  height: 500px;
+  width: 900px;
 }
