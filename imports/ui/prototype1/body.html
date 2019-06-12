@@ -6,7 +6,7 @@
         <div class="section1">
             <div class="imageComponent">
                 {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 3."
-                label="Bronze"}}
+                        label="Bronze"}}
             </div>
             <div class="progressComponent">
                 {{> progressBar id="progressBar" min="0" max="100" val="30"}}
@@ -14,7 +14,7 @@
         </div>
         <div class="section2">
             <div class="TBL">
-                {{> tableElement}}
+                {{> tableElement heads=(array "h1" "h2" "h3")}}
             </div>
             <div id="tabComponents">
                 <div>
@@ -22,7 +22,7 @@
                 </div>
                 <div>
                     {{> barChart id="proficiencyBarChart" title="Proficiency Level" labels=(array "Bronze" "Silver"
-                    "Gold" "Master" "Profesional") data=(array 20 40 50 80 95)}}
+                            "Gold" "Master" "Profesional") data=(array 20 40 50 80 95)}}
                 </div>
             </div>
         </div>
