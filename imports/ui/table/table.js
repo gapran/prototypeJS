@@ -14,20 +14,19 @@ Template.tableHeader.rendered = function () {
     for (let i = 0; i < this.data.keyNames.length; i++) {
 
         keyNamesFull = keyNamesFull + " <td>{{" + this.data.keyNames[i] + "}}</td> ";
-    }
 
-    console.log(keyNamesFull);
+        Session.set("keyNamesHTML", keyNamesFull);
+
+        // return keyNamesFull;
+    }
 };
 
 
 Template.bugsListRow.helpers({
 
-    keyValue() {
-        //document.getElementById("keyName").innerHTML("<td>{{+keyNames[0]+}}</td>");
+    renderKeysHTML: function () {
 
-        const hello = "{{status}}";
-
-        return hello;
+        return Session.get("keyNamesHTML");
     }
 });
 
