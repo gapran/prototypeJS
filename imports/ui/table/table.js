@@ -5,14 +5,29 @@ import {Template} from "meteor/templating";
 Template.tableHeader.rendered = function () {
 
     console.log(this.data.heads);
-    console.log(this.data.keys);
+    console.log(this.data.keyNames);
+    console.log(this.data.keyNames[0]);
+
+    var keyNamesFull;
+    keyNamesFull = "";
+
+    for (let i = 0; i < this.data.keyNames.length; i++) {
+
+        keyNamesFull = keyNamesFull + " <td>{{" + this.data.keyNames[i] + "}}</td> ";
+    }
+
+    console.log(keyNamesFull);
 };
 
 
 Template.bugsListRow.helpers({
 
-    bugsListRowKey() {
-        return "{{status}}";
+    keyValue() {
+        //document.getElementById("keyName").innerHTML("<td>{{+keyNames[0]+}}</td>");
+
+        const hello = "{{status}}";
+
+        return hello;
     }
 });
 
