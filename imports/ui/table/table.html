@@ -12,7 +12,7 @@
 </template>
 
 <template name="tableHeader">
-    {{#each heads}}
+    {{#each headers}}
         <td>{{this}}</td>
     {{/each}}
 </template>
@@ -24,9 +24,10 @@
 </template>
 
 <template name="bugsListRow">
-
     <tr>
         {{renderKeysHTML}}
+        {{name}}
+        <td>{{status}}</td>
+        <td>{{progress}}</td>
     </tr>
-
 </template>

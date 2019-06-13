@@ -4,7 +4,7 @@ import {Template} from "meteor/templating";
 
 Template.tableHeader.rendered = function () {
 
-    console.log(this.data.heads);
+    console.log(this.data.headers);
     console.log(this.data.keyNames);
     console.log(this.data.keyNames[0]);
 
@@ -26,7 +26,8 @@ Template.bugsListRow.helpers({
 
     renderKeysHTML: function () {
 
-        return Session.get("keyNamesHTML");
+        //return Session.get("keyNamesHTML");
+        return "<b>{{name}}</b>";
     }
 });
 
