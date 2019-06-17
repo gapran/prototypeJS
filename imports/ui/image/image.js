@@ -9,6 +9,6 @@ Template.badge.events({
       //location.href='imports/ui/imageLayout/imageLayout.html'
       //window.location.href = '/imports/ui/imageLayout/imageLayout.html'
 
-      FlowRouter.go('/imageLayout');
+      //FlowRouter.go('/imageLayout');
    },
 });
