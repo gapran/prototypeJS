@@ -17,9 +17,6 @@ import "../tabs/tabs.js";
 import "../image/image.html";
 import "../image/image.js";
 
-import "../imageLayout/imageLayout.js";
-import "../imageLayout/imageLayout.html";
-
 
 // Data for prototype - Currently: prototype1
 
