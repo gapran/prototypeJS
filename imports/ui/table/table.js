@@ -4,7 +4,7 @@ import { Template } from "meteor/templating";
 * @param columnNumber - The column number in a table.
 * */
 function sortTable(columnNumber, tableId) {
-    var table, rows, i, x, y, shouldSwitch;
+    var rows, i, x, y, shouldSwitch;
     var switchcount = 0;
     var table = document.getElementById(tableId);
     var switching = true;

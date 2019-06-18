@@ -26,7 +26,6 @@ function selectTab(headerElements, targetElement, tabData){
 }
 
 Template.tabs.events({
-
   "click .tabHeader"(e){
     var headers = e.target.parentElement.getElementsByClassName("tabHeader");
     selectTab(headers, e.target, this.tabData);
