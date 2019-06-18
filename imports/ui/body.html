@@ -1,0 +1,17 @@
+<body>
+
+<!-- Notifications (https://s-alert.meteorapp.com/) -->
+{{> sAlert}}
+
+<!-- Load different prototypes with dynamic loading. -->
+<!-- https://stackoverflow.com/questions/26944011/proper-way-to-handle-multiple-pages-in-meteor -->
+{{> Template.dynamic template=templateName }}
+
+</body>
+
+<template name="default_menu">
+    <ul>
+        <li><a href="#" class="link_prototype1">Prototype 1</a></li>
+        <li><a href="#" class="link_prototype2">Prototype 2 (not existing yet)</a></li>
+    </ul>
+</template>
