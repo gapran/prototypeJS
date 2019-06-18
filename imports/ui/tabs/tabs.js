@@ -1,24 +1,5 @@
 import {Template} from "meteor/templating";
 
-Template.tabs.events({
-
-  "click .tabHeader"(e){
-    var headers = e.target.parentElement.getElementsByClassName("tabHeader");
-    selectTab(headers, e.target, this.tabData);
-  },
-});
-
-Template.tabs.rendered = function (){
-    var headers = document.getElementById(this.data.id).getElementsByClassName("tabHeader");
-    var targetElement = headers[0];
-    var i;
-    for (i = 0; i < headers.length; i++) {
-        if(headers[i].getAttribute("tabId") === this.data.defaultTab)
-            targetElement = headers[i];
-    }
-    selectTab(headers, targetElement, this.data.tabData);
-};
-
 function selectTab(headerElements, targetElement, tabData){
     var i;
     for (i = 0; i < headerElements.length; i++) {
@@ -43,3 +24,23 @@ function selectTab(headerElements, targetElement, tabData){
     // Make the content visible.
     mainElement.style.display = "block";
 }
+
+Template.tabs.events({
+
+  "click .tabHeader"(e){
+    var headers = e.target.parentElement.getElementsByClassName("tabHeader");
+    selectTab(headers, e.target, this.tabData);
+  },
+});
+
+Template.tabs.rendered = function (){
+    var headers = document.getElementById(this.data.id).getElementsByClassName("tabHeader");
+    var targetElement = headers[0];
+    var i;
+    for (i = 0; i < headers.length; i++) {
+        if(headers[i].getAttribute("tabId") === this.data.defaultTab){
+            targetElement = headers[i];
+        }
+    }
+    selectTab(headers, targetElement, this.data.tabData);
+};
