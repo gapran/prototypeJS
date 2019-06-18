@@ -1,43 +1,6 @@
 import {Projects} from "../../api/projects.js";
 import {Template} from "meteor/templating";
 
-
-Template.bodyComponent.helpers({
-
-    /* Retrieves the documents from Projects collection in database */
-    bugsList() {
-        return Projects.find({});
-    }
-});
-
-
-Template.tableElement.events({
-
-    /* By clicking on first table header i.e., pointed by id - nameID, sorts the table based on it */
-    'click #nameID': function () {
-
-        showConsole("nameID");
-        sortTable(0);
-
-    },
-
-    /* By clicking on second table header i.e., pointed by id - statusID, sorts the table based on it */
-    'click #statusID': function () {
-
-        showConsole("statusID");
-        sortTable(1);
-
-    },
-
-    /* By clicking on third table header i.e., pointed by id - progressID, sorts the table based on it */
-    'click #progressID': function () {
-
-        showConsole("progressID");
-        sortTable(2);
-
-    }
-});
-
 /* Shows the selected table header in console
 * @param idValue - The id value of selected header name.
 * */
@@ -73,13 +36,13 @@ function sortTable(columnNumber) {
             y = rows[i + 1].getElementsByTagName("TD")[columnNumber];
             /*check if the two rows should switch place,
             based on the direction, asc or desc:*/
-            if (dir == "asc") {
+            if (dir === "asc") {
                 if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                     //if so, mark as a switch and break the loop:
                     shouldSwitch = true;
                     break;
                 }
-            } else if (dir == "desc") {
+            } else if (dir === "desc") {
                 if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
                     //if so, mark as a switch and break the loop:
                     shouldSwitch = true;
@@ -97,7 +60,7 @@ function sortTable(columnNumber) {
         } else {
             /*If no switching has been done AND the direction is "asc",
             set the direction to "desc" and run the while loop again.*/
-            if (switchcount == 0 && dir == "asc") {
+            if (switchcount === 0 && dir === "asc") {
                 dir = "desc";
                 switching = true;
             }
@@ -105,3 +68,41 @@ function sortTable(columnNumber) {
     }
 
 }
+
+
+Template.bodyComponent.helpers({
+
+    /* Retrieves the documents from Projects collection in database */
+    bugsList() {
+        return Projects.find({});
+    }
+});
+
+
+Template.tableElement.events({
+
+    /* By clicking on first table header i.e., pointed by id - nameID, sorts the table based on it */
+    "click #nameID"() {
+
+        showConsole("nameID");
+        sortTable(0);
+
+    },
+
+    /* By clicking on second table header i.e., pointed by id - statusID, sorts the table based on it */
+    "click #statusID"() {
+
+        showConsole("statusID");
+        sortTable(1);
+
+    },
+
+    /* By clicking on third table header i.e., pointed by id - progressID, sorts the table based on it */
+    "click #progressID"() {
+
+        showConsole("progressID");
+        sortTable(2);
+
+    }
+});
+
