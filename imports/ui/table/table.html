@@ -1,10 +1,10 @@
 <template name="table">
-    <div class="tableTemplate" id="{{id}}">
-        <table>
+    <div class="tableTemplate">
+        <table id="{{id}}">
             <thead>
                 <tr>
                     {{#each label in labels}}
-                        <td class="tableHeader">{{label}}</td>
+                        <td class="tableHeader" label="{{label}}">{{label}}</td>
                     {{/each}}
                 </tr>
             </thead>

@@ -58,7 +58,7 @@ Template.table.events({
     "click .tableHeader"(e) {
         var i;
         for(i = 0; i < this.labels.length; i++) {
-            if(this.labels[i] === e.target.textContent) {
+            if(this.labels[i] === e.target.getAttribute("label")) {
                 sortTable(i, this.id);
                 break;
             }
