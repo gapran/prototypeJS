@@ -19,6 +19,7 @@ body {
 .heading {
 	width: 1200px;
 }
+
 .subcontainer{
   width: 100%;
   text-align: center;
@@ -59,7 +60,12 @@ table {
   font-size: 14px;
 }
 
-tr{
+.tableTemplate{
+  max-height: 300px;
+  overflow: auto;
+}
+
+tr {
   height: 30px;
 }
 
