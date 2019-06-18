@@ -1,5 +1,4 @@
 // Libraries
-import "../../api/templates.js"; // Always put this one first.
 
 import "../progressBar/progressBar.html";
 import "../progressBar/progressBar.js";
@@ -17,7 +16,6 @@ import "../tabs/tabs.js";
 import "../image/image.html";
 import "../image/image.js";
 
+// Prototype 1
 
-// Data for prototype - Currently: prototype1
-
-import "./body.html";
+import "./prototype1.html";
