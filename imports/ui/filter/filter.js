@@ -8,6 +8,14 @@ Template.filter.events({
         Session.set("checkValue", x);
         console.log(Session.get("checkValue"));
 
+        // Alerts selected filter checked or not
+        var checkStatus = e.target.checked;
+
+        if (checkStatus === true){
+            alert("I am checked"); }
+        else {
+            alert("I am unchecked");
+        }
 
     },
 });
