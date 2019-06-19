@@ -19,6 +19,9 @@ import "../tabs/tabs.js";
 import "../image/image.html";
 import "../image/image.js";
 
+import "../filter/filter.html";
+import "../filter/filter.js";
+
 // Prototype 1
 
 import "./prototype1.html";
@@ -41,6 +44,9 @@ Template.prototype1.helpers({
   // Table data
   resultsTableLabels: ["Name", "Status", "Progress"],
   resultsTableData: Projects.find({}),
+
+  // Filter data
+  filterLabels: ["analysis in progress", "analysis almost done"]
 
 });
 

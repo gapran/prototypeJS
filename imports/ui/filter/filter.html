@@ -1,0 +1,13 @@
+<template name="filter">
+
+    <form id="{{id}}">
+
+        {{#each label in labels}}
+            <label>
+                <input class="filterValue" name="filterStatus" type="checkbox" value="{{label}}">
+            </label>{{label}}<br>
+        {{/each}}
+
+    </form>
+
+</template>
