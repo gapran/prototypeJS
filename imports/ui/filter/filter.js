@@ -38,6 +38,8 @@ Template.filter.events({
                 }
                 if (!rowSet.has(filterValue)) {
                     rows[j].style.display = "none";
+                } else {
+                    rows[j].style.display = "table-row";
                 }
             }
         }
