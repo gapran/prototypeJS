@@ -16,6 +16,19 @@ Template.filter.events({
             filterSet.delete(checkedFilter);
         }
 
+        // If no filter is selected
+        if (filterSet.size === 0) {
+
+            const table = document.getElementById(this.tableID);
+            const rows = table.rows;
+
+            // Loop through all rows in a table (except the first one, which contains the table headers)
+            for (let r = 1; r < rows.length; r++) {
+                rows[r].style.display = "table-row";
+
+            }
+        }
+
         // Convert current filterSet to filterArray
         const filterArray = Array.from(filterSet);
 
@@ -43,5 +56,6 @@ Template.filter.events({
                 }
             }
         }
+
     }
 });
