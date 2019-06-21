@@ -1,26 +1,5 @@
 import {Template} from "meteor/templating";
 
-Template.filter.helpers({
-
-    // Checks the present label
-    isSelectAll: function (label) {
-
-        return label === "Select all";
-    },
-
-    isDeselectAll: function (label) {
-
-        return label === "Deselect all";
-    },
-
-    isFilter: function (label) {
-
-        return label !== "Select all" && label === "Deselect all";
-    }
-
-});
-
-
 Template.filter.events({
 
     "click .filterValue"(event) {
