@@ -14,27 +14,27 @@ Template.filter.events({
         if (selectedItem === "Select all") {
 
             const checkList = document.getElementsByTagName("input");
-            for (let w = 0; w < checkList.length; w++) {
+            for (let element of checkList) {
                 // All filter items are checked
-                checkList[w].checked = true;
+                element.checked = true;
             }
         }
 
         if (selectedItem === "Deselect all") {
 
             const checkList = document.getElementsByTagName("input");
-            for (let w = 0; w < checkList.length; w++) {
+            for (let element of checkList) {
                 // All filter items are unchecked
-                checkList[w].checked = false;
+                element.checked = false;
             }
         }
 
         // Get selected ( checked ) filter names
         const selectedList = [];
         const filterList = document.getElementsByTagName("input");
-        for (let p = 0; p < filterList.length; p++) {
-            if (filterList[p].checked) {
-                selectedList.push(filterList[p].value);
+        for (let element of filterList) {
+            if (element.checked) {
+                selectedList.push(element.value);
             }
         }
 
@@ -53,10 +53,9 @@ Template.filter.events({
             }
 
             // Compare each value in selectedList ( list of checked items ) with the values in current table row
-            for (let i = 0; i < selectedList.length; i++) {
+            for (let element of selectedList) {
 
-                const filterValue = selectedList[i];
-                if (rowSet.has(filterValue)) {
+                if (rowSet.has(element)) {
                     showRow = true;
                 }
             }
