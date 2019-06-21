@@ -10,7 +10,8 @@ import "./prototype1/prototype1.js";
 import "./prototype1/about.js";
 
 // Pages of prototype 2
-// ...
+import "./prototype2/prototype2.js";
+import "./prototype2/about.js";
 
 // Helper for navigation
 Template.body.helpers({
