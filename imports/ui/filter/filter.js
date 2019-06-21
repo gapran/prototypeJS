@@ -1,41 +1,60 @@
 import {Template} from "meteor/templating";
 
-var filterSet = new Set();
-
 Template.filter.events({
     "click .filterValue"(e) {
 
-        // Get a checked filter name
-        const checkedFilter = e.target.getAttribute("value");
+        const filtersNumber = document.getElementsByClassName("filterValue").length;
+        console.log(filtersNumber);
 
-        // Creates filterSet with checked values
-        const checkStatus = e.target.checked;
-        if (checkStatus === true) {
-            filterSet.add(checkedFilter);
-        } else {
-            filterSet.delete(checkedFilter);
+        //var filterList = document.getElementsByClassName("filterValue");
+        // for(var i = 0; i < filtersNumber; i++) {
+        //     if(inputs[i].type == "checkbox") {
+        //         inputs[i].checked = true;
+        //     }
+        // }
+
+        // Get selected ( checked ) filter names
+        const selectedList = [];
+        const filterList = document.getElementsByTagName("input");
+        for (let p = 0; p < filterList.length; p++) {
+            if (filterList[p].checked) {
+                selectedList.push(filterList[p].value);
+            }
         }
+        console.log(filterList);
+        console.log(selectedList);
 
-        // If no filter is selected
-        if (filterSet.size === 0) {
+        // If all filters are selected - default
+        if (selectedList.length === filtersNumber) {
 
             const table = document.getElementById(this.tableID);
             const rows = table.rows;
 
             // Loop through all rows in a table (except the first one, which contains the table headers)
             for (let r = 1; r < rows.length; r++) {
-                rows[r].style.display = "table-row";
+                rows[r].style.display = "display";
 
             }
         }
 
-        // Convert current filterSet to filterArray
-        const filterArray = Array.from(filterSet);
+        // If no filter is selected
+        if (selectedList.length === 0) {
 
-        // Compare each value in filterArray with the values in table
-        for (let i = 0; i < filterArray.length; i++) {
+            const table = document.getElementById(this.tableID);
+            const rows = table.rows;
 
-            const filterValue = filterArray[i];
+            // Loop through all rows in a table (except the first one, which contains the table headers)
+            for (let r = 1; r < rows.length; r++) {
+                rows[r].style.display = "none";
+
+            }
+        }
+
+
+        // Compare each value in selectedList ( list of checked items ) with the values in table
+        for (let i = 0; i < selectedList.length; i++) {
+
+            const filterValue = selectedList[i];
 
             const table = document.getElementById(this.tableID);
             const rows = table.rows;
