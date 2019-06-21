@@ -6,12 +6,14 @@
 
             {{#if isSelectAll label }}
                 <label>
-                    <input class="filterButton" name="filterStatus" type="checkbox" value="{{label}}" checked>
+                    <input class="filterValue" id="filterSelect" name="filterStatus" type="checkbox" value="{{label}}"
+                           checked>
                 </label>{{label}}<br>
 
             {{else if isDeselectAll label}}
                 <label>
-                    <input class="filterButton" name="filterStatus" type="checkbox" value="{{label}}">
+                    <input class="filterValue" id="filterDeselect" name="filterStatus" type="checkbox"
+                           value="{{label}}">
                 </label>{{label}}<br>
 
             {{else}}

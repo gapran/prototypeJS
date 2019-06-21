@@ -22,11 +22,54 @@ Template.filter.helpers({
 
 
 Template.filter.events({
-    "click .filterValue"() {
+
+    "click .filterValue"(event) {
 
         // Retrieve the table to be filtered
         const table = document.getElementById(this.tableID);
         const rows = table.rows;
+
+        const checkedItem = event.target.getAttribute("value");
+
+        //Select all option
+        const selectCheck = document.getElementById("filterSelect");
+
+        //Deselect all option
+        const deselectCheck = document.getElementById("filterDeselect");
+
+
+        alert(checkedItem);
+        if (checkedItem === "Select all") {
+
+
+            const checkList = document.getElementsByTagName("input");
+            alert(checkList.length);
+            for (let w = 0; w < checkList.length; w++) {
+
+                if (checkList[w].value === "Deselect all") {
+                    checkList[w].checked = false;
+                } else {
+                    checkList[w].checked = true;
+                }
+            }
+
+
+        }
+
+        if (checkedItem === "Deselect all") {
+
+
+            const checkList = document.getElementsByTagName("input");
+            for (let w = 0; w < checkList.length; w++) {
+
+                if (checkList[w].value !== "Deselect all") {
+                    checkList[w].checked = false;
+                }
+            }
+
+
+        }
+
 
         // Number of items in a default filter list
         const filtersNumber = document.getElementsByClassName("filterValue").length;
@@ -40,25 +83,55 @@ Template.filter.events({
             }
         }
 
-        // If all filters are selected - default
-        if (selectedList.length === filtersNumber) {
+        var selectorSize = 0;
+        for (var u = 0; u < selectedList.length; u++) {
 
-            // Loop through all rows in a table (except the first one, which contains the table headers)
-            for (let r = 1; r < rows.length; r++) {
-                rows[r].style.display = "display";
+            if (selectedList[u].value === "Select all" || selectedList[u].value === "Deselect all") {
 
+                selectorSize++;
             }
         }
 
-        // If no filter is selected
-        if (selectedList.length === 0) {
+        alert(selectorSize);
+        // If all filters are selected - default, check condition excluding select/deselect all
+        // if (selectedList.length === (filtersNumber - selectorSize)) {
+        //
+        //     //Select all option is checked
+        //     selectCheck.checked = true;
+        //
+        //     //Deselect all option is not checked
+        //     // deselectCheck.checked = false;
+        //
+        //     // Loop through all rows in a table (except the first one, which contains the table headers)
+        //     for (let r = 1; r < rows.length; r++) {
+        //         rows[r].style.display = "display";
+        //
+        //     }
+        //
+        //
+        // } else if (selectedList.length === 0) { // If no filter is selected
+        //
+        //     //Deselect all option is checked
+        //     deselectCheck.checked = true;
+        //
+        //     //Select all option is not checked
+        //     selectCheck.checked = false;
+        //
+        //     // Loop through all rows in a table (except the first one, which contains the table headers)
+        //     for (let r = 1; r < rows.length; r++) {
+        //         rows[r].style.display = "none";
+        //
+        //     }
+        // } else { // If some filter is selected
+        //
+        //     //Select all option is not checked
+        //     selectCheck.checked = false;
+        //
+        //     //Select all option is not checked
+        //     deselectCheck.checked = false;
+        //
+        // }
 
-            // Loop through all rows in a table (except the first one, which contains the table headers)
-            for (let r = 1; r < rows.length; r++) {
-                rows[r].style.display = "none";
-
-            }
-        }
 
         // Loop through all rows in a table (except the first one, which contains the table headers)
         for (let j = 1; j < rows.length; j++) {
