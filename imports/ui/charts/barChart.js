@@ -6,10 +6,10 @@ Template.barChart.rendered = function (){
    var myChart = new Chart(ctx, {
            type: "bar",
            data: {
-               labels: this.data.data.map(a => a.label),
+               labels: this.data.data.map((a) => a.label),
                datasets: [{
                    label: this.data.title, // Name the series
-                   data: this.data.data.map(a => a.value), // Specify the data values array
+                   data: this.data.data.map((a) => a.value), // Specify the data values array
                    backgroundColor: [ // Specify custom colors
                        "rgba(255, 99, 132, 0.6)",
                        "rgba(54, 162, 235, 0.6)",
