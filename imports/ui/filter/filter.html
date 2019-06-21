@@ -1,6 +1,6 @@
 <template name="filter">
 
-    <form id="{{id}}">
+    <form id="{{id}}" title="{{title}}">
 
         {{#each label in labels}}
 
@@ -10,15 +10,15 @@
 
         {{/each}}
 
-        <label>
+        <br><label>
             <input class="filterValue" id="filterSelect" type="button" value="Select all">
         </label><br>
 
 
-        <label>
+        <br><label>
             <input class="filterValue" id="filterDeselect" type="button"
                    value="Deselect all">
-        </label><br>
+        </label><br> <br>
 
     </form>
 

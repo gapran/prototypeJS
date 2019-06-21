@@ -42,9 +42,11 @@ body {
 }
 
 .section3 {
+  margin:0 auto;
   width: 250px;
   height:550px;
   float: right;
+  text-align: left;
 
 }
 
@@ -163,4 +165,39 @@ tr:nth-child(even) {
 .demo {
   height: 500px;
   width: 900px;
+}
+
+/* Filter */
+
+.filterValue {
+
+  text-align: left;
+  border-collapse:collapse;
+  border-width:1px;
+  border-style:solid;
+  border-color: #2b2b2b;
+
+}
+
+form {
+
+  border-collapse:collapse;
+  border-width:1px;
+  border-style:solid;
+  border-color: #01002b;
+
+}
+
+#filterSelect {
+
+  position: absolute;
+  margin-left: 10px;
+
+}
+
+#filterDeselect{
+
+  position: absolute;
+  margin-left: 10px;
+
 }
