@@ -14,7 +14,7 @@
             </div>
             <div class="section2">
                 <div class="TBL">
-                    {{> table id="resultsTable" labels=resultsTableLabels data=resultsTableData }}
+                    {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData }}
                 </div>
                 <div id="tabComponents">
                     <div>
@@ -27,7 +27,7 @@
                         <div class="tabElement" id="tabMonitorVisualize"><div class="demo" style="background-color: yellow;"></div></div>
                     </div>
                     <div>
-                        {{> barChart id="proficiencyBarChart" title="Proficiency Level" labels=proficiencyBarChartLabels data=proficiencyBarChartValues}}
+                        {{> barChart id="proficiencyBarChart" title="Proficiency Level" data=proficiencyBarChartData}}
                     </div>
                 </div>
             </div>

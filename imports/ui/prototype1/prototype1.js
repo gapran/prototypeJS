@@ -19,28 +19,43 @@ import "../tabs/tabs.js";
 import "../image/image.html";
 import "../image/image.js";
 
-// Prototype 1
-
 import "./prototype1.html";
 
+// Prototype 1
 
 Template.prototype1.helpers({
 
-  // Bar chart data
-  proficiencyBarChartLabels: ["Bronze", "Silver", "Gold", "Master", "Profesional"],
-  proficiencyBarChartValues: [20, 40, 50, 80, 95],
+    // Bar chart data
+    proficiencyBarChartData: [
+        // Label for the bar label, and a numeric value
+        {label: "Bronze", value: 20},
+        {label: "Silver", value: 40},
+        {label: "Gold", value: 50},
+        {label: "Master", value: 80},
+        {label: "Professional", value: 95}
+    ],
 
-  // Tab data
-  bottomTabData: [
-    {label:"Analyze", id:"tabAnalyze"},
-    {label:"Categorize", id:"tabCategorize"},
-    {label:"Highlights", id:"tabHighlights"},
-    {label:"Monitor & Visualize", id:"tabMonitorVisualize"}
-  ],
+    // Tab data
+    bottomTabData: [
+        // Label for the tab title, and id of the invisivble div that contains the contents of the tab
+        {label: "Analyze", id: "tabAnalyze"},
+        {label: "Categorize", id: "tabCategorize"},
+        {label: "Highlights", id: "tabHighlights"},
+        {label: "Monitor & Visualize", id: "tabMonitorVisualize"}
+    ],
 
-  // Table data
-  resultsTableLabels: ["Name", "Status", "Progress"],
-  resultsTableData: Projects.find({}),
+    // Table data
+    resultsTableColumns: [
+        // Label for the table header, and id of the column in the database
+        {label: "Warning", id: "name"},
+        {label: "Status", id:"status"},
+        {label: "Progress", id:"progress"}
+    ],
+    // From the Mongo database. Results should be accessed with result.id
+    resultsTableData: Projects.find({}),
+
+    // Filter data
+    filterLabels: ["status", "progress"]
 
 });
 

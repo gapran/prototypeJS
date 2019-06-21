@@ -54,11 +54,18 @@ function sortTable(columnNumber, tableId) {
     }
 }
 
+Template.table.helpers({
+    getData(row, columnId) {
+        return row[columnId];
+    }
+});
+
 Template.table.events({
     "click .tableHeader"(e) {
         var i;
-        for(i = 0; i < this.labels.length; i++) {
-            if(this.labels[i] === e.target.getAttribute("label")) {
+        var colId = e.target.getAttribute("columnId");
+        for(i = 0; i < this.columns.length; i++) {
+            if(this.columns[i].id === colId) {
                 sortTable(i, this.id);
                 break;
             }

@@ -3,17 +3,17 @@
         <table id="{{id}}">
             <thead>
                 <tr>
-                    {{#each label in labels}}
-                        <td class="tableHeader" label="{{label}}">{{label}}</td>
+                    {{#each column in columns}}
+                        <td class="tableHeader" columnId="{{column.id}}">{{column.label}}</td>
                     {{/each}}
                 </tr>
             </thead>
             <tbody>
                 {{#each row in data}}
                     <tr>
-                        <td>{{row.name}}</td>
-                        <td>{{row.status}}</td>
-                        <td>{{row.progress}}%</td>
+                        {{#each column in columns}}
+                        <td>{{getData row column.id}}</td>
+                        {{/each}}
                     </tr>
                 {{/each}}
             </tbody>
