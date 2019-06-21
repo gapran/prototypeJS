@@ -3,9 +3,24 @@
     <form id="{{id}}">
 
         {{#each label in labels}}
-            <label>
-                <input class="filterValue" name="filterStatus" type="checkbox" value="{{label}}" checked>
-            </label>{{label}}<br>
+
+            {{#if isSelectAll label }}
+                <label>
+                    <input class="filterButton" name="filterStatus" type="checkbox" value="{{label}}" checked>
+                </label>{{label}}<br>
+
+            {{else if isDeselectAll label}}
+                <label>
+                    <input class="filterButton" name="filterStatus" type="checkbox" value="{{label}}">
+                </label>{{label}}<br>
+
+            {{else}}
+                <label>
+                    <input class="filterValue" name="filterStatus" type="checkbox" value="{{label}}" checked>
+                </label>{{label}}<br>
+            {{/if}}
+
+
         {{/each}}
 
     </form>

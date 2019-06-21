@@ -46,7 +46,7 @@ Template.prototype1.helpers({
   resultsTableData: Projects.find({}),
 
   // Filter data
-  filterLabels: ["analysis in progress", "analysis almost done"]
+  filterLabels: ["analysis in progress", "analysis almost done", "Select all", "Deselect all"]
 
 });
 
