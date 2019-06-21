@@ -69,9 +69,9 @@ Template.filter.events({
 
             // Display the table row if it has one of the selected ( checked ) item
             if (showRow === true) {
-                row.style.display = "table-row";
+                row.style.display = "table-row"; // displays the current row
             } else {
-                row.style.display = "none";
+                row.style.display = "none"; // hides the current table row
             }
         }
     }
