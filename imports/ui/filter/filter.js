@@ -15,19 +15,38 @@ Template.filter.events({
         // List of items in a filter
         const filterList = document.getElementsByTagName("input");
 
-        if (selectedItem === "Select all") {
-            for (let element of filterList) {
-                // All filter items are checked
-                element.checked = true;
-            }
+        switch (selectedItem) {
+
+            case "Select all":
+                for (let element of filterList) {
+                    // All filter items are checked
+                    element.checked = true;
+                }
+                break;
+
+
+            case "Deselect all":
+                for (let element of filterList) {
+                    // All filter items are unchecked
+                    element.checked = false;
+                }
+                break;
         }
 
-        if (selectedItem === "Deselect all") {
-            for (let element of filterList) {
-                // All filter items are unchecked
-                element.checked = false;
-            }
-        }
+
+        // if (selectedItem === "Select all") {
+        //     for (let element of filterList) {
+        //         // All filter items are checked
+        //         element.checked = true;
+        //     }
+        // }
+        //
+        // if (selectedItem === "Deselect all") {
+        //     for (let element of filterList) {
+        //         // All filter items are unchecked
+        //         element.checked = false;
+        //     }
+        // }
 
         // Get selected ( checked ) filter names
         const selectedList = [];
