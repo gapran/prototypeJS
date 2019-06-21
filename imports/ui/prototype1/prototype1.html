@@ -18,13 +18,21 @@
                 </div>
                 <div id="tabComponents">
                     <div>
-                        <br />
+                        <br/>
                         {{> tabs id="bottomTabs" defaultTab="tabCategorize" tabData=bottomTabData }}
                         <!-- Invisible components that are needed in the tabs -->
-                        <div class="tabElement" id="tabAnalyze"><div class="demo" style="background-color: red;"></div></div>
-                        <div class="tabElement" id="tabCategorize"><div class="demo" style="background-color: blue;"></div></div>
-                        <div class="tabElement" id="tabHighlights"><div class="demo" style="background-color: green;"></div></div>
-                        <div class="tabElement" id="tabMonitorVisualize"><div class="demo" style="background-color: yellow;"></div></div>
+                        <div class="tabElement" id="tabAnalyze">
+                            <div class="demo" style="background-color: red;"></div>
+                        </div>
+                        <div class="tabElement" id="tabCategorize">
+                            <div class="demo" style="background-color: blue;"></div>
+                        </div>
+                        <div class="tabElement" id="tabHighlights">
+                            <div class="demo" style="background-color: green;"></div>
+                        </div>
+                        <div class="tabElement" id="tabMonitorVisualize">
+                            <div class="demo" style="background-color: yellow;"></div>
+                        </div>
                     </div>
                     <div>
                         {{> barChart id="proficiencyBarChart" title="Proficiency Level" labels=proficiencyBarChartLabels data=proficiencyBarChartValues}}

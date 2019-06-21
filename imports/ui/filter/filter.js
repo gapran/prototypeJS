@@ -29,50 +29,26 @@ Template.filter.events({
         const table = document.getElementById(this.tableID);
         const rows = table.rows;
 
-        const checkedItem = event.target.getAttribute("value");
+        // Retrieve the selected item
+        const selectedItem = event.target.getAttribute("value");
 
-        //Select all option
-        const selectCheck = document.getElementById("filterSelect");
-
-        //Deselect all option
-        const deselectCheck = document.getElementById("filterDeselect");
-
-
-        alert(checkedItem);
-        if (checkedItem === "Select all") {
-
-
-            const checkList = document.getElementsByTagName("input");
-            alert(checkList.length);
-            for (let w = 0; w < checkList.length; w++) {
-
-                if (checkList[w].value === "Deselect all") {
-                    checkList[w].checked = false;
-                } else {
-                    checkList[w].checked = true;
-                }
-            }
-
-
-        }
-
-        if (checkedItem === "Deselect all") {
-
+        if (selectedItem === "Select all") {
 
             const checkList = document.getElementsByTagName("input");
             for (let w = 0; w < checkList.length; w++) {
-
-                if (checkList[w].value !== "Deselect all") {
-                    checkList[w].checked = false;
-                }
+                // All filter items are checked
+                checkList[w].checked = true;
             }
-
-
         }
 
+        if (selectedItem === "Deselect all") {
 
-        // Number of items in a default filter list
-        const filtersNumber = document.getElementsByClassName("filterValue").length;
+            const checkList = document.getElementsByTagName("input");
+            for (let w = 0; w < checkList.length; w++) {
+                // All filter items are unchecked
+                checkList[w].checked = false;
+            }
+        }
 
         // Get selected ( checked ) filter names
         const selectedList = [];
@@ -82,55 +58,6 @@ Template.filter.events({
                 selectedList.push(filterList[p].value);
             }
         }
-
-        var selectorSize = 0;
-        for (var u = 0; u < selectedList.length; u++) {
-
-            if (selectedList[u].value === "Select all" || selectedList[u].value === "Deselect all") {
-
-                selectorSize++;
-            }
-        }
-
-        alert(selectorSize);
-        // If all filters are selected - default, check condition excluding select/deselect all
-        // if (selectedList.length === (filtersNumber - selectorSize)) {
-        //
-        //     //Select all option is checked
-        //     selectCheck.checked = true;
-        //
-        //     //Deselect all option is not checked
-        //     // deselectCheck.checked = false;
-        //
-        //     // Loop through all rows in a table (except the first one, which contains the table headers)
-        //     for (let r = 1; r < rows.length; r++) {
-        //         rows[r].style.display = "display";
-        //
-        //     }
-        //
-        //
-        // } else if (selectedList.length === 0) { // If no filter is selected
-        //
-        //     //Deselect all option is checked
-        //     deselectCheck.checked = true;
-        //
-        //     //Select all option is not checked
-        //     selectCheck.checked = false;
-        //
-        //     // Loop through all rows in a table (except the first one, which contains the table headers)
-        //     for (let r = 1; r < rows.length; r++) {
-        //         rows[r].style.display = "none";
-        //
-        //     }
-        // } else { // If some filter is selected
-        //
-        //     //Select all option is not checked
-        //     selectCheck.checked = false;
-        //
-        //     //Select all option is not checked
-        //     deselectCheck.checked = false;
-        //
-        // }
 
 
         // Loop through all rows in a table (except the first one, which contains the table headers)
@@ -151,10 +78,10 @@ Template.filter.events({
 
                 const filterValue = selectedList[i];
                 if (rowSet.has(filterValue)) {
-                    // rows[j].style.display = "none";
                     showRow = true;
                 }
             }
+
             // Display the table row if it has one of the selected ( checked ) item
             if (showRow === true) {
                 rows[j].style.display = "table-row";

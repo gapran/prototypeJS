@@ -21,32 +21,31 @@ import "../image/image.js";
 
 import "../filter/filter.html";
 import "../filter/filter.js";
+import "./prototype1.html";
 
 // Prototype 1
-
-import "./prototype1.html";
 
 
 Template.prototype1.helpers({
 
-  // Bar chart data
-  proficiencyBarChartLabels: ["Bronze", "Silver", "Gold", "Master", "Profesional"],
-  proficiencyBarChartValues: [20, 40, 50, 80, 95],
+    // Bar chart data
+    proficiencyBarChartLabels: ["Bronze", "Silver", "Gold", "Master", "Professional"],
+    proficiencyBarChartValues: [20, 40, 50, 80, 95],
 
-  // Tab data
-  bottomTabData: [
-    {label:"Analyze", id:"tabAnalyze"},
-    {label:"Categorize", id:"tabCategorize"},
-    {label:"Highlights", id:"tabHighlights"},
-    {label:"Monitor & Visualize", id:"tabMonitorVisualize"}
-  ],
+    // Tab data
+    bottomTabData: [
+        {label: "Analyze", id: "tabAnalyze"},
+        {label: "Categorize", id: "tabCategorize"},
+        {label: "Highlights", id: "tabHighlights"},
+        {label: "Monitor & Visualize", id: "tabMonitorVisualize"}
+    ],
 
-  // Table data
-  resultsTableLabels: ["Name", "Status", "Progress"],
-  resultsTableData: Projects.find({}),
+    // Table data
+    resultsTableLabels: ["Name", "Status", "Progress"],
+    resultsTableData: Projects.find({}),
 
-  // Filter data
-  filterLabels: ["analysis in progress", "analysis almost done", "Select all", "Deselect all"]
+    // Filter data
+    filterLabels: ["analysis in progress", "analysis almost done"]
 
 });
 

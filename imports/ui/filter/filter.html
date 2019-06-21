@@ -4,26 +4,21 @@
 
         {{#each label in labels}}
 
-            {{#if isSelectAll label }}
-                <label>
-                    <input class="filterValue" id="filterSelect" name="filterStatus" type="checkbox" value="{{label}}"
-                           checked>
-                </label>{{label}}<br>
-
-            {{else if isDeselectAll label}}
-                <label>
-                    <input class="filterValue" id="filterDeselect" name="filterStatus" type="checkbox"
-                           value="{{label}}">
-                </label>{{label}}<br>
-
-            {{else}}
-                <label>
-                    <input class="filterValue" name="filterStatus" type="checkbox" value="{{label}}" checked>
-                </label>{{label}}<br>
-            {{/if}}
-
+            <label>
+                <input class="filterValue" name="filterStatus" type="checkbox" value="{{label}}" checked>
+            </label>{{label}}<br>
 
         {{/each}}
+
+        <label>
+            <input class="filterValue" id="filterSelect" type="button" value="Select all">
+        </label><br>
+
+
+        <label>
+            <input class="filterValue" id="filterDeselect" type="button"
+                   value="Deselect all">
+        </label><br>
 
     </form>
 
