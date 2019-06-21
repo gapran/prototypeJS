@@ -1,16 +1,14 @@
 import {Template} from "meteor/templating";
 
 Template.filter.events({
-    "click .filterValue"(e) {
+    "click .filterValue"() {
 
+        // Retrieve the table to be filtered
+        const table = document.getElementById(this.tableID);
+        const rows = table.rows;
+
+        // Number of items in a default filter list
         const filtersNumber = document.getElementsByClassName("filterValue").length;
-
-        //var filterList = document.getElementsByClassName("filterValue");
-        // for(var i = 0; i < filtersNumber; i++) {
-        //     if(inputs[i].type == "checkbox") {
-        //         inputs[i].checked = true;
-        //     }
-        // }
 
         // Get selected ( checked ) filter names
         const selectedList = [];
@@ -20,13 +18,9 @@ Template.filter.events({
                 selectedList.push(filterList[p].value);
             }
         }
-        console.log(selectedList);
 
         // If all filters are selected - default
         if (selectedList.length === filtersNumber) {
-
-            const table = document.getElementById(this.tableID);
-            const rows = table.rows;
 
             // Loop through all rows in a table (except the first one, which contains the table headers)
             for (let r = 1; r < rows.length; r++) {
@@ -38,19 +32,12 @@ Template.filter.events({
         // If no filter is selected
         if (selectedList.length === 0) {
 
-            const table = document.getElementById(this.tableID);
-            const rows = table.rows;
-
             // Loop through all rows in a table (except the first one, which contains the table headers)
             for (let r = 1; r < rows.length; r++) {
                 rows[r].style.display = "none";
 
             }
         }
-
-        // Retrieve the table to be filtered
-        const table = document.getElementById(this.tableID);
-        const rows = table.rows;
 
         // Loop through all rows in a table (except the first one, which contains the table headers)
         for (let j = 1; j < rows.length; j++) {
