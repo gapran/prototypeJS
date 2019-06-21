@@ -1,111 +1,111 @@
 body {
-  background: whitesmoke;
-  color: rgb(0, 0, 0);
-  font-family: Arial;
-  font-size: 14px;
-  margin: 0;
-  height: 100%;
-  width: 100%;
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size: 14px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .container {
-  margin: 0 auto;
-  width: 1200px;
-  height: 550px;
-  align-content: center;
-  align-items: center;
+    margin: 0 auto;
+    width: 1200px;
+    height: 550px;
+    align-content: center;
+    align-items: center;
 }
 
 .heading {
-	width: 1200px;
+    width: 1200px;
 }
 
-.subcontainer{
-  width: 100%;
-  text-align: center;
+.subcontainer {
+    width: 100%;
+    text-align: center;
 }
 
 .section1 {
-  margin:0 auto;
-  float:left;
-  width:200px;
-  height:550px;
-  
+    margin: 0 auto;
+    float: left;
+    width: 200px;
+    height: 550px;
+
 }
 
 .section2 {
-  display: inline-block;
-  margin:0 auto;
-  width:744px;
-  height:550px;
+    display: inline-block;
+    margin: 0 auto;
+    width: 744px;
+    height: 550px;
 
 }
 
 .section3 {
-  margin:0 auto;
-  width: 250px;
-  height:550px;
-  float: right;
-  text-align: left;
+    margin: 0 auto;
+    width: 250px;
+    height: 550px;
+    float: right;
+    text-align: left;
 
 }
 
 /* Table */
 
 table {
-  text-align:center; 
-  width:100%;
-  border-collapse:collapse;
-  border-width:1px;
-  border-style:solid;
-  border-color:#050505;
-  font-size: 14px;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #050505;
+    font-size: 14px;
 }
 
-.tableTemplate{
-  max-height: 300px;
-  overflow: auto;
+.tableTemplate {
+    max-height: 300px;
+    overflow: auto;
 }
 
 tr {
-  height: 30px;
+    height: 30px;
 }
 
 td, th {
-  border-width:1px;
-  padding:3px;
-  border-color:#050505;
-  border-style: solid;
+    border-width: 1px;
+    padding: 3px;
+    border-color: #050505;
+    border-style: solid;
 }
 
 thead {
-  background-color: #364a94;
-  color: white;
+    background-color: #364a94;
+    color: white;
 }
 
 tr:nth-child(even) {
-  background: #e8e3f1ed;
+    background: #e8e3f1ed;
 }
 
 /* Badge */
 
-.badge{
-  height: 80%;
-  width: 80%;
+.badge {
+    height: 80%;
+    width: 80%;
 }
 
 /* Progress bar */
 
-.progressFrame{
-  border-style: inset;
+.progressFrame {
+    border-style: inset;
 }
 
 .progressBar {
-  height: 18px;
-  background-color: #364a94;
-  text-align: center; /* To center it horizontally (if you want) */
-  line-height: 18px; /* To center it vertically */
-  color: white; 
+    height: 18px;
+    background-color: #364a94;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 18px; /* To center it vertically */
+    color: white;
 }
 
 .progressTable {
@@ -118,86 +118,91 @@ tr:nth-child(even) {
 
 /* Bar chart */
 
-.barChart{
-  display: block;
-  padding:10px;
-  height: 300px;
-  max-height: 300px;
+.barChart {
+    display: block;
+    padding: 10px;
+    height: 300px;
+    max-height: 300px;
 }
 
 /* Tabs */
 
-.tabHeaders{
-  overflow: hidden;
+.tabHeaders {
+    overflow: hidden;
 }
 
-.tabHeader{
-  background-color: inherit;
-  float: left;
-  outline: none;
-  cursor: pointer;
-  padding: 10px 15px;
-  background-color: #e8e3f1ed;
-  border: 1px solid #ccc;
-  border-bottom: none;
+.tabHeader {
+    background-color: inherit;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #e8e3f1ed;
+    border: 1px solid #ccc;
+    border-bottom: none;
 }
 
 .tabHeader:hover {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
 .tabHeader.active {
-  background-color: #364a94;
-  color: white;
+    background-color: #364a94;
+    color: white;
 }
 
 .tabContent {
-  height: 320px;
-  padding: 10px 10px;
-  border: 1px solid #ccc;
-  overflow: auto;
+    height: 320px;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    overflow: auto;
 }
 
 .tabElement {
-  display: none;
+    display: none;
 }
 
 .demo {
-  height: 500px;
-  width: 900px;
+    height: 500px;
+    width: 900px;
 }
 
 /* Filter */
 
 .filterValue {
 
-  text-align: left;
-  border-collapse:collapse;
-  border-width:1px;
-  border-style:solid;
-  border-color: #2b2b2b;
+    text-align: left;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #2b2b2b;
 
 }
 
 form {
 
-  border-collapse:collapse;
-  border-width:1px;
-  border-style:solid;
-  border-color: #01002b;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #01002b;
 
 }
 
 #filterSelect {
 
-  position: absolute;
-  margin-left: 10px;
+    margin-left: 10px;
+    background-color: #364a94;
+    color: white;
+    float: left;
 
 }
 
-#filterDeselect{
+#filterDeselect {
 
-  position: absolute;
-  margin-left: 10px;
+    position: absolute;
+    margin-left: 10px;
+    background-color: #364a94;
+    color: white;
+    float: right;
 
 }
