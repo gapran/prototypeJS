@@ -16,6 +16,7 @@ Template.filter.helpers({
 
 // Returns the index of the column which matches the columnId.
 function getTableId(tableColumns, columnId) {
+    var i;
     for(i = 0; i < tableColumns.length; i++){
         if(tableColumns[i].id === columnId) {
             return i;
