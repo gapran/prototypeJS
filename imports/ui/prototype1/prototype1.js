@@ -19,6 +19,9 @@ import "../tabs/tabs.js";
 import "../image/image.html";
 import "../image/image.js";
 
+import "../filter/filter.html";
+import "../filter/filter.js";
+
 import "./prototype1.html";
 
 // Prototype 1
@@ -55,7 +58,8 @@ Template.prototype1.helpers({
     resultsTableData: Projects.find({}),
 
     // Filter data
-    filterLabels: ["status", "progress"]
+    // Ids on which to filter from a table. Must match the ones in resultsTableColumns
+    filterIds: ["status", "progress"]
 
 });
 
