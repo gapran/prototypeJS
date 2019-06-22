@@ -30,7 +30,6 @@ body {
   float:left;
   width:200px;
   height:550px;
-  
 }
 
 .section2 {
@@ -87,14 +86,14 @@ tr:nth-child(even) {
 
 /* Badge */
 
-.badge{
+.badge {
   height: 80%;
   width: 80%;
 }
 
 /* Progress bar */
 
-.progressFrame{
+.progressFrame {
   border-style: inset;
 }
 
@@ -163,4 +162,35 @@ tr:nth-child(even) {
 .demo {
   height: 500px;
   width: 900px;
+}
+
+/* Filters */
+
+.filter {
+  text-align:left;
+  border-collapse: collapse;
+}
+
+.filter tr:nth-child(even) {
+  background: whitesmoke;
+}
+
+.filter td {
+  border: none;
+}
+
+.filter tr {
+  height: 20px;
+}
+
+.filter thead {
+  height: 30px;
+}
+
+.filterLabel {
+  margin-left: 10px;
+}
+
+.filterValue {
+  margin-left: 30px;
 }
