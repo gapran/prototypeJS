@@ -59,7 +59,15 @@ Template.prototype1.helpers({
 
     // Filter data
     // Ids on which to filter from a table. Must match the ones in resultsTableColumns
-    filterIds: ["status", "progress"]
+    filterIds: ["status", "progress"],
+
+    //Sample Java code
+
+    javacode: [
+        {id: "codearea",
+        text: "For this one, the code view should not be editable. To open a file, the command is programatical. No need for doing a menu for that."}
+    ]
+
 
 });
 

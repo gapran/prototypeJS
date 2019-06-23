@@ -9,6 +9,8 @@ import { Session } from "meteor/session";
 import "./prototype1/prototype1.js";
 import "./prototype1/about.js";
 
+// Importing code view template
+import "./codeview/codeview.js";
 // Pages of prototype 2
 // ...
 
@@ -37,6 +39,9 @@ Template.body.events({
   "click .link_prototype1_about"() {
      Session.set("templateName", "prototype1_about");
   },
+  "click .link_prototype2"() {
+    Session.set("templateName", "codeview");
+  }
   // ...
 
   // Navigation rules for prototype 2

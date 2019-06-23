@@ -1,0 +1,9 @@
+<template name="codeview">
+ 
+    <div id="{{id}}" class="container">
+        {{#each line in codetext}}
+        <textarea readonly name="codearea" id={{line.id}}>{{line.text}}</textarea>
+     {{/each}}
+    </div>
+
+</template>

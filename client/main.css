@@ -34,10 +34,22 @@ body {
 
 .section2 {
   display: inline-block;
-  margin:0 auto;
+  margin: 0 auto;
+  /* margin: 0 1.5% 24px 1.5%; */
+  position: relative;
   width:744px;
   height:550px;
 
+}
+
+.section4 {
+
+  float: left;
+  margin: 0 5.5%;
+  position: absolute;
+  top: 750px;
+  left: 50px;
+  width: 63%
 }
 
 .section3 {
@@ -46,6 +58,8 @@ body {
   float: right;
 
 }
+
+
 
 /* Table */
 
@@ -193,4 +207,19 @@ tr:nth-child(even) {
 
 .filterValue {
   margin-left: 30px;
+}
+
+textarea {
+  width: 52%;
+  /* float: top; */
+  min-height: 250px;
+  overflow: scroll;
+  margin: auto;
+  display: inline-block;
+  background: #f4f4f9;
+  outline: none;
+  font-family: Courier, sans-serif;
+  font-size: 14px;
+  white-space: nowrap; 
+ overflow-x: auto;
 }

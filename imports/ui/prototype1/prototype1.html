@@ -29,12 +29,29 @@
                     <div>
                         {{> barChart id="proficiencyBarChart" title="Proficiency Level" data=proficiencyBarChartData}}
                     </div>
+                     
                 </div>
             </div>
+
+            
 
             <div class="section3">
                 {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
             </div>
+
+            <div class="section4">
+                    {{> codeview id="javaCodeEditor" codetext=javacode}}
+            </div>
+           
+
+
+
+
+
+
+
+
+           
         </div>
     </div>
 </template>
