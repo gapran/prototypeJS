@@ -10,4 +10,3 @@ import "../login/login.js";
 // Prototype 2
 
 import "./prototype2.html";
-
