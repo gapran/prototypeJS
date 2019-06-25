@@ -24,16 +24,3 @@ import "../filter/filter.js";
 
 // Prototype 3
 import "./prototype3.html";
-
-
-// Template.prototype3.events({
-//     'click.profile': function(event){
-//         document.body.style.backgroundColor = "#f3f3f3";
-//         console.log(event);
-//     document.getElementById("mobile").style.backgroundImage = "url('web.jpg')";
-//     document.getElementById("mobile").style.backgroundRepeat ="no-repeat";
-//     }
-//     // "click .project"() {
-//     //     Session.set("templateName", "table");
-//     //  },
-//   });

@@ -50,11 +50,3 @@ Template.body.events({
   }
 
 });
-// Template.link_prototype3.events({
-//   'click.edit_button': function(event){
-//       document.body.style.backgroundColor = "#f3f3f3";
-//       console.log(event);
-//   document.getElementById("mobile").style.backgroundImage = "url('web.jpg')";
-//   document.getElementById("mobile").style.backgroundRepeat ="no-repeat";
-//   }
-// });
