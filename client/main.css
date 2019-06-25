@@ -160,7 +160,7 @@ tr:nth-child(even) {
 }
 
 .demo {
-  height: 3000px;
+  height: 5000px;
   width: 9000px;
 }
 
@@ -193,6 +193,31 @@ tr:nth-child(even) {
 
 .filterValue {
   margin-left: 30px;
+}
+
+/* Web container */
+
+.web-container {
+  margin: 0 auto;
+  position: relative;
+  width: 1331px;
+  height: 762px;
+  align-content: center;
+  align-items: center;
+  background: url('web.png') no-repeat;
+}
+
+.web-sub-container {
+  position: absolute;
+  top: 60px;
+  right: 1px;
+  width: 1328px;
+  height: 650px;
+  margin-left: 125px;
+  margin-top: 50px;
+  align-content: center;
+  align-items: center;
+  overflow: auto;
 }
 
 /* Mobile container */

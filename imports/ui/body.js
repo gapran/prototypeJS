@@ -10,6 +10,7 @@ import "./prototype1/prototype1.js";
 import "./prototype1/about.js";
 
 // Pages of prototype 2
+import "./prototype2/prototype2.js";
 // ...
 // Pages of prototype 3
 import "./prototype3/prototype3.js";
@@ -42,7 +43,9 @@ Template.body.events({
   // ...
 
   // Navigation rules for prototype 2
-  // ...
+  "click .link_prototype2"() {
+    Session.set("templateName", "prototype2");
+  },
 
   // Navigation rules for prototype 3
   "click .link_prototype3"() {
