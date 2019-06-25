@@ -1,3 +1,5 @@
+@import "prototype1.css";
+
 body {
     background: whitesmoke;
     color: rgb(0, 0, 0);
@@ -8,61 +10,8 @@ body {
     width: 100%;
 }
 
-.container {
-    margin: 0 auto;
-    width: 1310px;
-    height: 600px;
-    align-content: center;
-    align-items: center;
-}
+/* Table */
 
-.layoutcontainer {
-    position: absolute;
-    top: 20px;
-    width: 1301px;
-    height: 551px;
-    align-content: center;
-    align-items: center;
-    background-image: url("ide_layout.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.heading {
-    width: 1200px;
-}
-
-.subcontainer {
-    position: absolute;
-    top: 33px;
-    width: 100%;
-    text-align: center;
-}
-
-.section1 {
-    margin: 2px auto;
-    float: left;
-    width: 200px;
-    height: 550px;
-}
-
-.section2 {
-    margin: 2px auto;
-    width: 744px;
-    height: 550px;
-
-}
-
-.section3 {
-    width: 250px;
-    height: 700px;
-    position: absolute;
-    top: 2px;
-    right: 16px;
-}
-
-    /* Table */
 table {
     text-align: center;
     width: 100%;
@@ -179,10 +128,8 @@ tr:nth-child(even) {
 }
 
 .demo {
-
-    height: 200px;
-    width: 900px;
-
+    height: 9000px;
+    width: 9000px;
 }
 
 /* Filters */
@@ -257,5 +204,27 @@ tr:nth-child(even) {
   margin-top: 80px;
   height: 620px;
   width: 350px;
+  overflow: auto;
+}
+
+/* IDE container */
+
+.ide-container {
+  margin: 0 auto;
+  width: 1450px;
+  height: 600px;
+  align-content: center;
+  align-items: center;
+  background-image: url("ide_layout.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ide-sub-container {
+  position: absolute;
+  margin-top: 27px;
+  width: 1445px;
+  height: 570px;
   overflow: auto;
 }
