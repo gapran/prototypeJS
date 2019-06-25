@@ -209,10 +209,10 @@ button:hover {
 .imglogo {
   text-align: center;
   position: absolute;
-  height: 70px;
-  width: 70px;
-  right: 1300px; 
-  top: 120px; 
+  height: 65px;
+  width: 65px;
+  right: 960px; 
+  top: 33px; 
 }
 
 /* Avatar image */
@@ -230,32 +230,39 @@ img.avatar {
 .loginheader {
   text-align: center;
   position: absolute;
-  right: 130px; 
-  top: 110px; 
+  right: 200px; 
+  top: 15px; 
   padding: 16px;
-  width: 100%;
+  width: 1000px;
 }
 
 .webcontainer {
   margin: 0 auto;
-  width: 1500px;
-  height: 750px;
+  top:20px;
+  width: 1331px;
+  height: 762px;
   align-content: center;
   align-items: center;
-  background: url('web.jpg') no-repeat;
+  background: url('web.png') no-repeat;
 }
 
-.websubcontainer{
+.websubcontainer {
   position: absolute;
-  right: 40px; 
-  top: 230px; 
-  width: 100%;
-  text-align: center;
+  top: 110px;
+  right: 234px;
+  margin: 0 auto;
+  width: 1330px;
+  height: 650px;
+  align-content: center;
+  align-items: center;
 }
 
 .loginblock {
   display: inline-block;
   margin:0 auto;
+  position: absolute;
+  right: 400px; 
+  top: 130px; 
   width:550px;
   height:550px;
 
