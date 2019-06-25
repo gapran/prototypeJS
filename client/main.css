@@ -34,20 +34,21 @@ body {
 }
 
 .subcontainer {
+    position: absolute;
+    top: 33px;
     width: 100%;
     text-align: center;
 }
 
 .section1 {
-    margin: 0 auto;
+    margin: 2px auto;
     float: left;
     width: 200px;
     height: 550px;
 }
 
 .section2 {
-    display: inline-block;
-    margin: 0 auto;
+    margin: 2px auto;
     width: 744px;
     height: 550px;
 
@@ -55,13 +56,13 @@ body {
 
 .section3 {
     width: 250px;
-    height: 550px;
-    float: right;
-
+    height: 700px;
+    position: absolute;
+    top: 2px;
+    right: 16px;
 }
 
-/* Table */
-
+    /* Table */
 table {
     text-align: center;
     width: 100%;
@@ -74,6 +75,11 @@ table {
 
 .tableTemplate {
     max-height: 300px;
+    overflow: auto;
+}
+
+.filterTemplate {
+    max-height: 500px;
     overflow: auto;
 }
 
@@ -162,7 +168,7 @@ tr:nth-child(even) {
 }
 
 .tabContent {
-    height: 320px;
+    height: 200px;
     padding: 10px 10px;
     border: 1px solid #ccc;
     overflow: auto;
@@ -173,7 +179,7 @@ tr:nth-child(even) {
 }
 
 .demo {
-    height: 500px;
+    height: 200px;
     width: 900px;
 }
 
