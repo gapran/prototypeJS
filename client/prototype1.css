@@ -1,0 +1,21 @@
+.section1 {
+    margin: 2px auto;
+    float: left;
+    width: 200px;
+    height: 550px;
+}
+
+.section2 {
+    margin: 2px auto;
+    width: 744px;
+    height: 550px;
+
+}
+
+.section3 {
+    width: 250px;
+    height: 700px;
+    position: absolute;
+    top: 2px;
+    right: 16px;
+}

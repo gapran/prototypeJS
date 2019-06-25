@@ -1,108 +1,76 @@
+@import "prototype1.css";
+
 body {
-  background: whitesmoke;
-  color: rgb(0, 0, 0);
-  font-family: Arial;
-  font-size: 14px;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.container {
-  margin: 0 auto;
-  width: 1200px;
-  height: 550px;
-  align-content: center;
-  align-items: center;
-}
-
-.heading {
-	width: 1200px;
-}
-
-.subcontainer{
-  width: 100%;
-  text-align: center;
-}
-
-.section1 {
-  margin:0 auto;
-  float:left;
-  width:200px;
-  height:550px;
-}
-
-.section2 {
-  display: inline-block;
-  margin:0 auto;
-  width:744px;
-  height:550px;
-
-}
-
-.section3 {
-  width: 250px;
-  height:550px;
-  float: right;
-
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size: 14px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 /* Table */
 
 table {
-  text-align:center; 
-  width:100%;
-  border-collapse:collapse;
-  border-width:1px;
-  border-style:solid;
-  border-color:#050505;
-  font-size: 14px;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #050505;
+    font-size: 14px;
 }
 
-.tableTemplate{
-  max-height: 300px;
-  overflow: auto;
+.tableTemplate {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.filterTemplate {
+    max-height: 500px;
+    overflow: auto;
 }
 
 tr {
-  height: 30px;
+    height: 30px;
 }
 
 td, th {
-  border-width:1px;
-  padding:3px;
-  border-color:#050505;
-  border-style: solid;
+    border-width: 1px;
+    padding: 3px;
+    border-color: #050505;
+    border-style: solid;
 }
 
 thead {
-  background-color: #364a94;
-  color: white;
+    background-color: #364a94;
+    color: white;
 }
 
 tr:nth-child(even) {
-  background: #e8e3f1ed;
+    background: #e8e3f1ed;
 }
 
 /* Badge */
 
 .badge {
-  height: 80%;
-  width: 80%;
+    height: 80%;
+    width: 80%;
 }
 
 /* Progress bar */
 
 .progressFrame {
-  border-style: inset;
+    border-style: inset;
 }
 
 .progressBar {
-  height: 18px;
-  background-color: #364a94;
-  text-align: center; /* To center it horizontally (if you want) */
-  line-height: 18px; /* To center it vertically */
-  color: white; 
+    height: 18px;
+    background-color: #364a94;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 18px; /* To center it vertically */
+    color: white;
 }
 
 .progressTable {
@@ -115,83 +83,84 @@ tr:nth-child(even) {
 
 /* Bar chart */
 
-.barChart{
-  display: block;
-  padding:10px;
-  height: 300px;
-  max-height: 300px;
+.barChart {
+    display: block;
+    padding: 10px;
+    height: 300px;
+    max-height: 300px;
 }
 
 /* Tabs */
 
-.tabHeaders{
-  overflow: hidden;
+.tabHeaders {
+    overflow: hidden;
 }
 
-.tabHeader{
-  background-color: inherit;
-  float: left;
-  outline: none;
-  cursor: pointer;
-  padding: 10px 15px;
-  background-color: #e8e3f1ed;
-  border: 1px solid #ccc;
-  border-bottom: none;
+.tabHeader {
+    background-color: inherit;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #e8e3f1ed;
+    border: 1px solid #ccc;
+    border-bottom: none;
 }
 
 .tabHeader:hover {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
 .tabHeader.active {
-  background-color: #364a94;
-  color: white;
+    background-color: #364a94;
+    color: white;
 }
 
 .tabContent {
-  height: 320px;
-  padding: 10px 10px;
-  border: 1px solid #ccc;
-  overflow: auto;
+    height: 200px;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    overflow: auto;
 }
 
 .tabElement {
-  display: none;
+    display: none;
 }
 
 .demo {
-  height: 5000px;
-  width: 9000px;
+    height: 9000px;
+    width: 9000px;
 }
 
 /* Filters */
 
 .filter {
-  text-align:left;
-  border-collapse: collapse;
+    text-align: left;
+    border-collapse: collapse;
 }
 
 .filter tr:nth-child(even) {
-  background: whitesmoke;
+    background: whitesmoke;
 }
 
 .filter td {
-  border: none;
+    border: none;
 }
 
 .filter tr {
-  height: 20px;
+    height: 20px;
 }
 
 .filter thead {
-  height: 30px;
+    height: 30px;
 }
 
 .filterLabel {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .filterValue {
+
   margin-left: 30px;
 }
 
@@ -235,5 +204,27 @@ tr:nth-child(even) {
   margin-top: 80px;
   height: 620px;
   width: 350px;
+  overflow: auto;
+}
+
+/* IDE container */
+
+.ide-container {
+  margin: 0 auto;
+  width: 1450px;
+  height: 600px;
+  align-content: center;
+  align-items: center;
+  background-image: url("ide_layout.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ide-sub-container {
+  position: absolute;
+  margin-top: 27px;
+  width: 1445px;
+  height: 570px;
   overflow: auto;
 }
