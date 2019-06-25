@@ -214,62 +214,6 @@ button:hover {
   top: 33px; 
 }
 
-/* Avatar image */
-img.avatar {
-  width: 30%;
-  border-radius: 50%;
-}
-
-/* Add padding to containers */
-.logincontainer {
-  padding: 16px;
-  width: 50%;
-}
-
-.loginheader {
-  text-align: center;
-  position: absolute;
-  right: 200px; 
-  top: 15px; 
-  padding: 16px;
-  width: 1000px;
-}
-
-.webcontainer {
-  margin: 0 auto;
-  position: relative;
-  width: 1331px;
-  height: 762px;
-  align-content: center;
-  align-items: center;
-  background: url('web.png') no-repeat;
-}
-
-.websubcontainer {
-  position: absolute;
-  top: 60px;
-  right: 1px;
-  width: 1328px;
-  height: 650px;
-  margin-left: 125px;
-  margin-top: 50px;
-  align-content: center;
-  align-items: center;
-  overflow: auto;
-}
-
-.loginblock {
-  display: inline-block;
-  margin:0 auto;
-  position: absolute;
-  right: 400px; 
-  top: 130px; 
-  width:550px;
-  height:550px;
-  height: 3000px;
-  width: 9000px;
-}
-
 /* Filters */
 
 .filter {
@@ -299,6 +243,31 @@ img.avatar {
 
 .filterValue {
   margin-left: 30px;
+}
+
+/* Web container */
+
+.web-container {
+  margin: 0 auto;
+  position: relative;
+  width: 1331px;
+  height: 762px;
+  align-content: center;
+  align-items: center;
+  background: url('web.png') no-repeat;
+}
+
+.web-sub-container {
+  position: absolute;
+  top: 60px;
+  right: 1px;
+  width: 1328px;
+  height: 650px;
+  margin-left: 125px;
+  margin-top: 50px;
+  align-content: center;
+  align-items: center;
+  overflow: auto;
 }
 
 /* Mobile container */
