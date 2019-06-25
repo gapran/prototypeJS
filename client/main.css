@@ -161,8 +161,8 @@ tr:nth-child(even) {
 }
 
 .demo {
-  height: 500px;
-  width: 900px;
+  height: 5000px;
+  width: 9000px;
 }
 
 /*Prototype-2*/
@@ -238,7 +238,7 @@ img.avatar {
 
 .webcontainer {
   margin: 0 auto;
-  top:20px;
+  position: relative;
   width: 1331px;
   height: 762px;
   align-content: center;
@@ -248,13 +248,15 @@ img.avatar {
 
 .websubcontainer {
   position: absolute;
-  top: 110px;
-  right: 234px;
-  margin: 0 auto;
-  width: 1330px;
+  top: 60px;
+  right: 1px;
+  width: 1328px;
   height: 650px;
+  margin-left: 125px;
+  margin-top: 50px;
   align-content: center;
   align-items: center;
+  overflow: auto;
 }
 
 .loginblock {
@@ -265,5 +267,4 @@ img.avatar {
   top: 130px; 
   width:550px;
   height:550px;
-
 }
