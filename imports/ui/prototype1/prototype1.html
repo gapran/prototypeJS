@@ -1,0 +1,54 @@
+<template name="prototype1">
+    <div class="ide-container">
+        <div class="ide-sub-container">
+
+            <div class="section1">
+
+                <div class="imageComponent">
+                    {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
+                </div>
+
+                <div class="progressComponent">
+                    {{> progressBar id="progressBar" min="0" max="100" val="30"}}
+                </div>
+
+                <a href="#" class="link_prototype1_about">About page</a>
+
+            </div>
+
+            <div class="section2">
+                <div class="TBL">
+                    {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData }}
+                </div>
+                <div id="tabComponents">
+                    <div>
+                        <br/>
+                        {{> tabs id="bottomTabs" defaultTab="tabCategorize" tabData=bottomTabData }}
+                        <!-- Invisible components that are needed in the tabs -->
+                        <div class="tabElement" id="tabAnalyze">
+                            <div class="demo" style="background-color: red;"></div>
+                        </div>
+                        <div class="tabElement" id="tabCategorize">
+                            <div class="demo" style="background-color: blue;"></div>
+                        </div>
+                        <div class="tabElement" id="tabHighlights">
+                            <div class="demo" style="background-color: green;"></div>
+                        </div>
+                        <div class="tabElement" id="tabMonitorVisualize">
+                            <div>
+                                {{> barChart id="proficiencyBarChart" title="Proficiency Level" data=proficiencyBarChartData style="height:200px; min-height:200px; max-height:200px;"}}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="section3">
+                {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
+            </div>
+
+        </div>
+    </div>
+</template>

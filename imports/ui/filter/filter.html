@@ -1,0 +1,34 @@
+<template name="filter">
+    <div class="filterTemplate">
+        <table id="{{id}}" class="filter">
+            <thead><tr><td>
+                <label title="Select/Deselect all filters">
+                    <input type="checkbox" class="filterLabel" checked>
+                    Filters
+                </label>
+            </td></tr></thead>
+
+            <tbody>
+            {{#each filterId in filterIds}}
+
+                <tr><td>
+                    <label title="Select/Deselect all '{{getTableLabelFromId filterId}}' filters">
+                        <input type="checkbox" class="filterLabel" filterId="{{filterId}}" checked>
+                        {{getTableLabelFromId filterId}}
+                    </label>
+                </td></tr>
+
+                {{#each value in getValues filterId}}
+                    <tr><td>
+                        <label>
+                            <input type="checkbox" class="filterValue" value="{{value}}" filterId="{{filterId}}" checked>
+                            {{value}}
+                        </label>
+                    </td></tr>
+                {{/each}}
+
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>

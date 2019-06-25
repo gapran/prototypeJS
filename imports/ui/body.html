@@ -1,34 +1,18 @@
 <body>
-<div class="container">
-    <div class="heading">
-    </div>
-    <div class="subcontainer">
-      <div class="section1">
-          <div class = "badge">
-              <img id="levelImg" src = "/badge1.PNG" alt = "Badge Level"/>
-              <label for ="badgeRank">Bronze</label>
-          </div>
-          {{> progressBar}}
-      </div>
-      <div class="section2">
-          <div class ="TBL">
-            {{> tableCom}}                            
-          </div>
-          <div id ="tabComponents">
-            <div>
-                  {{> myTabs}}
-            </div>
-            <div>
-              {{> myCanvas}}
-            </div>
-          </div>
-      </div>
-          
-      <div class="section3">
-      </div>
-    </div>
-</div>
+
+<!-- Notifications (https://s-alert.meteorapp.com/) -->
+{{> sAlert}}
+
+<!-- Load different prototypes with dynamic loading. -->
+<!-- https://stackoverflow.com/questions/26944011/proper-way-to-handle-multiple-pages-in-meteor -->
+{{> Template.dynamic template=templateName }}
+
 </body>
 
-
-
+<template name="default_menu">
+    <ul>
+        <li><a href="#" class="link_prototype1">Prototype 1 - IDE layout</a></li>
+        <li><a href="#" class="link_prototype2">Prototype 2 - Web layout</a></li>
+        <li><a href="#" class="link_prototype3">Prototype 3 - Mobile layout</a></li>
+    </ul>
+</template>

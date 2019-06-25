@@ -1,0 +1,9 @@
+<template name="tabs">
+    <div id="{{id}}" class="tabHeaders">
+        {{#each tabInfo in tabData}}
+            <button class="tabHeader" tabId="{{tabInfo.id}}">{{tabInfo.label}}</button>
+        {{/each}}
+    </div>
+    <div class="tabContent"></div>
+</template>
+
