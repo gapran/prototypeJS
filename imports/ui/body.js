@@ -15,6 +15,9 @@ import "./prototype2/prototype2.js";
 // Pages of prototype 3
 import "./prototype3/prototype3.js";
 
+// Pages of prototype 6
+import "./prototype6/prototype6.js";
+
 // Helper for navigation
 Template.body.helpers({
   templateName(){
@@ -40,6 +43,7 @@ Template.body.events({
   "click .link_prototype1_about"() {
      Session.set("templateName", "prototype1_about");
   },
+
   // ...
 
   // Navigation rules for prototype 2
@@ -50,6 +54,11 @@ Template.body.events({
   // Navigation rules for prototype 3
   "click .link_prototype3"() {
     Session.set("templateName", "prototype3");
+  },
+
+  // Navigation rules for prototype 3
+  "click .link_prototype6"() {
+    Session.set("templateName", "prototype6");
   }
 
 });

@@ -1,0 +1,22 @@
+/* IDE ( new ) container - Prototype 6 */
+
+.ide-new-container {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 1301px;
+    height: 551px;
+    align-content: center;
+    align-items: center;
+    background-image: url("ide_layout.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ide-new-sub-container {
+    position: absolute;
+    top: 33px;
+    width: 1301px;
+    height: 518px;
+}
