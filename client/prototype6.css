@@ -17,6 +17,61 @@
 .ide-new-sub-container {
     position: absolute;
     top: 33px;
-    width: 1301px;
+    width: 1298px;
     height: 518px;
+    left: 2px;
+}
+
+.button-text-right {
+    writing-mode: vertical-rl;
+}
+
+.button-text-left {
+    writing-mode: sideways-lr;
+}
+
+.btn-left-group button {
+    writing-mode:  sideways-lr;
+    background-color: #4053af; /*  background */
+    border: 1px solid #243780; /*  border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    height: 172px;
+    display: block; /* Make the buttons appear below each other */
+}
+
+.btn-right-group button {
+    writing-mode:  vertical-rl;
+    background-color: #4053af; /*  background */
+    border: 1px solid #243780; /*  border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    height: 172px;
+    display: block; /* Make the buttons appear below each other */
+}
+
+.btn-left-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-left-group button:hover {
+    background-color: #3d518e;
+}
+
+.btn-right-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-right-group button:hover {
+    background-color: #3d518e;
+}
+
+.right-button-section {
+    position: absolute;
+    top: 0;
+    right: 16px;
 }
