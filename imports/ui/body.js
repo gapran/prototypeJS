@@ -17,6 +17,8 @@ import "./prototype3/prototype3.js";
 
 // Pages of prototype 6
 import "./prototype6/prototype6.js";
+import "./prototype6/profile.js";
+
 
 // Helper for navigation
 Template.body.helpers({
@@ -59,6 +61,9 @@ Template.body.events({
   // Navigation rules for prototype 3
   "click .link_prototype6"() {
     Session.set("templateName", "prototype6");
+  },
+  "click .link_prototype6_profile"() {
+    Session.set("templateName", "prototype6_profile");
   }
 
 });
