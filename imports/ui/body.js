@@ -18,7 +18,11 @@ import "./prototype3/prototype3.js";
 // Pages of prototype 6
 import "./prototype6/prototype6.js";
 import "./prototype6/profile.js";
-
+import "./prototype6/activity.js";
+import "./prototype6/leader.js";
+import "./prototype6/project.js";
+import "./prototype6/settings.js";
+import "./prototype6/analysis.js";
 
 // Helper for navigation
 Template.body.helpers({
@@ -58,12 +62,27 @@ Template.body.events({
     Session.set("templateName", "prototype3");
   },
 
-  // Navigation rules for prototype 3
+  // Navigation rules for prototype 6
   "click .link_prototype6"() {
     Session.set("templateName", "prototype6");
   },
+  "click .link_prototype6_project"() {
+    Session.set("templateName", "prototype6_project");
+  },
+  "click .link_prototype6_analysis"() {
+    Session.set("templateName", "prototype6_analysis");
+  },
+  "click .link_prototype6_settings"() {
+    Session.set("templateName", "prototype6_settings");
+  },
   "click .link_prototype6_profile"() {
     Session.set("templateName", "prototype6_profile");
+  },
+  "click .link_prototype6_activity"() {
+    Session.set("templateName", "prototype6_activity");
+  },
+  "click .link_prototype6_leader"() {
+    Session.set("templateName", "prototype6_leader");
   }
 
 });
