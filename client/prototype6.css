@@ -15,11 +15,19 @@
 }
 
 .ide-new-sub-container {
-    position: absolute;
+    position: relative;
     top: 33px;
     width: 1298px;
     height: 518px;
     left: 2px;
+}
+
+.ide-mid-container {
+    position: fixed;
+    left:100px;
+    width: 1000px;
+    height: 500px;
+
 }
 
 .button-text-right {
