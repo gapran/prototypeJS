@@ -25,9 +25,16 @@
 .ide-mid-container {
     position: fixed;
     left:100px;
-    width: 1000px;
+    width: 1167px;
     height: 500px;
 
+}
+
+.table-section {
+
+    position: absolute;
+    width: 750px;
+    height: 300px;
 }
 
 .button-text-right {
@@ -81,5 +88,13 @@
 .right-button-section {
     position: absolute;
     top: 0;
+    right: 16px;
+}
+
+.filter-section {
+    width: 250px;
+    height: 700px;
+    position: absolute;
+    top: 2px;
     right: 16px;
 }
