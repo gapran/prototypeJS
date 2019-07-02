@@ -148,3 +148,18 @@
 .profile-form div + div {
     margin-top: 1em;
 }
+
+mark.red {
+    color:#ff0000;
+    background: none;
+}
+
+mark.blue {
+    color:#0000A0;
+    background: none;
+}
+
+mark.green {
+    color: #08a016;
+    background: none;
+}
