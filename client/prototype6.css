@@ -109,11 +109,11 @@
 }
 
 .image_inner_container{
-    border-radius: 50%;
+    border-radius: 15%;
     padding: 5px;
-    background: #833ab4;
-    background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
-    background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
+    background: #3049b4;
+    background: -webkit-linear-gradient(to bottom, #4053af, #4053af, #3049b4);
+    background: linear-gradient(to bottom, #4053af, #4053af, #3049b4);
 }
 .image_inner_container img{
     height: 200px;
@@ -135,7 +135,7 @@
 
 
 
-.profile-form {
+.prototype6-form {
     /* Just to center the form on the page */
     margin: 0 auto;
     width: 400px;
@@ -145,7 +145,7 @@
     border-radius: 1em;
 }
 
-.profile-form div + div {
+.prototype6-form div + div {
     margin-top: 1em;
 }
 
