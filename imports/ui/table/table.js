@@ -71,4 +71,10 @@ Template.table.events({
             }
         }
     },
+    "click td"(e, template) {
+        if(typeof template.data.callbacks !== "undefined" &&
+            typeof template.data.callbacks.cellClickCallback !== "undefined"){
+            template.data.callbacks.cellClickCallback.call(e.target);
+        }
+    },
 });

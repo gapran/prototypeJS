@@ -56,6 +56,17 @@ Template.prototype1.helpers({
     ],
     // From the Mongo database. Results should be accessed with result.id
     resultsTableData: Projects.find({}),
+    // Alert callback: on click on a cell.
+    alertCallback(cell) {
+        alert("Click event on cell " + cell);
+    },
+    tableCallbacks(){
+        return {
+            cellClickCallback(){
+                alert("Clicked on cell: " + this.innerText);
+            }
+        };
+    },
 
     // Filter data
     // Ids on which to filter from a table. Must match the ones in resultsTableColumns
