@@ -24,9 +24,9 @@
 
 .ide-mid-container {
     position: absolute;
-    left:100px;
-    width: 1100px;
-    height: 500px;
+    left: 68px;
+    width: 1163px;
+    height: 515px;
 
 }
 
@@ -133,6 +133,8 @@
     border-radius: 50%;
 }
 
+
+
 .profile-form {
     /* Just to center the form on the page */
     margin: 0 auto;
@@ -145,31 +147,4 @@
 
 .profile-form div + div {
     margin-top: 1em;
-}
-
-label {
-    /* To make sure that all labels have the same size and are properly aligned */
-    display: inline-block;
-    width: 90px;
-    text-align: right;
-}
-
-input, textarea {
-    /* To make sure that all text fields have the same font settings
-       By default, textareas have a monospace font */
-    font: 1em sans-serif;
-
-    /* To give the same size to all text fields */
-    width: 300px;
-    box-sizing: border-box;
-
-    border: none;
-}
-
-textarea {
-    /* To properly align multiline text fields with their labels */
-    vertical-align: top;
-
-    /* To give enough room to type some text */
-    height: 5em;
 }
