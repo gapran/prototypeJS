@@ -9,6 +9,9 @@ import "../progressBar/progressBar.js";
 import "../table/table.html";
 import "../table/table.js";
 
+import "../chat/chat.html";
+import "../chat/chat.js";
+
 import "../charts/Chart.js";
 import "../charts/barChart.html";
 import "../charts/barChart.js";
