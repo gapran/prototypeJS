@@ -63,6 +63,7 @@
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
+    /*position: fixed;*/
     height: 172px;
     display: block; /* Make the buttons appear below each other */
 }
@@ -88,7 +89,8 @@
 .right-button-section {
     position: absolute;
     top: 0;
-    right: 16px;
+    width: 66px;
+    right: 0px;
 }
 
 .filter-section {
@@ -163,3 +165,6 @@ mark.green {
     color: #08a016;
     background: none;
 }
+
+
+
