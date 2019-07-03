@@ -161,81 +161,81 @@ tr:nth-child(even) {
 }
 
 .filterValue {
-  margin-left: 30px;
+    margin-left: 30px;
 }
 
 /* Web container */
 
 .web-container {
-  margin: 0 auto;
-  position: relative;
-  width: 1331px;
-  height: 762px;
-  align-content: center;
-  align-items: center;
-  background: url('web.png') no-repeat;
+    margin: 0 auto;
+    position: relative;
+    width: 1331px;
+    height: 762px;
+    align-content: center;
+    align-items: center;
+    background: url('web.png') no-repeat;
 }
 
 .web-sub-container {
-  position: absolute;
-  top: 60px;
-  right: 1px;
-  width: 1328px;
-  height: 650px;
-  margin-left: 125px;
-  margin-top: 50px;
-  align-content: center;
-  align-items: center;
-  overflow: auto;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+    width: 1328px;
+    height: 650px;
+    margin-left: 125px;
+    margin-top: 50px;
+    align-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 /* Mobile container */
 
 .mobile-container {
-  padding-top: 5px;
-  height: 1024px;
-  align-content: left;
-  align-items: left;
-  background:url('mobileimage.jpg') no-repeat;
+    padding-top: 5px;
+    height: 1024px;
+    align-content: left;
+    align-items: left;
+    background: url('mobileimage.jpg') no-repeat;
 }
 
 .mobile-sub-container {
-  margin-left: 225px;
-  margin-top: 80px;
-  height: 620px;
-  width: 350px;
-  overflow: auto;
+    margin-left: 225px;
+    margin-top: 80px;
+    height: 620px;
+    width: 350px;
+    overflow: auto;
 }
 
 /* IDE container */
 
 .ide-container {
-  margin: 0 auto;
-  width: 1450px;
-  height: 600px;
-  align-content: center;
-  align-items: center;
-  background-image: url("ide_layout.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+    margin: 0 auto;
+    width: 1450px;
+    height: 600px;
+    align-content: center;
+    align-items: center;
+    background-image: url("ide_layout.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .ide-sub-container {
-  position: absolute;
-  margin-top: 27px;
-  width: 1445px;
-  height: 570px;
-  overflow: auto;
+    position: absolute;
+    margin-top: 27px;
+    width: 1445px;
+    height: 570px;
+    overflow: auto;
 }
 
 /* Chat */
 
-{box-sizing: border-box;}
+* {box-sizing: border-box;}
 
 /* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
-    background-color: #555;
+    background-color: #4053af;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -248,7 +248,7 @@ tr:nth-child(even) {
 }
 
 /* The popup chat - hidden by default */
-.form-popup {
+.chat-popup {
     display: none;
     position: fixed;
     bottom: 0;
@@ -281,7 +281,7 @@ tr:nth-child(even) {
     outline: none;
 }
 
-/* Set a style for the submit/login button */
+/* Set a style for the submit/send button */
 .form-container .btn {
     background-color: #4CAF50;
     color: white;
@@ -289,7 +289,7 @@ tr:nth-child(even) {
     border: none;
     cursor: pointer;
     width: 100%;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     opacity: 0.8;
 }
 
