@@ -1,7 +1,6 @@
 <template name="prototype1">
     <div class="ide-container">
         <div class="ide-sub-container">
-
             <div class="section1">
 
                 <div class="imageComponent">
@@ -42,13 +41,13 @@
                     </div>
 
                 </div>
-
             </div>
 
             <div class="section3">
                 {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
+                <br />
+                {{> chat id="chat" }}
             </div>
-
         </div>
     </div>
 </template>

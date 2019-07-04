@@ -1,0 +1,11 @@
+<template name="chat">
+    <table class="chat-template" style="{{style}}">
+        <thead><tr><td>Chat</td></tr></thead>
+        <tr><td class="chat-container">
+            <b>To: </b><input type="text" name="toname" />
+            <div class="discussion" id="{{id}}"></div>
+            <textarea placeholder="Type a message..." name="chatmessage"></textarea>
+            <button class="send">Send</button>
+        </td></tr>
+    </table>
+</template>
