@@ -1,19 +1,11 @@
 <template name="chat">
-
-    <button class="open-button">Chat</button>
-
-    <div class="chat-popup" id="chatForm" style="display: none">
-        <form class="form-container">
-            <h1>Chat</h1>
-            <label for="toname"><b>To:</b></label>
-            <input type="text" id="toname" name="toname" placeholder="Teammate Name" required>
-            <br><br>
-            <label for="chatmessage"><b>Message</b></label>
-            <textarea placeholder="Type message..." name="chatmessage" required></textarea>
-
-            <button type="submit" class="btn">Send</button>
-            <button type="button" class="btn cancel">Close</button>
-        </form>
-    </div>
-
+    <table class="chat-template" style="{{style}}">
+        <thead><tr><td>Chat</td></tr></thead>
+        <tr><td class="chat-container">
+            <b>To: </b><input type="text" name="toname" />
+            <div class="discussion" id="{{id}}"></div>
+            <textarea placeholder="Type a message..." name="chatmessage"></textarea>
+            <button class="send">Send</button>
+        </td></tr>
+    </table>
 </template>
