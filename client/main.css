@@ -230,6 +230,8 @@ tr:nth-child(even) {
 }
 
 /* Chat */
+/* Reference: https://www.w3schools.com/howto/howto_js_popup_chat.asp under Fair Use. */
+
 
 * {box-sizing: border-box;}
 
