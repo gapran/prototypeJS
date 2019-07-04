@@ -5,7 +5,7 @@ function chat(textarea, inputElement, discussionElement) {
         inputElement.className += " missingFormData";
     } else {
         inputElement.className = inputElement.className.replace(" missingFormData", "");
-        var text = textarea.value.replace(/<[^>]*>?/gm, '').replace(/(\r\n|\n|\r)/gm, "");
+        var text = textarea.value.replace(/<[^>]*>?/gm, "").replace(/(\r\n|\n|\r)/gm, "");
         if(text !== ""){
             discussionElement.innerHTML += "<br /> &gt; " + text;
         }
@@ -21,7 +21,7 @@ Template.chat.events({
             document.getElementById(template.data.id));
     },
 
-    'keypress textarea': function (e, template) {
+    "keypress textarea"(e, template) {
         if (e.which === 13) {
             chat(e.target,
                 e.target.parentElement.getElementsByTagName("INPUT")[0],
