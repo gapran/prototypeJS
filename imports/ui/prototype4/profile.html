@@ -1,0 +1,46 @@
+<template name="profile" >
+            <div class="mobile-container" >
+                <div class="mobile-sub-container">
+                    <div class="demo" style="background-color:white">
+                        <div>
+                            <button id ="backbtn" style="margin-left: 140px;" class="backbtn">back</button>
+                        </div>
+        
+                        <div id="profileDiv" style="width: 170px; padding-left: 106px;">
+                            <div class="imageComponent">
+                                    {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
+                                </div>
+                
+                                <div class="progressComponent">
+                                    {{> progressBar id="progressBar" min="0" max="100" val="30"}}
+                                </div>
+        
+                                <div class="section2" style="margin-left: -97px;">
+                                        <div id="tabComponents">
+                                            <div>
+                                                <br/>
+                                                {{> tabs id="bottomTabs" defaultTab="tabCategorize" tabData=bottomTabData }}
+                                                <div class="tabElement" id="tabAnalyze">
+                                                    <div class="demo" style="background-color: red;"></div>
+                                                </div>
+                                                <div class="tabElement" id="tabCategorize">
+                                                    <div class="demo" style="background-color: blue;"></div>
+                                                </div>
+                                                <div class="tabElement" id="tabHighlights">
+                                                    <div class="demo" style="background-color: green;"></div>
+                                                </div>
+                                                <div class="tabElement" id="tabMonitorVisualize">
+                                                    <div>
+                                                        {{> barChart id="proficiencyBarChart" title="Proficiency Level" data=proficiencyBarChartData style="height:200px; min-height:200px; max-height:200px;"}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                </div>
+            </div>
+        </template>

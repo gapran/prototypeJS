@@ -14,6 +14,8 @@ import "./prototype2/prototype2.js";
 // ...
 // Pages of prototype 3
 import "./prototype3/prototype3.js";
+// Pages of prototype 4
+import "./prototype4/prototype4.js";
 
 // Helper for navigation
 Template.body.helpers({
@@ -50,6 +52,9 @@ Template.body.events({
   // Navigation rules for prototype 3
   "click .link_prototype3"() {
     Session.set("templateName", "prototype3");
+  },
+  // Navigation rules for prototype 4
+  "click .link_prototype4"() {
+    Session.set("templateName", "prototype4");
   }
-
 });

@@ -1,0 +1,19 @@
+<template name="project" >
+        <div class="mobile-container" >
+            <div class="mobile-sub-container">
+                <div class="demo" style="background-color:black">
+                    
+                    <div class="TBL">
+                        {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData callbacks=tableCallbacks }}
+                    </div>
+
+                    <div >
+                        {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
+                        <br />
+                    </div>
+
+                </div>
+                    
+            </div>
+        </div>
+    </template>
