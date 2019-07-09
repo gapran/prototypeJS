@@ -1,5 +1,6 @@
 @import "prototype1.css";
 
+
 body {
     background: whitesmoke;
     color: rgb(0, 0, 0);
@@ -264,4 +265,72 @@ tr:nth-child(even) {
 
 .missingFormData {
     border: red 2px solid;
+}
+
+/* Code editor */
+
+.editorContainer{
+    max-height:500px;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.codeEditor {
+    border: 1px solid black;
+    text-align: left;
+    padding: none;
+}
+
+.codeEditor pre{
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+.codeEditor tr {
+    background: white;
+    height: 23px;
+}
+
+.codeEditor td {
+    border-top: none;
+    border-bottom: none;
+}
+
+.warningCell {
+    text-align: right;
+    background-color: #DCDCDC;
+    color: #696969;
+}
+
+.lineNumberCell {
+    background-color: #DCDCDC;
+    color: #696969;
+}
+
+.codeEditor .warningIcon {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    margin: 1px;
+}
+
+.codeEditor .warning {
+    background-image: url("warning.png");
+}
+
+.codeEditor .info {
+    background-image: url("info.png");
+}
+
+.codeEditor .error {
+    background-image: url("error.png");
+}
+
+.editorKeyword {
+    font-weight: bold;
+    color: #0000A0;
 }

@@ -25,7 +25,25 @@ import "../image/image.js";
 import "../filter/filter.html";
 import "../filter/filter.js";
 
+import "../codeEditor/codeEditor.html";
+import "../codeEditor/codeEditor.js";
+
 import "./prototype1.html";
+
+// Read file from the public folder.
+// https://github.com/CollectionFS/Meteor-CollectionFS/issues/320#issuecomment-43817349
+function getTextFromFile (url) {
+    var text;
+    $.ajax({
+        async: false,
+        type: 'GET',
+        url: url,
+        success(data) {
+            text = data;
+        }
+    });
+    return text.split("\n");
+}
 
 // Prototype 1
 
@@ -73,7 +91,16 @@ Template.prototype1.helpers({
 
     // Filter data
     // Ids on which to filter from a table. Must match the ones in resultsTableColumns
-    filterIds: ["status", "progress"]
+    filterIds: ["status", "progress"],
 
+    // ABCOptions editor data
+    fileContents: getTextFromFile("ABCOptions.java"),
+    warnings: [
+        {lineNumber: 2, type:"error", description: "Warning 2"},
+        {lineNumber: 5, type:"error", description: "Warning 5.1"},
+        {lineNumber: 5, type:"info", description: "Warning 5.2"},
+        {lineNumber: 5, type:"error", description: "Warning 5.3"},
+        {lineNumber: 22, type:"warning", description: "Warning 22"},
+    ]
 });
 
