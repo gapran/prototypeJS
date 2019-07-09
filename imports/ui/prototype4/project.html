@@ -2,13 +2,12 @@
         <div class="mobile-container" >
             <div class="mobile-sub-container">
                 <div class="demo" style="background-color:black">
-                    
                     <div class="TBL">
-                        {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData callbacks=tableCallbacks }}
+                        {{> table id="resultsTable1" columns=resultsTableColumns1 data=resultsTableData1 callbacks=tableCallbacks }}
                     </div>
 
                     <div >
-                        {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
+                        {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns1 tableData=resultsTableData1}}
                         <br />
                     </div>
 

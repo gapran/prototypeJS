@@ -48,20 +48,7 @@ Template.prototype4.helpers({
         {label: "Monitor & Visualize", id: "tabMonitorVisualize"}
     ],
 
-    // Table data
-    resultsTableColumns: [
-        // Label for the table header, and id of the column in the database
-        {label: "Warning", id: "name"},
-        {label: "Status", id:"status"},
-        {label: "Progress", id:"progress"}
-    ],
-
-    // From the Mongo database. Results should be accessed with result.id
-    resultsTableData: Projects.find({}),
-
-    // Filter data
-    // Ids on which to filter from a table. Must match the ones in resultsTableColumns
-    filterIds: ["status", "progress"]
+  
 
 });
 
