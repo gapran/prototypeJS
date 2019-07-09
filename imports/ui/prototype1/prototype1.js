@@ -1,7 +1,7 @@
 // Libraries
 
 import {Projects} from "../../api/projects.js";
-import {getTextFromFile} from "../../api/files.js"
+import {getTextFromFile} from "../../api/files.js";
 import {Template} from "meteor/templating";
 
 import "../progressBar/progressBar.html";
@@ -87,6 +87,13 @@ Template.prototype1.helpers({
         {lineNumber: 5, type:"info", description: "Warning 5.2"},
         {lineNumber: 5, type:"error", description: "Warning 5.3"},
         {lineNumber: 22, type:"warning", description: "Warning 22"},
-    ]
+    ],
+    codeEditorCallbacks(){
+        return {
+            iconClickCallback(){
+                alert("Clicked on icon: " + this.getAttribute("title"));
+            }
+        };
+    },
 });
 

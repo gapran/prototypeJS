@@ -25,9 +25,20 @@ Template.codeEditor.helpers({
         var warningString = "";
         var type;
         for (type in warningMap) {
-            warningString += "<span class=\" warningIcon " + type+
-                "\" title=\""+ warningMap[type] +"\"></span>";
+            if (warningMap.hasOwnProperty(type)) {
+                warningString += "<span class=\" warningIcon " + type+
+                    "\" title=\""+ warningMap[type] +"\"></span>";
+            }
         }
         return warningString;
     }
+});
+
+Template.codeEditor.events({
+    "click .warningIcon"(e, template) {
+        if(typeof template.data.callbacks !== "undefined" &&
+            typeof template.data.callbacks.iconClickCallback !== "undefined"){
+            template.data.callbacks.iconClickCallback.call(e.target);
+        }
+    },
 });
