@@ -1,6 +1,7 @@
 // Libraries
 
 import {Projects} from "../../api/projects.js";
+import {getTextFromFile} from "../../api/files.js"
 import {Template} from "meteor/templating";
 
 import "../progressBar/progressBar.html";
@@ -29,21 +30,6 @@ import "../codeEditor/codeEditor.html";
 import "../codeEditor/codeEditor.js";
 
 import "./prototype1.html";
-
-// Read file from the public folder.
-// https://github.com/CollectionFS/Meteor-CollectionFS/issues/320#issuecomment-43817349
-function getTextFromFile (url) {
-    var text;
-    $.ajax({
-        async: false,
-        type: 'GET',
-        url: url,
-        success(data) {
-            text = data;
-        }
-    });
-    return text.split("\n");
-}
 
 // Prototype 1
 
