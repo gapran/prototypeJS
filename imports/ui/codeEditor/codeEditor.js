@@ -17,7 +17,7 @@ function getNumPos(txt, func) {
       for (j = 0; j < arr.length; j++) {
         c = txt.substr(i, arr[j].length);
         if (c === arr[j]) {
-          if (c === "-" && (txt.substr(i - 1, 1) == "e" || txt.substr(i - 1, 1) === "E")) {
+          if (c === "-" && (txt.substr(i - 1, 1) === "e" || txt.substr(i - 1, 1) === "E")) {
             continue;
           }
           endpos = i;
