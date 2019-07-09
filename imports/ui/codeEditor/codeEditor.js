@@ -186,6 +186,27 @@ Template.codeEditor.helpers({
       return javaMode(text);
     },
 
+    getWarningIcons(index){
+        var warningMap = {};
+        var i;
+        for(i = 0; i < this.warnings.length; i++) {
+            var warning = this.warnings[i];
+            if(warning.lineNumber === index+1) {
+                warningMap[warning.type] = warningMap[warning.type] || [];
+                warningMap[warning.type].push(warning.id);
+            }
+        }
+
+        var icons = [];
+        var type;
+        for (type in warningMap) {
+            if (warningMap.hasOwnProperty(type)) {
+                icons.push({type:type, ids:warningMap[type]});
+            }
+        }
+        return icons;
+    },
+
     addWarnings(index) {
         // Merge warning of the same type together.
         var warningMap = {};
@@ -215,11 +236,21 @@ Template.codeEditor.helpers({
     }
 });
 
-Template.codeEditor.events({
-    "click .warningIcon"(e, template) {
+Template.warningIcon.helpers({
+    tooltipCallback() {
+        if(typeof this.callbacks !== "undefined" &&
+            typeof this.callbacks.iconTooltipCallback !== "undefined"){
+            return this.callbacks.iconTooltipCallback.call(this);
+        }
+        return this.type;
+    }
+});
+
+Template.warningIcon.events({
+    "click"(e, template) {
         if(typeof template.data.callbacks !== "undefined" &&
             typeof template.data.callbacks.iconClickCallback !== "undefined"){
-            template.data.callbacks.iconClickCallback.call(e.target);
+            template.data.callbacks.iconClickCallback.call({elem: e.target, data: template.data});
         }
     },
 });

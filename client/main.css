@@ -173,7 +173,7 @@ tr:nth-child(even) {
     height: 762px;
     align-content: center;
     align-items: center;
-    background: url('web.png') no-repeat;
+    background: url('backgrounds/web.png') no-repeat;
 }
 
 .web-sub-container {
@@ -196,7 +196,7 @@ tr:nth-child(even) {
     height: 1024px;
     align-content: left;
     align-items: left;
-    background: url('mobileimage.jpg') no-repeat;
+    background: url('backgrounds/mobileimage.jpg') no-repeat;
 }
 
 .mobile-sub-container {
@@ -215,7 +215,7 @@ tr:nth-child(even) {
     height: 600px;
     align-content: center;
     align-items: center;
-    background-image: url("ide_layout.png");
+    background-image: url("backgrounds/ide_layout.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -272,6 +272,7 @@ tr:nth-child(even) {
     max-height:500px;
     overflow: auto;
     border: 1px solid black;
+    position: relative;
 }
 
 .codeEditor {
@@ -316,22 +317,42 @@ tr:nth-child(even) {
     background-size: 100%;
     background-repeat: no-repeat;
     cursor:pointer;
-    margin: 1px;
+    margin-left: -2px;
+    padding: 0;
 }
 
 .codeEditor .warning {
-    background-image: url("warning.png");
+    background-image: url("icons/warning.png");
 }
 
 .codeEditor .info {
-    background-image: url("info.png");
+    background-image: url("icons/info.png");
 }
 
 .codeEditor .error {
-    background-image: url("error.png");
+    background-image: url("icons/error.png");
 }
 
-.editorKeyword {
-    font-weight: bold;
-    color: #0000A0;
+.codeEditorWarningInfo {
+    min-width: 300px;
+    max-width: 800px;
+    max-height: 300px;
+    border: gray solid 1px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    display: none;
+    padding: 10px;
+    position: absolute;
+}
+
+.close {
+    width: 17px;
+    height: 17px;
+    float: right;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    padding: 0;
+    background-image: url("icons/close.png");
 }
