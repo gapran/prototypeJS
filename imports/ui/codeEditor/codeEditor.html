@@ -5,7 +5,7 @@
                 <tr>
                     <td class="warningCell">{{{addWarnings @index}}}</td>
                     <td class="lineNumberCell">{{inc @index}}</td>
-                    <td class="editorCell"><pre>{{line}}</pre></td>
+                    <td class="editorCell"><pre>{{{syntaxHighlighting line}}}</pre></td>
                 </tr>
             {{/each}}
         </table>
