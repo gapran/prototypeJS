@@ -33,6 +33,16 @@ import "./prototype1.html";
 
 // Prototype 1
 
+function getDetailedWarningsInfo(ids){
+    var info = ids.length + " warning" + (ids.length === 1 ? "" : "s") + ":";
+    var i;
+    for(i = 0; i<ids.length; i++){
+        // TODO(rashmi): retrieve detailed warning info from database.
+        info += "\n- " + ids[i];
+    }
+    return info;
+}
+
 Template.prototype1.helpers({
 
     // Bar chart data
@@ -80,20 +90,49 @@ Template.prototype1.helpers({
     filterIds: ["status", "progress"],
 
     // ABCOptions editor data
-    fileContents: getTextFromFile("ABCOptions.java"),
+    fileContents: getTextFromFile("code/ABCOptions.java"),
     warnings: [
-        {lineNumber: 2, type:"error", description: "Warning 2"},
-        {lineNumber: 5, type:"error", description: "Warning 5.1"},
-        {lineNumber: 5, type:"info", description: "Warning 5.2"},
-        {lineNumber: 5, type:"error", description: "Warning 5.3"},
-        {lineNumber: 22, type:"warning", description: "Warning 22"},
+        // TODO(rashmi): retrieve list of warnings from database.
+        {id:"1234", lineNumber: 2, type:"error"},
+        {id:"6783", lineNumber: 5, type:"error"},
+        {id:"1209", lineNumber: 5, type:"info"},
+        {id:"3497", lineNumber: 5, type:"error"},
+        {id:"1011", lineNumber: 22, type:"warning"},
     ],
     codeEditorCallbacks(){
         return {
             iconClickCallback(){
-                alert("Clicked on icon: " + this.getAttribute("title"));
+                // Position of the icon.
+                var warningInfoElem = document.getElementById("ABCOptionsCodeEditorWarningInfo");
+                var xElem = this.elem.getBoundingClientRect().left;
+                var yElem = this.elem.getBoundingClientRect().top;
+                var wElem = this.elem.offsetWidth;
+
+                // Position of the editor.
+                var editorElem = document.getElementById("ABCOptionsCodeEditor");
+                var xEdit = editorElem.getBoundingClientRect().left;
+                var yEdit = editorElem.getBoundingClientRect().top;
+
+                // Put warningInfo popup at the correct position.
+                warningInfoElem.style.display = "block";
+                warningInfoElem.style.left = (xElem-xEdit+wElem)+"px";
+                warningInfoElem.style.top = (yElem-yEdit+20)+"px";
+
+                // Add warning data to warningInfo popup.
+                var textElem = warningInfoElem.getElementsByTagName("DIV")[0];
+                textElem.innerText = getDetailedWarningsInfo(this.data.ids);
+            },
+            iconTooltipCallback(){
+                // TODO(rashmi): retrieve basic warning info from database.
+                return "Tooltip for " + this.ids;
             }
         };
+    }
+});
+
+Template.prototype1.events({
+    "click .close"(e) {
+        e.target.parentElement.style.display = "none";
     },
 });
 
