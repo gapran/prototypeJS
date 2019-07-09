@@ -1,0 +1,13 @@
+<template name = "codeEditor">
+    <div class="editorContainer" style="{{style}}">
+        <table id="{{id}}" class="codeEditor">
+            {{#each line in fileContents}}
+                <tr>
+                    <td class="warningCell">{{{addWarnings @index}}}</td>
+                    <td class="lineNumberCell">{{inc @index}}</td>
+                    <td class="editorCell"><pre>{{line}}</pre></td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</template>

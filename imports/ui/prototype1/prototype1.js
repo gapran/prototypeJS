@@ -1,6 +1,7 @@
 // Libraries
 
 import {Projects} from "../../api/projects.js";
+import {getTextFromFile} from "../../api/files.js";
 import {Template} from "meteor/templating";
 
 import "../progressBar/progressBar.html";
@@ -24,6 +25,9 @@ import "../image/image.js";
 
 import "../filter/filter.html";
 import "../filter/filter.js";
+
+import "../codeEditor/codeEditor.html";
+import "../codeEditor/codeEditor.js";
 
 import "./prototype1.html";
 
@@ -73,7 +77,23 @@ Template.prototype1.helpers({
 
     // Filter data
     // Ids on which to filter from a table. Must match the ones in resultsTableColumns
-    filterIds: ["status", "progress"]
+    filterIds: ["status", "progress"],
 
+    // ABCOptions editor data
+    fileContents: getTextFromFile("ABCOptions.java"),
+    warnings: [
+        {lineNumber: 2, type:"error", description: "Warning 2"},
+        {lineNumber: 5, type:"error", description: "Warning 5.1"},
+        {lineNumber: 5, type:"info", description: "Warning 5.2"},
+        {lineNumber: 5, type:"error", description: "Warning 5.3"},
+        {lineNumber: 22, type:"warning", description: "Warning 22"},
+    ],
+    codeEditorCallbacks(){
+        return {
+            iconClickCallback(){
+                alert("Clicked on icon: " + this.getAttribute("title"));
+            }
+        };
+    },
 });
 
