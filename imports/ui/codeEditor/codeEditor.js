@@ -201,7 +201,7 @@ Template.codeEditor.helpers({
         var type;
         for (type in warningMap) {
             if (warningMap.hasOwnProperty(type)) {
-                icons.push({type:type, ids:warningMap[type]});
+                icons.push({type, ids:warningMap[type]});
             }
         }
         return icons;
