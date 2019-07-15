@@ -1,0 +1,31 @@
+<template name="loginPage">
+    <div class="web-container">
+        <div class="web-sub-container">
+
+            <div class="logo">
+                        {{> badge id="icon" img="/Capture.PNG" alt="Icon" title="This is hover for icon." label=""}}
+            </div>
+
+            <div class="loginheader">
+                    <h1>Gamification of Program Analysis</h1>
+            </div>
+            <div class="loginBlock">
+                <form >
+                        <div class="imgAvatar">
+                            {{> badge id="icon" img="/Avatar.PNG" alt="Avatar" title="This is hover for Avatar." label=""}}
+                        </div>
+            
+                        <div class="logincontainer">
+                          <label for="uname"><b>Username</b></label>
+                          <input type="text" placeholder="Enter Username" name="uname">
+            
+                          <label for="psw"><b>Password</b></label>
+                          <input type="password" placeholder="Enter Password" name="psw">
+            
+                          <button class="loginbutton" type="submit">Login</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,34 @@
+<template name="categorize1">
+    <div class="web-container">
+        <div class="web-sub-container">
+    
+            <div class="header">
+                <div class="titleheaderfor7">
+                    <h1>Gamification of Program Analysis</h1>
+                </div>
+        
+                <div class="sidenav">
+                    <div class="logofor7">
+                        <a href="#default">{{> badge id="icon" img="/Capture.PNG" alt="Icon" title="This is hover for icon." label=""}}</a>
+                    </div>
+                    <a href="#" class="link_profile1">Profile</a>
+                    <a href="#" class="link_editor1">Editor</a>
+                    <a class="active" href="#">Categorize</a>
+                    <a href="#" class="link_highlights1">Highlights</a>
+                    <a href="#" class="link_visualize1">Visualize</a>
+                </div>
+            </div>
+    
+            <div class="newbodysection">
+                <div class="table">
+                    {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData }}
+                </div>
+
+                <div class="filter">
+                    {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</template>

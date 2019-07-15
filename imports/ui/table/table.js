@@ -1,4 +1,4 @@
-import { Template } from "meteor/templating";
+import {Template} from "meteor/templating";
 
 /* Sorts the table based on selected table header column value
 * @param columnNumber - The column number in a table.

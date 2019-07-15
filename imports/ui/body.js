@@ -1,7 +1,7 @@
 import "../api/templates.js";
 import "./body.html";
 
-import { Template } from "meteor/templating";
+import {Template} from "meteor/templating";
 import { Meteor } from "meteor/meteor";
 import { Session } from "meteor/session";
 
@@ -28,6 +28,12 @@ import "./prototype6/categorize.js";
 import "./prototype6/highlights.js";
 import "./prototype6/visualize.js";
 
+// Pages of prototype 7
+import "./prototype7/prototype7.js";
+import "./prototype7/editor.js";
+import "./prototype7/categorize.js";
+import "./prototype7/highlights.js";
+import "./prototype7/visualize.js";
 
 // Helper for navigation
 Template.body.helpers({
@@ -77,7 +83,7 @@ Template.body.events({
   //   Session.set("templateName", "prototype5");
   // },
 
-  // Navigation rules for prototype 5
+  // Navigation rules for prototype 6
   "click .link_prototype6"() {
     Session.set("templateName", "loginPage");
   },
@@ -99,5 +105,25 @@ Template.body.events({
   "click .link_profile"() {
     Session.set("templateName", "prototype6");
   },
+
+  // Navigation rules for prototype 7
+  "click .link_prototype7"() {
+    Session.set("templateName", "prototype7");
+  },
+  "click .link_editor1"() {
+    Session.set("templateName", "editor1");
+  },
+  "click .link_categorize1"() {
+    Session.set("templateName", "categorize1");
+  },
+  "click .link_highlights1"() {
+    Session.set("templateName", "highlights1");
+  },
+  "click .link_visualize1"() {
+    Session.set("templateName", "visualize1");
+  },
+  "click .link_profile1"() {
+    Session.set("templateName", "prototype7");
+  }
 
 });
