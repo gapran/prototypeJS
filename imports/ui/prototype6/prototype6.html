@@ -1,0 +1,49 @@
+<template name="prototype6">
+    <div class="web-container">
+        <div class="web-sub-container">
+
+            <div class="header">
+                <a href="#default" class="logo">{{> badge id="icon" img="/Capture.PNG" alt="Icon" title="This is hover for icon." label=""}}</a>
+
+                <div class="titleheader">
+                    <h1>Gamification of Program Analysis</h1>
+                </div>
+
+                <div class="header-right">
+                  <a class="active" href="#">Profile</a>
+                  <a href="#" class="link_editor">Editor</a>
+                  <a href="#" class="link_categorize">Categorize</a>
+                  <a href="#" class="link_highlights">Highlights</a>
+                  <a href="#" class="link_visualize">Visualize</a>
+                </div>
+            </div>
+
+            <div class="bodysection">
+
+                <div class="imageComponent">
+                    {{> badge id="levelImg" img="/Avatar.PNG" alt="Badge Level 1" title="This is hover for badge 1." label=""}}
+                </div>
+                                &nbsp;&nbsp;
+                <div class="imageStars">
+                    {{> badge id="level" img="/stars.jpg" alt="" title="" label=""}}
+                </div>
+                <div class="info">
+                    <h2>Name: <mark class="red">Haseeb Ahmad</mark></h2>
+                    <h2>Designation: <mark class="blue">Developer</mark></h2>
+                    <h2>Rank: <mark class="green">Bronze</mark></h2>
+                </div>
+
+                <div class="imgcontainer">
+                    {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
+                </div>
+
+                <div class="progress">
+                        <h1>Progress</h1>
+                    {{> progressBar id="progressBar" min="0" max="100" val="30"}}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</template>

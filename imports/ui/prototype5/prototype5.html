@@ -5,48 +5,78 @@
             <div class="section1">
 
                 <div class="imageComponent">
-                    {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
+                    {{> badge id="levelImg" img="/Avatar.PNG" alt="Badge Level 1" title="This is hover for badge 1." label=""}}
+                </div>
+                &nbsp;&nbsp;
+                <div class="imageStars">
+                        {{> badge id="level" img="/stars.jpg" alt="" title="" label=""}}
                 </div>
 
-                <div class="progressComponent">
-                    {{> progressBar id="progressBar" min="0" max="100" val="30"}}
-                </div>
-
-                <a href="#" class="link_prototype5_about">About page</a>
+                <h3>Name: <mark class="red">Haseeb Ahmad</mark></h3>
+                <h3>Designation: <mark class="blue">Developer</mark></h3>
+                <h3>Rank: <mark class="green">Bronze</mark></h3>
 
             </div>
 
             <div class="section2">
-                <div class="TBL">
-                    {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData }}
-                </div>
-                <div id="tabComponents">
-                    <div>
-                        <br/>
+                    <div class="mainTab">
                         {{> tabs id="bottomTabs" defaultTab="tabCategorize" tabData=bottomTabData }}
                         <!-- Invisible components that are needed in the tabs -->
+                        <div class="tabElement" id="profile">
+
+                            <div class="imgcontainer">
+                                {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
+                            </div>
+
+                            <div class="progress">
+                                    {{> progressBar id="progressBar" min="0" max="100" val="30"}}
+                            </div>
+                
+                            <ul class="achievement">
+                                <h1>Achivements:</h1>
+                                &nbsp;&nbsp;
+                                {{> badge id="achievement" img="/Achievement1.png" alt="Achievement1" title="This is hover for Achievement 1" label=""}}
+                                &nbsp;&nbsp;
+                                {{> badge id="achievement" img="/Achievement2.png" alt="Achievement2" title="This is hover for Achievement 2" label=""}}
+                                &nbsp;&nbsp;
+                                {{> badge id="achievement" img="/Achievement3.png" alt="Achievement3" title="This is hover for Achievement 3" label=""}}
+                                &nbsp;&nbsp;
+                                {{> badge id="achievement" img="/Achievement4.png" alt="Achievement4" title="This is hover for Achievement 4" label=""}}
+                            </ul>    
+                        </div>
                         <div class="tabElement" id="tabAnalyze">
-                            <div class="demo" style="background-color: red;"></div>
+                            <div class="demo">
+                                    <img src="code.jpg">
+                            </div>
                         </div>
                         <div class="tabElement" id="tabCategorize">
-                            <div class="demo" style="background-color: blue;"></div>
+                            <div class="table">
+                                {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData }}
+                            </div>
+                            <div class="filter">
+                                {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
+                            </div>
                         </div>
                         <div class="tabElement" id="tabHighlights">
-                            <div class="demo" style="background-color: green;"></div>
+                            <h2>Total Bugs:200</h2>
+                            <br>
+                            <h2>Fixed Bugs:30</h2>
+                            <div class="progressHighlights">
+                                {{> progressBar id="progressBar" min="0" max="100" val="15"}}
+                            </div>
+                            <br>
+                            <h2>Remaining Bugs:170</h2>
+                            <div class="progressHighlights">
+                                {{> progressBar id="progressBar" min="0" max="100" val="85"}}
+                            </div>
                         </div>
+
                         <div class="tabElement" id="tabMonitorVisualize">
                             <div>
                                 {{> barChart id="proficiencyBarChart" title="Proficiency Level" data=proficiencyBarChartData style="height:200px; min-height:200px; max-height:200px;"}}
                             </div>
                         </div>
                     </div>
-
-                </div>
-
-            </div>
-
-            <div class="section3">
-                {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
             </div>
 
         </div>

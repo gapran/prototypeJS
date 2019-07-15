@@ -24,7 +24,7 @@ import "../filter/filter.js";
 
 import "./prototype5.html";
 
-// Prototype 1
+// Prototype 5
 
 Template.prototype5.helpers({
 
@@ -41,6 +41,7 @@ Template.prototype5.helpers({
     // Tab data
     bottomTabData: [
         // Label for the tab title, and id of the invisivble div that contains the contents of the tab
+        {label: "Profile", id: "profile"},
         {label: "Analyze", id: "tabAnalyze"},
         {label: "Categorize", id: "tabCategorize"},
         {label: "Highlights", id: "tabHighlights"},

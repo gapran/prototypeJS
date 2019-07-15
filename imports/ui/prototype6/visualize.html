@@ -1,0 +1,28 @@
+<template name="visualize">
+    <div class="web-container">
+        <div class="web-sub-container">
+    
+            <div class="header">
+                <a href="#default" class="logo">{{> badge id="icon" img="/Capture.PNG" alt="Icon" title="This is hover for icon." label=""}}</a>
+                <div class="titleheader">
+                    <h1>Gamification of Program Analysis</h1>
+                </div>
+    
+                <div class="header-right">
+                    <a href="#" class="link_profile">Profile</a>
+                    <a href="#" class="link_editor">Editor</a>
+                    <a href="#" class="link_categorize">Categorize</a>
+                    <a href="#" class="link_highlights">Highlights</a>
+                    <a class="active" href="#">Visualize</a>
+                </div>
+            </div>
+    
+            <div class="bodysection">
+                <div>
+                    {{> barChart id="proficiencyBarChart" title="Proficiency Level" data=proficiencyBarChartData style="height:200px; min-height:200px; max-height:200px;"}}
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</template>

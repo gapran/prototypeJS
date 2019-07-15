@@ -15,9 +15,19 @@ import "./prototype2/prototype2.js";
 // Pages of prototype 3
 import "./prototype3/prototype3.js";
 
-// Pages of prototype 3
+// Pages of prototype 5
 import "./prototype5/prototype5.js";
 import "./prototype5/about.js";
+import "./prototype5/login.js";
+
+// Pages of prototype 6
+import "./prototype6/prototype6.js";
+
+import "./prototype6/editor.js";
+import "./prototype6/categorize.js";
+import "./prototype6/highlights.js";
+import "./prototype6/visualize.js";
+
 
 // Helper for navigation
 Template.body.helpers({
@@ -56,12 +66,38 @@ Template.body.events({
     Session.set("templateName", "prototype3");
   },
 
-  // Navigation rules for prototype 3
+  // Navigation rules for prototype 5
   "click .link_prototype5"() {
     Session.set("templateName", "prototype5");
   },
   "click .link_prototype5_about"() {
     Session.set("templateName", "prototype5_about");
- }
+  },
+  // "click .loginbutton"() {
+  //   Session.set("templateName", "prototype5");
+  // },
+
+  // Navigation rules for prototype 5
+  "click .link_prototype6"() {
+    Session.set("templateName", "loginPage");
+  },
+  "click .loginbutton"() {
+    Session.set("templateName", "prototype6");
+  },
+  "click .link_editor"() {
+    Session.set("templateName", "editor");
+  },
+  "click .link_categorize"() {
+    Session.set("templateName", "categorize");
+  },
+  "click .link_highlights"() {
+    Session.set("templateName", "highlights");
+  },
+  "click .link_visualize"() {
+    Session.set("templateName", "visualize");
+  },
+  "click .link_profile"() {
+    Session.set("templateName", "prototype6");
+  },
 
 });
