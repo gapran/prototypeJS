@@ -17,4 +17,4 @@ Sarif File Changes for
 		(ii)	File extension change from .java to _java, .js to _js, .html to _html
 	
 		(iii)	Folder name change from WebGoat-8.0.0.M23 to WebGoat-8-0-0-M23
-
+		

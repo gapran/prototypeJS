@@ -15,4 +15,3 @@ Update Operations
     3.  Database file name for Sarif Files update related details : 'sarifUpdate.js'
     
     4.  Use SarifFiles.update() for inserting any json object inside sarif file details.
-
