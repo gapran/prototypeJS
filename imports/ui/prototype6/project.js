@@ -10,6 +10,15 @@ import "../codeEditor/codeEditor.html";
 import "../codeEditor/codeEditor.js";
 import {Template} from "meteor/templating";
 
+function getDetailedWarningsInfo(ids){
+    var info = ids.length + " warning" + (ids.length === 1 ? "" : "s") + ":";
+    var i;
+    for(i = 0; i<ids.length; i++){
+        // TODO(rashmi): retrieve detailed warning info from database.
+        info += "\n- " + ids[i];
+    }
+    return info;
+}
 
 Template.prototype6_project.helpers({
 
