@@ -163,70 +163,198 @@ tr:nth-child(even) {
 }
 
 .filterValue {
-  margin-left: 30px;
+    margin-left: 30px;
 }
 
 /* Web container */
 
 .web-container {
-  margin: 0 auto;
-  position: relative;
-  width: 1331px;
-  height: 762px;
-  align-content: center;
-  align-items: center;
-  background: url('web.png') no-repeat;
+    margin: 0 auto;
+    position: relative;
+    width: 1331px;
+    height: 762px;
+    align-content: center;
+    align-items: center;
+    background: url('backgrounds/web.png') no-repeat;
 }
 
 .web-sub-container {
-  position: absolute;
-  top: 60px;
-  right: 1px;
-  width: 1328px;
-  height: 650px;
-  margin-left: 125px;
-  margin-top: 50px;
-  align-content: center;
-  align-items: center;
-  overflow: auto;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+    width: 1328px;
+    height: 650px;
+    margin-left: 125px;
+    margin-top: 50px;
+    align-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 /* Mobile container */
 
 .mobile-container {
-  padding-top: 5px;
-  height: 1024px;
-  align-content: left;
-  align-items: left;
-  background:url('mobileimage.jpg') no-repeat;
+    padding-top: 5px;
+    height: 1024px;
+    align-content: left;
+    align-items: left;
+    background: url('backgrounds/mobileimage.jpg') no-repeat;
 }
 
 .mobile-sub-container {
-  margin-left: 225px;
-  margin-top: 80px;
-  height: 620px;
-  width: 350px;
-  overflow: auto;
+    margin-left: 225px;
+    margin-top: 80px;
+    height: 620px;
+    width: 350px;
+    overflow: auto;
 }
 
 /* IDE container */
 
 .ide-container {
-  margin: 0 auto;
-  width: 1450px;
-  height: 600px;
-  align-content: center;
-  align-items: center;
-  background-image: url("ide_layout.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+    margin: 0 auto;
+    width: 1450px;
+    height: 600px;
+    align-content: center;
+    align-items: center;
+    background-image: url("backgrounds/ide_layout.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .ide-sub-container {
-  position: absolute;
-  margin-top: 27px;
-  width: 1445px;
-  height: 570px;
-  overflow: auto;
+    position: absolute;
+    margin-top: 27px;
+    width: 1445px;
+    height: 570px;
+    overflow: auto;
+}
+
+/* Chat */
+
+.chat-container {
+    background-color: white;
+    padding: 10px 0px;
+}
+
+.chat-container input {
+    width: 75%;
+}
+
+.chat-container textarea {
+    padding: 10px;
+    resize: none;
+    height: 30px;
+    width: 80%;
+    margin: 5px;
+}
+
+.chat-container .send {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+}
+
+.discussion {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.missingFormData {
+    border: red 2px solid;
+}
+
+/* Code editor */
+
+.editorContainer{
+    max-height:500px;
+    overflow: auto;
+    border: 1px solid black;
+    position: relative;
+}
+
+.codeEditor {
+    border: 1px solid black;
+    text-align: left;
+    padding: none;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+}
+
+.codeEditor pre{
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+}
+
+.codeEditor tr {
+    background: white;
+    height: 23px;
+}
+
+.codeEditor td {
+    border-top: none;
+    border-bottom: none;
+}
+
+.warningCell {
+    text-align: right;
+    background-color: #DCDCDC;
+    color: #696969;
+}
+
+.lineNumberCell {
+    background-color: #DCDCDC;
+    color: #696969;
+}
+
+.codeEditor .warningIcon {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    margin-left: -2px;
+    padding: 0;
+}
+
+.codeEditor .warning {
+    background-image: url("icons/warning.png");
+}
+
+.codeEditor .info {
+    background-image: url("icons/info.png");
+}
+
+.codeEditor .error {
+    background-image: url("icons/error.png");
+}
+
+.codeEditorWarningInfo {
+    min-width: 300px;
+    max-width: 800px;
+    max-height: 300px;
+    border: gray solid 1px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    display: none;
+    padding: 10px;
+    position: absolute;
+}
+
+.close {
+    width: 17px;
+    height: 17px;
+    float: right;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    padding: 0;
+    background-image: url("icons/close.png");
 }
