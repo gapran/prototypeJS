@@ -4,8 +4,10 @@
 
             <div class="ide-mid-container">
 
-                <img src="/code-view.jpg" width="100%" height="100%" alt="the code view">
-                
+<!--                <img src="/code-view.jpg" width="100%" height="100%" alt="the code view">-->
+<!--                -->
+                {{> codeEditor id="ABCOptionsCodeEditor" type="Java" fileContents=fileContents warnings=warnings callbacks=codeEditorCallbacks warningInfoId="ABCOptionsCodeEditorWarningInfo" }}
+
             </div>
 
             <div>
