@@ -167,4 +167,8 @@ mark.green {
 }
 
 
-
+.progressArea {
+    position: relative;
+    height: 10px;
+    width: 200px;
+}
