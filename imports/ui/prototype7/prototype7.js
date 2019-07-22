@@ -13,8 +13,4 @@ import "./prototype7.html";
 
 // Prototype 7
 
-Template.prototype7.helpers({
-
-
-});
 

@@ -86,7 +86,7 @@
     width: 760px;
     padding: 10px 10px;
     border: 1px solid #ccc;
-    overflow: unset !important;
+    overflow: unset;
 }
 
 .table {

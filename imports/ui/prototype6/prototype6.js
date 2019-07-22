@@ -13,8 +13,3 @@ import "./prototype6.html";
 
 // Prototype 6
 
-Template.prototype6.helpers({
-
-
-});
-

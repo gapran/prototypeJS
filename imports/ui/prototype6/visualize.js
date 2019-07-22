@@ -1,5 +1,8 @@
-import "./visualize.html";
 
+import {Projects} from "../../api/projects.js";
+import {Template} from "meteor/templating";
+
+import "./visualize.html";
 import "../charts/Chart.js";
 import "../charts/barChart.html";
 import "../charts/barChart.js";
