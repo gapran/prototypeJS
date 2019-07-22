@@ -1,8 +1,9 @@
-import "./categorize.html";
+import {Projects} from "../../api/projects.js";
+import {Template} from "meteor/templating";
 
+import "./categorize.html";
 import "../table/table.html";
 import "../table/table.js";
-
 import "../filter/filter.html";
 import "../filter/filter.js";
 
