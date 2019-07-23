@@ -21,7 +21,8 @@ Template.prototype6_analysis.helpers({
         // Label for the table header, and id of the column in the database
         {label: "Warning", id: "name"},
         {label: "Status", id: "status"},
-        {label: "Progress", id: "progress"}
+        {label: "Progress", id: "progress"},
+        {label: "Assignee", id: "assignee"}
     ],
     // From the Mongo database. Results should be accessed with result.id
     resultsTableData: Projects.find({}),
