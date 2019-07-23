@@ -31,4 +31,13 @@ Template.prototype6_analysis.helpers({
     // Ids on which to filter from a table. Must match the ones in resultsTableColumns
     filterIds: ["status", "progress"]
 
+
+});
+
+Template.prototype6_analysis.events({
+    // Retrieve the clicked cell
+    "click td"(e) {
+        alert(e.target.innerText);
+        Session.set("cellClicked", e.target.innerText)
+        }
 });
