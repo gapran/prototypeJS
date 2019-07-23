@@ -172,3 +172,14 @@ mark.green {
     height: 10px;
     width: 200px;
 }
+
+.prototype6-bugform {
+    position: absolute;
+    height: 140px;
+    width: 1104px;
+    top: 343px;
+    right: 84px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
