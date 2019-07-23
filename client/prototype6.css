@@ -196,3 +196,7 @@ mark.green {
     cursor: pointer; /* Pointer/hand icon */
 
 }
+
+#fix-btn:hover {
+    background-color: #3d518e;
+}
