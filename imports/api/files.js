@@ -10,5 +10,5 @@ export function getTextFromFile(url) {
             text = data;
         }
     });
-    return text.split("\n");
+    return text.split("/n");
 }
