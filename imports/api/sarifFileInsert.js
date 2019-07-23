@@ -1,14 +1,12 @@
 
 import {SarifFiles} from "./sarifFiles.js";
 
-import {getTextFromFile} from "./sarifFilesData.js";
+import {getJSONData} from "./sarifFilesData.js";
 
 
-var findbugs = getTextFromFile("sarifFiles/findbugsXmltoSarif.json");
-console.log("FINDBUGS SARIF FILE DATA ", findbugs);
-
-var checkmarx = getTextFromFile("sarifFiles/checkmarxCsvtoSarif.json");
-var checkstyle = getTextFromFile("sarifFiles/checkstyleXmltoSarif.json");
+var findbugs = getJSONData("sarifFiles/findbugsXmltoSarif.json");
+var checkmarx = getJSONData("sarifFiles/checkmarxCsvtoSarif.json");
+var checkstyle = getJSONData("sarifFiles/checkstyleXmltoSarif.json");
  
 
 // For inserting Json data in the mongo db collection 

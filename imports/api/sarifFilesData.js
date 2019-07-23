@@ -1,4 +1,4 @@
-export function getTextFromFile(url) {
+export function getJSONData(url) {
     var text;
     $.ajax({
         async: false,
