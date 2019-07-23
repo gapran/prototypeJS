@@ -29,7 +29,11 @@ Template.prototype6_analysis.helpers({
 
     // Filter data
     // Ids on which to filter from a table. Must match the ones in resultsTableColumns
-    filterIds: ["status", "progress"]
+    filterIds: ["status", "progress"],
+
+    theBug() {
+        return Session.get('cellClicked');
+    }
 
 
 });
@@ -37,7 +41,6 @@ Template.prototype6_analysis.helpers({
 Template.prototype6_analysis.events({
     // Retrieve the clicked cell
     "click td"(e) {
-        alert(e.target.innerText);
         Session.set("cellClicked", e.target.innerText)
         }
 });

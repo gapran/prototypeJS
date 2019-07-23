@@ -17,10 +17,14 @@
                 <form class="prototype6-bugform">
                     <br>
                     Bug Name:
-                    <input type="text" style="border: none;" name="bugName" value="" readonly><br> <br>
-                    Description:
-                    <input type="text" style="border: none;" name="bugDescription" value="" readonly>
-                    <br> <br>
+                    <input type="text" style="border: none;" name="bugName" value={{theBug}} readonly><br> <br>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="bugDescription">Bug Description</label>
+                        </div> <br>
+                        <div class="col-75">
+                    <textarea style="border: none; width:700px" name="bugDescription" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus varius dictum. Cras massa risus, sodales ac condimentum cursus, ultricies placerat nulla. Duis a est eget nunc iaculis iaculis dapibus dictum nisl. Ut pretium volutpat cursus. Ut sed mi non tellus bibendum convallis. Aliquam tempus sodales efficitur. In tempor mauris et risus porta ultrices. " readonly></textarea>
+                        </div></div>
                 </form>
             </div>
 
