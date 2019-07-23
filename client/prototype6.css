@@ -176,10 +176,23 @@ mark.green {
 .prototype6-bugform {
     position: absolute;
     height: 140px;
-    width: 1104px;
+    width: 750px;
     top: 343px;
-    right: 84px;
+    left: 84px;
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
+}
+
+#fix-btn {
+
+    position: absolute;
+    top: 465px;
+    right: 255px;
+    background-color: #4053af; /*  background */
+    border: 1px solid #243780; /*  border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+
 }
