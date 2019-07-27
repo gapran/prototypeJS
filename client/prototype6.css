@@ -46,7 +46,7 @@
 }
 
 .btn-left-group button {
-    writing-mode:  sideways-lr;
+    writing-mode: sideways-lr;
     background-color: #4053af; /*  background */
     border: 1px solid #243780; /*  border */
     color: white; /* White text */
@@ -57,7 +57,7 @@
 }
 
 .btn-right-group button {
-    writing-mode:  vertical-rl;
+    writing-mode: vertical-rl;
     background-color: #4053af; /*  background */
     border: 1px solid #243780; /*  border */
     color: white; /* White text */
@@ -102,7 +102,7 @@
 }
 
 
-.image_outer_container{
+.image_outer_container {
     margin-top: auto;
     margin-bottom: auto;
     border-radius: 50%;
@@ -110,31 +110,31 @@
     width: 220px;
 }
 
-.image_inner_container{
+.image_inner_container {
     border-radius: 15%;
     padding: 5px;
     background: #3049b4;
     background: -webkit-linear-gradient(to bottom, #4053af, #4053af, #3049b4);
     background: linear-gradient(to bottom, #4053af, #4053af, #3049b4);
 }
-.image_inner_container img{
+
+.image_inner_container img {
     height: 200px;
     width: 200px;
     border-radius: 50%;
     border: 5px solid white;
 }
 
-.image_outer_container .green_icon{
+.image_outer_container .green_icon {
     background-color: #4cd137;
     position: absolute;
     right: 30px;
     bottom: 10px;
     height: 30px;
     width: 30px;
-    border:5px solid white;
+    border: 5px solid white;
     border-radius: 50%;
 }
-
 
 
 .prototype6-form {
@@ -152,12 +152,12 @@
 }
 
 mark.red {
-    color:#ff0000;
+    color: #ff0000;
     background: none;
 }
 
 mark.blue {
-    color:#0000A0;
+    color: #0000A0;
     background: none;
 }
 
@@ -171,6 +171,12 @@ mark.green {
     position: relative;
     height: 10px;
     width: 200px;
+
+}
+
+.progressFrame {
+    background-color: gray;
+
 }
 
 .prototype6-bugform {
@@ -203,58 +209,58 @@ mark.green {
 
 /* Reset CSS - http://html5doctor.com */
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,  pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 body {
-    line-height:1;
+    line-height: 1;
 }
 
-article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section{
-    display:block;
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 
 nav ul {
-    list-style:none;
+    list-style: none;
 }
 
 blockquote, q {
-    quotes:none;
+    quotes: none;
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
-    content:'';
-    content:none;
+    content: '';
+    content: none;
 }
 
 a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 /* change colors to suit your needs */
 ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
 }
 
 /* change colors to suit your needs */
 mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
 }
 
 del {
@@ -262,32 +268,32 @@ del {
 }
 
 abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
+    border-bottom: 1px dotted;
+    cursor: help;
 }
 
 table {
-    border-collapse:collapse;
-    border-spacing:0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* change border color to suit your needs */
 hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 input, select {
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 .recent-list {
 
-    margin:60px;
+    margin: 60px;
 }
 
 .settings-form {
