@@ -30,25 +30,6 @@ import "./project.html";
 
 Template.project.helpers({
 
-    // Bar chart data
-    proficiencyBarChartData: [
-        // Label for the bar label, and a numeric value
-        {label: "Bronze", value: 20},
-        {label: "Silver", value: 40},
-        {label: "Gold", value: 50},
-        {label: "Master", value: 80},
-        {label: "Professional", value: 95}
-    ],
-
-    // Tab data
-    bottomTabData: [
-        // Label for the tab title, and id of the invisivble div that contains the contents of the tab
-        {label: "Analyze", id: "tabAnalyze"},
-        {label: "Categorize", id: "tabCategorize"},
-        {label: "Highlights", id: "tabHighlights"},
-        {label: "Monitor & Visualize", id: "tabMonitorVisualize"}
-    ],
-
       // Table data
       resultsTableColumns1: [
         // Label for the table header, and id of the column in the database
