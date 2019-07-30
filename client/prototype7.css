@@ -68,6 +68,13 @@
     height: 50px;
     display: block; /* Make the buttons appear below each other */
 }
+.progressBarmobile {
+    height: 18px;
+    background-color: #364a94;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 18px; /* To center it vertically */
+    color: white;
+}
 
 .btn-left-group button:not(:last-child) {
     border-bottom: none; /* Prevent double borders */
