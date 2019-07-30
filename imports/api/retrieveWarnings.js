@@ -25,6 +25,7 @@ export function getSarifData(codeFileName)
                     var tempLocation = locations[k];
                     var uri = tempLocation.analysisTarget.uri;
                     var startLine = tempLocation.analysisTarget.region.startLine ;
+                    var line = parseInt(startLine);
                     var ruleId = tempResult.ruleId;
                     var shortMessage  = tempResult.message;
                     var tempFileName = uri.split("/");
@@ -32,7 +33,7 @@ export function getSarifData(codeFileName)
                     fileName = fileName.replace("_",".");
                     if(fileName == codeFileName)
                     {
-                       var tempWarning = {id: ruleId , lineNumber: startLine, type:"error", message : shortMessage};
+                       var tempWarning = {id:ruleId , lineNumber: line, type:"error"};
                        warnings.push(tempWarning);
                         
                     }

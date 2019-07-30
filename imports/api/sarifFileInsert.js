@@ -3,7 +3,10 @@ import {SarifFiles} from "./sarifFiles.js";
 
 import {getJSONData} from "./sarifFilesData.js";
 
-
 var checkmarx = getJSONData("sarifFiles/checkmarxCsvtoSarif.json");
 
-SarifFiles.insert(checkmarx);
+var count = SarifFiles.find().count();
+
+if(count == 0){
+    SarifFiles.insert(checkmarx);
+}
