@@ -9,3 +9,12 @@
     font-size: 16px;
   }
   .button2 {background-color: rgb(37, 186, 0);}
+  .chat {
+    text-align: left;
+    width: 370px;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #050505;
+    font-size: 14px;
+}

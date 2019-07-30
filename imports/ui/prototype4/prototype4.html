@@ -2,21 +2,23 @@
     <div class="mobile-container" >
         <div class="mobile-sub-container">
             <div class="demo" style="background-color:white">
-                <div id="homeDiv" style="padding-top: 95px;">
+                <div id="homeDiv" >
                     <p>
+                            <h3  style="background-color: greenyellow;">
                          <img width="50px" src="gpa_logo.png" align="middle">
-                         <b style="color: blue">Gamification of Program Analysis</b>
+                        
+                         <b style="color: blue;">Gamification of Program Analysis</b>
+                            </h3>
                     </p>
-                    <b style="color: blue ; margin-left: 115px;">Welcome Osama</b>
-
+                    <b style="color: blue ; margin-left: 115px; background-color: greenyellow;">Welcome Osama</b>
+<!-- 
                     <div style="margin-left: 90px; margin-top: 60px;">
                             <button id ="pro" style="margin-left: -37px;" class="btnProfile">My profile</button>
                             <button id ="proj" style="margin-left: 65px;" class="btnProject">My Project</button>
                     </div>
                     <div>
                         <button id ="chat" style="margin-left: 140px;" class="btnchat">chat</button>
-                    </div>
-                 
+                    </div> -->
                     <div id="profileDiv" style="width: 170px; padding-left: 106px;">
                         <div class="imageComponent">
                                 {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
@@ -26,7 +28,7 @@
                                 {{> progressBar id="progressBar" min="0" max="100" val="30"}}
                             </div>
     
-                            <div class="section2" style="margin-left: -97px;">
+                            <div style="margin-left: -97px; width: 426px;">
                                     <div id="tabComponents">
                                         <div>
                                             <br/>
@@ -50,15 +52,26 @@
                     
                                     </div>
                                 </div>
-                
-                
-                
-                
                             </div>
-                </div>
+                        </div>
+                <br />
+                <div class="chat" style="width: 326px;">
+                        {{> chat id="chat" }}
+                    </div>
 
-
-
+                <div class="demo"   style="width: 326px;">
+                        <div class="TBL" style="background-color:yellow;">
+                            {{> table id="resultsTable1" columns=resultsTableColumns1 data=resultsTableData1 callbacks=tableCallbacks }}
+                        </div>
+    
+                        <div >
+                            {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns1 tableData=resultsTableData1}}
+                            <br />
+                        </div>
+                        {{> codeEditor id="ABCOptionsCodeEditor" type="Java" fileContents=fileContents warnings=warnings callbacks=codeEditorCallbacks }}
+                    </div>
+                           
+                           
             </div>
         </div>
     </div>
