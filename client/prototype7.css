@@ -68,6 +68,17 @@
     height: 50px;
     display: block; /* Make the buttons appear below each other */
 }
+.mobilesetting{
+    writing-mode: sideways-top;
+    background-color: #4053af; /*  background */
+    border: 1px solid #243780; /*  border */
+    color: white; /* White text */
+    /* padding: 10px 24px; Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    height: 50px;
+    width: 328px;
+    display: block; 
+}
 .progressBarmobile {
     height: 18px;
     background-color: #364a94;
@@ -115,7 +126,8 @@
     margin-bottom: auto;
     border-radius: 50%;
     position: relative;
-    width: 220px;
+    width: 115px;
+    ;
 }
 
 .image_inner_container {
@@ -138,9 +150,9 @@
     position: absolute;
     right: 30px;
     bottom: 10px;
-    height: 30px;
-    width: 30px;
-    border: 5px solid white;
+    height: 13px;
+    width: 13px;
+    border: 3px solid white;
     border-radius: 50%;
 }
 
@@ -152,7 +164,7 @@
     /* To see the outline of the form */
     padding: 1em;
     padding-left: 8px;
-    padding-top: 67px;
+    padding-top: 37px;
     border: 1px solid #CCC;
     border-radius: 1em;
 }
