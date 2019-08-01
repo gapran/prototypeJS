@@ -1,0 +1,66 @@
+<template name="prototype7_profile">
+
+    <div class="mobile-container" >
+        <div class="mobile-sub-container">
+            <div class="demo" style="background-color:rgb(0, 255, 191)">
+
+                <div class="d-sm-flex" style="height: 10vh;">
+                    <div class="image_outer_container">
+                        <div class="green_icon"></div>
+                        <div class="image_inner_container">
+                            <img src="/profile-pic.jpg?resize=100%2C300&ssl=1">
+                        </div>
+                        <div class="progressArea">
+                                {{> progressBar id="progressBar" min="0" max="100" val="70"}} <br>
+                            </div> 
+                    </div>
+
+                   
+                    
+                </div>
+
+                <div style="background-color:rgb(0, 204, 255); width: 329px;">
+                    <form class="prototype7-form">
+                        First name:
+                        <input type="text" style="border: none;" name="firstname" value="Osama" readonly><br> <br>
+                        Last name:
+                        <input type="text" style="border: none;" name="lastname" value="Ali" readonly>
+                        <br> <br>
+                        Points:
+                        <input type="text" style="border: none;" name="points" value="70" readonly>
+                        <br> <br>
+                        Profession:
+                        <input type="text" style="border: none;" name="profession" value="Student" readonly>
+                        <br> <br>
+                        Company:
+                        <input type="text" style="border: none;" name="company" value="Dream Star Pro INC" readonly>
+                        <br> <br>
+                        Achievements:
+                        <input type="image" src="images/badge1.PNG" alt="Hattrick Fixer Badge" title="You achieved this badge for fixing 3 bugs in 3 days." height="25px" width="25px">
+                        <input type="image" src="images/badge2.PNG" alt="A Badge" title="A Badge" height="25px" width="25px">
+                        <input type="image" src="images/badge3.PNG" alt="B Badge" title="B Badge" height="25px" width="25px">
+                        <input type="image" src="images/badge4.PNG" alt="C Badge" title="C Badge" height="25px" width="25px">
+                    </form>
+                </div>
+                <div style="background-color:rgb(0, 89, 255);  width: 329px;">
+                        {{> prototype7_activity  }}
+                </div>
+
+                    <div style="width: 329px;"> <br><br>
+                        {{> chat id="chatview" }}
+                </div>
+            
+
+
+                <div >
+                        <div class="btn-left-group">
+                                <button class="link_prototype7_profile">User Profile</button>
+                                <button class="link_prototype7_analysis">Analysis</button>
+                                <button class="link_prototype7_project">Code View</button>
+                                <button class="link_prototype7_leader">Leader Board</button>
+                            </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</template>
