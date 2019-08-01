@@ -90,16 +90,8 @@ Template.prototype1.helpers({
     filterIds: ["status", "progress"],
 
     // ABCOptions editor data
-    fileContents: getTextFromFile("ABCOptions.java"),
+    fileContents: getTextFromFile("CreateDB.java"),
     warnings : getSarifData("CreateDB.java"),
-    /*warnings: [
-        // TODO(rashmi): retrieve list of warnings from database.
-        {id:"1234", lineNumber: 2, type:"error"},
-        {id:"6783", lineNumber: 5, type:"error"},
-        {id:"1209", lineNumber: 5, type:"info"},
-        {id:"3497", lineNumber: 5, type:"error"},
-        {id:"1011", lineNumber: 22, type:"warning"},
-    ],*/
     codeEditorCallbacks(){
         return {
             iconClickCallback(){
