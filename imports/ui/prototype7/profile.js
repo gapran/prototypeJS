@@ -18,8 +18,8 @@ Template.prototype7_profile.created = function () {
 
 Template.prototype7_profile.events({
 
-    'click .progressArea' () {
-        const value = document.getElementById('progressBar').innerText;
-        sAlert.info("You have fixed "+value+" percent of assigned bugs. Good Job!", { effect: 'stackslide', position: 'bottom-left',timeout: 3000});
+    "click .progressArea" () {
+        const value = document.getElementById("progressBar").innerText;
+        sAlert.info("You have fixed "+value+" percent of assigned bugs. Good Job!", { effect: "stackslide", position: "bottom-left",timeout: 3000});
 }
 });

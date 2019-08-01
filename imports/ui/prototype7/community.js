@@ -3,12 +3,12 @@
 
 // File
 
-import "./leader.html";
+import "./community.html";
 
-Template.prototype7_leader.helpers({
+Template.prototype7_community.helpers({
 
 // Bar chart data
-leaderBarChartData: [
+communityBarChartData: [
     // Label for the bar label, and a numeric value
     {label: "Mike", value: 30},
     {label: "John", value: 60},

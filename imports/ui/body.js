@@ -19,7 +19,7 @@ import "./prototype3/prototype3.js";
 import "./prototype7/prototype7.js";
 import "./prototype7/profile.js";
 import "./prototype7/activity.js";
-import "./prototype7/leader.js";
+import "./prototype7/community.js";
 import "./prototype7/project.js";
 import "./prototype7/settings.js";
 import "./prototype7/analysis.js";
@@ -80,7 +80,7 @@ Template.body.events({
   "click .link_prototype7_activity"() {
     Session.set("templateName", "prototype7_activity");
   },
-  "click .link_prototype7_leader"() {
-    Session.set("templateName", "prototype7_leader");
+  "click .link_prototype7_community"() {
+    Session.set("templateName", "prototype7_community");
   }
 });
