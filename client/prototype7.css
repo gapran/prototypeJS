@@ -1,0 +1,324 @@
+/* IDE ( new ) container - Prototype 6 */
+
+.ide-new-container {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 1301px;
+    height: 551px;
+    align-content: center;
+    align-items: center;
+    background-image: url("backgrounds/ide_layout.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ide-new-sub-container {
+    position: relative;
+    top: 33px;
+    width: 1298px;
+    height: 518px;
+    left: 2px;
+}
+
+.ide-mid-container {
+    position: absolute;
+    left: 68px;
+    width: 1163px;
+    height: 515px;
+
+}
+
+.table-section {
+
+    position: absolute;
+    width: 750px;
+    height: 300px;
+}
+
+.button-text-right {
+    writing-mode: vertical-rl;
+}
+
+.button-text-left {
+    writing-mode: sideways-lr;
+}
+
+.btn-left-group button {
+    writing-mode: sideways-lr;
+    background-color: #4053af; /*  background */
+    border: 1px solid #243780; /*  border */
+    color: white; /* White text */
+    /* padding: 10px 24px; Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    height: 50px;
+    width: 328px;
+    display: block; /* Make the buttons appear below each other */
+}
+
+.btn-right-group button {
+    writing-mode: vertical-rl;
+    background-color: #4053af; /*  background */
+    border: 1px solid #243780; /*  border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    /*position: fixed;*/
+    height: 50px;
+    display: block; /* Make the buttons appear below each other */
+}
+.mobilesetting{
+    writing-mode: sideways-top;
+    background-color: #4053af; /*  background */
+    border: 1px solid #243780; /*  border */
+    color: white; /* White text */
+    /* padding: 10px 24px; Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    height: 50px;
+    width: 328px;
+    display: block; 
+}
+.progressBarmobile {
+    height: 18px;
+    background-color: #364a94;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 18px; /* To center it vertically */
+    color: white;
+}
+
+.btn-left-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-left-group button:hover {
+    background-color: #3d518e;
+}
+
+.btn-right-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-right-group button:hover {
+    background-color: #3d518e;
+}
+
+.right-button-section {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    right: 0px;
+}
+
+.filter-section {
+    width: 250px;
+    height: 700px;
+    position: absolute;
+    top: 2px;
+    right: 16px;
+}
+
+
+.image_outer_container {
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    position: relative;
+    width: 115px;
+    ;
+}
+
+.image_inner_container {
+    border-radius: 74px;
+    padding: 2px;
+    background: #3049b4;
+    /* background: -webkit-linear-gradient(to bottom, #364a94, #4053af, #3049b4); */
+    /* background: linear-gradient(to bottom, #4053af, #4053af, #3049b4); */
+}
+
+.image_inner_container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.image_outer_container .green_icon {
+    background-color: #4cd137;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    height: 13px;
+    width: 13px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+
+.prototype7-form {
+    /* Just to center the form on the page */
+    margin: 0;
+    width: 400px;
+    /* To see the outline of the form */
+    padding: 1em;
+    padding-left: 8px;
+    padding-top: 37px;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+.prototype7-form div + div {
+    margin-top: 1em;
+}
+
+mark.red {
+    color: #ff0000;
+    background: none;
+}
+
+mark.blue {
+    color: #0000A0;
+    background: none;
+}
+
+mark.green {
+    color: #08a016;
+    background: none;
+}
+
+
+.progressArea {
+    position: relative;
+    height: 10px;
+    width: 200px;
+
+}
+
+.progressFrame {
+    background-color: gray;
+
+}
+
+.prototype7-bugform {
+    position: absolute;
+    height: 140px;
+    width: 750px;
+    top: 343px;
+    left: 84px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+#fix-btn {
+
+    top: 465px;
+    right: 255px;
+    background-color: #08a016; /*  background */
+    border: 1px solid #08a016; /*  border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+
+}
+
+#fix-btn:hover {
+    background-color: #3d518e;
+}
+
+/* Reset CSS - http://html5doctor.com */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colors to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colors to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border color to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+.recent-list {
+
+    margin: 60px;
+}
+
+.settings-form {
+
+    top: 200px;
+
+}
