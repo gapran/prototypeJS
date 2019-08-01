@@ -2,7 +2,7 @@
 // ...
 
 // File
-
+import {Template} from "meteor/templating";
 import "./community.html";
 
 Template.prototype7_community.helpers({
