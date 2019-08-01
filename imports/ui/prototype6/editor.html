@@ -3,23 +3,46 @@
         <div class="web-sub-container">
     
             <div class="header">
-                <a href="#default" class="logo">{{> badge id="icon" img="/Capture.PNG" alt="Icon" title="This is hover for icon." label=""}}</a>
+                <a href="#default" class="logo">{{> badge id="icon" img="icons/gpa_logo.png" alt="Icon" title="This is hover for icon." label=""}}</a>
                 <div class="titleheader">
                     <h1>Gamification of Program Analysis</h1>
                 </div>
     
                 <div class="header-right">
-                    <a href="#" class="link_profile">Profile</a>
-                    <a class="active" href="#">Editor</a>
-                    <a href="#" class="link_categorize">Categorize</a>
+                    <a href="#" class="link_profile" >Profile</a>
                     <a href="#" class="link_highlights">Highlights</a>
+                    <a href="#" class="active">Editor</a>
+                    <a href="#" class="link_categorize">Analyze</a>
                     <a href="#" class="link_visualize">Visualize</a>
                 </div>
             </div>
     
-            <div class="bodysection">
-                <img class="editor" src="code.jpg">
+            <div class="editorBody">
+                    <div class="dropdown">
+                            <button class="dropbtn">Project</button>
+                            <div class="dropdown-content">
+                              <a href="#">Project 1</a>
+                              <a href="#">Project 2</a>
+                              <a href="#">Project 3</a>
+                              <a href="#">Project 4</a>
+                              <a href="#">Project 5</a>
+                            </div>
+                    </div>
+
+                    <div class="dropdown">
+                            <button class="dropbtn">File</button>
+                            <div class="dropdown-content">
+                              <a href="#">Encryption.java</a>
+                              <a href="#">Cadacy.html</a>
+                              <a href="#">SQL_Enjection.py</a>
+                              <a href="#">Prototype.css</a>
+                              <a href="#">Employess_Data.csv</a>
+                            </div>
+                    </div>
+                <br>
+                {{> codeEditor id="ABCOptionsCodeEditor" type="Java" fileContents=fileContents warnings=warnings callbacks=codeEditorCallbacks warningInfoId="ABCOptionsCodeEditorWarningInfo" }}
             </div>
+
     
         </div>
     </div>

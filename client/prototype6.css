@@ -21,6 +21,11 @@ mark.green {
     background: none;
 }
 
+mark.brown {
+  color: brown;
+  background: none;
+}
+
 .progressHighlights{
     width: 300px;
 }
@@ -101,13 +106,19 @@ mark.green {
   }
 
 .imageComponent{
-    height: 200px;
-    width: 200px;
+  position: absolute;
+  top: 50px;
+  right:1070px;
+  height: 200px;
+  width: 200px;
 }
 
 .imageStars{
-    height: 60px;
-    width: 180px;
+  position: absolute;
+  top: 250px;
+  right:1150px;
+  height: 45px;
+  width: 130px;
 }
 
 .bodysection img.editor {
@@ -115,10 +126,75 @@ mark.green {
     width: 100%;
   }
 
+.info {
+  position: absolute;
+  right: 1030px;
+  top: 310px;
+  height: 100px;
+  width: 250px;
+}
+
 .highlights{
     position: absolute;
     right: 500px;
     top: 100px;
     width: 300px;
     display: block;
+}
+
+.editorBody {
+  margin: 2px auto;
+  width: 1305px;
+  height: 550px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.chat {
+  position: absolute;
+  top: 300px;
+  right: 50px;
+  margin: 2px auto;
+  width: 300px;
+  height: 550px;
 }
