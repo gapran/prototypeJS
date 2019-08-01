@@ -1,4 +1,0 @@
-import "../../api/sarifFileInsert.js";
-
-
-

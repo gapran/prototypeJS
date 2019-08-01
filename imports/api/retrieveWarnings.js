@@ -1,16 +1,14 @@
-import "../ui/databaseInsert/databaseInsert.js";
-
 import {SarifFiles} from "./sarifFiles.js";
 
 export function getSarifData(codeFileName)
 {
-
     console.log("Get sarif data");
     var warnings = [];
-    var tempSarifData = SarifFiles.find({"runs.tool.name" : "Checkmarx"}) ;
-
-    rawData = tempSarifData.map(function(tempSarifData) 
+    var test = SarifFiles.find().count();
+    console.log("count data", test);
+    var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"}).map(function(tempSarifData) 
     {
+        console.log("map data");
         var runs = tempSarifData.runs;
         for(var i=0;i<runs.length;i++)
         {
@@ -51,7 +49,7 @@ export function getSarifData(codeFileName)
 
         }
     });
-
+    console.log("sarif data", SarifData);
     console.log("warnings", warnings);
     return warnings;
 

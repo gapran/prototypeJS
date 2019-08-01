@@ -90,7 +90,7 @@ Template.prototype1.helpers({
     filterIds: ["status", "progress"],
 
     // ABCOptions editor data
-    fileContents: getTextFromFile("CreateDB.java"),
+    fileContents: getTextFromFile("ABCOptions.java"),
     warnings : getSarifData("CreateDB.java"),
     /*warnings: [
         // TODO(rashmi): retrieve list of warnings from database.

@@ -1,4 +1,6 @@
-export function getJSONData(url) {
+// Function to get the json data from the file
+
+/*export function getJSONData(url) {
     var text;
     $.ajax({
         async: false,
@@ -9,4 +11,4 @@ export function getJSONData(url) {
         }
     });
     return text;
-}
+}*/

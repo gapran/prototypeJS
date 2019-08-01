@@ -1,4 +1,6 @@
-import {SarifFiles} from "./sarifFiles.js";
+// Sample code for updating a sarif file
+
+/*import {SarifFiles} from "./sarifFiles.js";
 
 
 // For updating one result
@@ -12,3 +14,5 @@ SarifFiles.update({version : "1.0.0"}, {$set : { sarifFileName : "sarif_file_1",
 // For updating the error inside Sarif Files
 
 SarifFiles.update({"runs.tool.name" : "FindBugs" }, {$set : {"runs.$.tool.name" : "Findbugs V1.0 "}}, {multi: true}) ;
+
+*/

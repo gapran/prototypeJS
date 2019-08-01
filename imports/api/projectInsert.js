@@ -1,4 +1,6 @@
-import {Projects} from "./projects.js";
+// Sample code for inserting a project
+
+/*import {Projects} from "./projects.js";
 
 var projectDetails = {
     name: "test1",
@@ -13,5 +15,5 @@ var projectDetails = {
     
 Projects.insert(projectDetails);
     
-    
+*/  
     
