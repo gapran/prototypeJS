@@ -134,7 +134,7 @@
     border-radius: 74px;
     padding: 2px;
     background: #3049b4;
-    background: -webkit-linear-gradient(to bottom, #364a94, #4053af, #3049b4);
+    /* background: -webkit-linear-gradient(to bottom, #364a94, #4053af, #3049b4); */
     /* background: linear-gradient(to bottom, #4053af, #4053af, #3049b4); */
 }
 
