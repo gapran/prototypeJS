@@ -3,22 +3,24 @@
         <div class="ide-new-sub-container">
 
             <div class="ide-mid-container">
-                {{> barChart id="leaderBarChart" title="Leader Board" data=leaderBarChartData style="position: relative; top: 70px; height:200px; min-height:200px; max-height:200px; max-width:1136px"}}
+                {{> barChart id="leaderBarChart" title="Leader Board" data=leaderBarChartData style="position: relative; top: 70px; height:200px; min-height:200px; max-height:200px; max-width:1006px; width: 783px;"}}
                 <br><br><br><br><br><br><h6><mark class="blue">Mr Max</mark> is leading this month with maximum number of bug fixes.</h6>
+            </div>
+            
+            <div style="    right: 70px; top: 275px;" class="section3"> <br><br><br><br>
+                {{> chat id="chatview" }}
             </div>
 
             <div>
-                <div class="btn-left-group">
-                    <button class="link_prototype6_project">Code View</button>
-                    <button class="link_prototype6_analysis">Analysis</button>
-                    <button class="link_prototype6_settings">I D E Settings</button>
+                <div  class="btn-left-group">
+                    <button style ="width: 90px" class="link_prototype6_project">Code View</button>
+                    <button style ="width: 90px" class="link_prototype6_analysis">Analysis</button>
                 </div>
             </div>
             <div class="right-button-section">
                 <div class="btn-right-group">
-                    <button class="link_prototype6_profile">User Profile</button>
-                    <button class="link_prototype6_activity">Recent Activity</button>
-                    <button class="link_prototype6_leader">Leader Board</button>
+                    <button style ="width: 90px" class="link_prototype6_profile">User Profile</button>
+                    <button style ="width: 90px" class="link_prototype6_leader">Leader Board</button>
                 </div>
             </div>
         </div>

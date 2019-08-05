@@ -8,14 +8,15 @@ import {Template} from "meteor/templating";
 
 import "../progressBar/progressBar.html";
 import "../progressBar/progressBar.js";
-
+// import "./activity.html";
+// import "./activity.js";
 Template.prototype6_profile.helpers({
 
 });
 
 Template.prototype6_profile.created = function () {
 
-    sAlert.info("Badge Icons - Credits: Laura Reen, Licence - Creative Commons (Attribution-Noncommercial 3.0 Unported) ", {position: 'bottom', timeout: 3000});
+    // sAlert.info("Badge Icons - Credits: Laura Reen, Licence - Creative Commons (Attribution-Noncommercial 3.0 Unported) ", {position: 'bottom', timeout: 3000});
 };
 
 Template.prototype6_profile.events({
