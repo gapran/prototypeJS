@@ -1,7 +1,7 @@
 // Libraries
-import {Projects} from "../../api/projects.js";
+import {Projects} from "../../../collections/projects.js";
+import {SarifFiles} from "../../../collections/sarifFiles.js";
 import {getTextFromFile} from "../../api/files.js";
-import {getSarifData} from "../../api/retrieveWarnings.js";
 import {Template} from "meteor/templating";
 
 import "../progressBar/progressBar.html";
@@ -30,6 +30,9 @@ import "../codeEditor/codeEditor.html";
 import "../codeEditor/codeEditor.js";
 
 import "./prototype1.html";
+
+//Subscribe to the published data 
+Meteor.subscribe("SarifFiles");
 
 // Prototype 1
 
@@ -90,8 +93,58 @@ Template.prototype1.helpers({
     filterIds: ["status", "progress"],
 
     // ABCOptions editor data
-    fileContents: getTextFromFile("CreateDB.java"),
-    warnings : getSarifData("CreateDB.java"),
+    fileContents: getTextFromFile("code/CreateDB.java"),
+    warnings : function(){
+        var warnings = [];
+        var test = SarifFiles.find().count();
+        console.log("count data", test);
+        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"}).map(function(tempSarifData) 
+        {
+            console.log("map data");
+            var runs = tempSarifData.runs;
+            for(var i=0;i<runs.length;i++)
+            {
+                var tempRun = runs[i];
+                var results = tempRun.results ;
+                for(var j=0;j<results.length;j++)
+                {
+                    var tempResult = results[j];
+                    var locations = tempResult.locations;
+                    for(var k=0;k<locations.length;k++)
+                    {
+                        var tempLocation = locations[k];
+                        var uri = tempLocation.analysisTarget.uri;
+                        var startLine = tempLocation.analysisTarget.region.startLine ;
+                        var line = parseInt(startLine);
+                        var ruleId = tempResult.ruleId;
+                        var shortMessage  = tempResult.message;
+                        var tempFileName = uri.split("/");
+                        var fileName = tempFileName[tempFileName.length-1];
+                        fileName = fileName.replace("_",".");
+                        if(fileName == "CreateDB.java")
+                        {
+                        var tempWarning = {id:ruleId , lineNumber: line, type:"error"};
+                        warnings.push(tempWarning);
+                            
+                        }
+                    }
+
+                    tempLocation = [];
+                    uri = "";
+                    startLine = "";
+                    ruleId = "";
+                    shortMessage = "";
+                    tempFileName = [];
+                    fileName = "";
+                    
+                }
+
+            }
+        });
+        console.log("sarif data", SarifData);
+        console.log("warnings", warnings);
+        return warnings;
+    },
     codeEditorCallbacks(){
         return {
             iconClickCallback(){

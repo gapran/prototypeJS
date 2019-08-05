@@ -1,12 +1,17 @@
 1. Database used in the application is MongoDB and for the database we have two different collections "Projects" and "SarifFiles" in the form of JSON structure.
+
 2. For each project there could be multiple sarifFiles and are inserted via command line (Powershell for windows).
+
 3. To insert a sarif file, please follow the below instructions : 
 	(i)	Copy (Ctrl+V) the contents of the file.
 	(ii) Run Powershell using administrator rights and go to the directory where .meteor folder is available
 	(iii) Run "meteor mongo" from the powershell. MongoDB would be connected to the application.
 	(iii)	Run SarifFiles.insert(filecontents)
 
-4. There were some changes made in the sarif file that was parsed previously and all the changes are listed below : 
+4. Please remove autopublish feature from meteor. To do so, go to the directory where .meteor folder is available from Windows Powershell using Administrator rights.
+Run the command :  "meteor remove autopublish"
+
+5. There were some changes made in the sarif file that was parsed previously and all the changes are listed below : 
 
 	Sarif File Changes for 
 
