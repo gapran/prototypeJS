@@ -117,8 +117,6 @@
     border-radius: 15%;
     padding: 5px;
     background: #3049b4;
-    background: -webkit-linear-gradient(to bottom, #4053af, #4053af, #3049b4);
-    background: linear-gradient(to bottom, #4053af, #4053af, #3049b4);
 }
 
 .image_inner_container img {
