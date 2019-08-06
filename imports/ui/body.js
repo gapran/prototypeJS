@@ -105,6 +105,9 @@ Template.body.events({
   "click .link_profile"() {
     Session.set("templateName", "prototype6");
   },
+  "click .fixbutton"() {
+    Session.set("templateName", "editor");
+  },
 
   // Navigation rules for prototype 7
   "click .link_prototype7"() {

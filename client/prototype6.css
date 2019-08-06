@@ -136,8 +136,8 @@ mark.brown {
 
 .highlights{
     position: absolute;
-    right: 500px;
-    top: 100px;
+    right: 150px;
+    top: 50px;
     width: 300px;
     display: block;
 }
@@ -198,3 +198,58 @@ mark.brown {
   width: 300px;
   height: 550px;
 }
+
+  /* Table */
+.tableSection{
+
+  position: absolute;
+  top: 40px;
+  right: 550px;
+  height: 275px;
+  width: 600px;
+  text-align: center;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #050505;
+  font-size: 14px;
+}
+
+.filterSection {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  height: 300px;
+  width: 200px;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.descriptionSection {
+  position: absolute;
+  top: 330px;
+  right: 550px;
+  height: 260px;
+  width: 600px;
+  background-color: lightgreen;
+}
+
+.fixbutton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 90px;
+}
+
+.activitySection {
+  position: absolute;
+  top: 150px;
+  right: 600px;
+  height: 260px;
+  width: 600px;
+  background-color: lightpink;
+}
+

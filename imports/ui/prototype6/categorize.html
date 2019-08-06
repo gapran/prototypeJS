@@ -10,21 +10,39 @@
     
                 <div class="header-right">
                     <a href="#" class="link_profile" >Profile</a>
-                    <a href="#" class="link_highlights">Highlights</a>
-                    <a href="#" class="link_editor">Editor</a>
                     <a href="#" class="active">Analyze</a>
+                    <a href="#" class="link_editor">Editor</a>
+                    <a href="#" class="link_highlights">Highlights</a>
                     <a href="#" class="link_visualize">Visualize</a>
                 </div>
             </div>
     
             <div class="bodysection">
-                <div class="table">
+                <div class="tableSection">
                     {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData }}
                 </div>
 
-                <div class="filter">
+                <div class="filterSection">
                     {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
                 </div>
+
+                <div class="descriptionSection">
+                    <form style="width: 329px;">
+                        <b>Bug Name:</b>
+                        <input type="text" style="border: none;" name="bugName" value={{theBug}} readonly><br> <br>
+                        <div>
+                            <div >
+                                <label for="bugDescription"><b>Bug Description</b></label>
+                            </div> <br>
+                            <div >
+                             <textarea style="border: none; width:550px; height:60px" name="bugDescription" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus varius dictum. Cras massa risus, sodales ac condimentum cursus, ultricies placerat nulla. Duis a est eget nunc iaculis iaculis dapibus dictum nisl. Ut pretium volutpat cursus. Ut sed mi non tellus bibendum convallis. Aliquam tempus sodales efficitur. In tempor mauris et risus porta ultrices. " readonly></textarea>
+                             <button class="fixbutton" type="button">Fix Now!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
             </div>
     
         </div>
