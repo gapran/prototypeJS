@@ -26,7 +26,7 @@ Template.categorize.helpers({
     filterIds: ["status", "progress"],
 
     theBug() {
-        return Session.get('cellClicked');
+        return Session.get("cellClicked");
     }
 
 });
@@ -34,6 +34,6 @@ Template.categorize.helpers({
 Template.categorize.events({
     // Retrieve the clicked cell
     "click td"(e) {
-        Session.set("cellClicked", e.target.innerText)
+        Session.set("cellClicked", e.target.innerText);
         }
 });
