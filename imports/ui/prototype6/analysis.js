@@ -34,7 +34,8 @@ Template.prototype6_analysis.helpers({
     theBug() {
         return Session.get('cellClicked');
     }
-
+    
+   
 
 });
 

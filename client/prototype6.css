@@ -190,7 +190,16 @@ mark.green {
     border: 1px solid #CCC;
     border-radius: 1em;
 }
-
+.prototype6-suggestion {
+    position: absolute;
+    height: 140px;
+    width: 226px;
+    top: 289px;
+    right: 85px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
 #fix-btn {
 
     position: absolute;
