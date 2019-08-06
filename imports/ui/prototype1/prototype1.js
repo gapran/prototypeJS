@@ -1,3 +1,6 @@
+/*global Meteor*/
+/*eslint no-undef: "error"*/
+
 // Libraries
 import {Projects} from "../../../collections/projects.js";
 import {SarifFiles} from "../../../collections/sarifFiles.js";
@@ -94,13 +97,11 @@ Template.prototype1.helpers({
 
     // ABCOptions editor data
     fileContents: getTextFromFile("code/CreateDB.java"),
-    warnings : function(){
+    warnings(){
         var warnings = [];
-        var test = SarifFiles.find().count();
-        console.log("count data", test);
-        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"}).map(function(tempSarifData) 
+        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        SarifData.map(function(tempSarifData) 
         {
-            console.log("map data");
             var runs = tempSarifData.runs;
             for(var i=0;i<runs.length;i++)
             {
@@ -121,28 +122,25 @@ Template.prototype1.helpers({
                         var tempFileName = uri.split("/");
                         var fileName = tempFileName[tempFileName.length-1];
                         fileName = fileName.replace("_",".");
-                        if(fileName == "CreateDB.java")
+                        if(fileName === "CreateDB.java")
                         {
                         var tempWarning = {id:ruleId , lineNumber: line, type:"error"};
                         warnings.push(tempWarning);
+                        tempLocation = [];
+                        uri = "";
+                        startLine = "";
+                        ruleId = "";
+                        shortMessage = "";
+                        tempFileName = [];
+                        fileName = "";
                             
                         }
                     }
-
-                    tempLocation = [];
-                    uri = "";
-                    startLine = "";
-                    ruleId = "";
-                    shortMessage = "";
-                    tempFileName = [];
-                    fileName = "";
                     
                 }
 
             }
         });
-        console.log("sarif data", SarifData);
-        console.log("warnings", warnings);
         return warnings;
     },
     codeEditorCallbacks(){
