@@ -1,6 +1,7 @@
 // Libraries
 
 import {Projects} from "../../api/projects.js";
+import {SarifFiles} from "../../api/sarifFiles.js";
 import {getTextFromFile} from "../../api/files.js";
 import {Template} from "meteor/templating";
 
@@ -88,17 +89,54 @@ Template.prototype1.helpers({
     // Filter data
     // Ids on which to filter from a table. Must match the ones in resultsTableColumns
     filterIds: ["status", "progress"],
+    fileContents: getTextFromFile("code/CreateDB.java"),
+    warnings(){
+        var warnings = [];
+        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        SarifData.map(function(tempSarifData) 
+        {
+            var runs = tempSarifData.runs;
+            for(var i=0;i<runs.length;i++)
+            {
+                var tempRun = runs[i];
+                var results = tempRun.results ;
+                for(var j=0;j<results.length;j++)
+                {
+                    var tempResult = results[j];
+                    var locations = tempResult.locations;
+                    for(var k=0;k<locations.length;k++)
+                    {
+                        var tempLocation = locations[k];
+                        var uri = tempLocation.analysisTarget.uri;
+                        var startLine = tempLocation.analysisTarget.region.startLine ;
+                        var line = parseInt(startLine);
+                        var ruleId = tempResult.ruleId;
+                        var shortMessage  = tempResult.message;
+                        var tempFileName = uri.split("/");
+                        var fileName = tempFileName[tempFileName.length-1];
+                        fileName = fileName.replace("_",".");
+                        if(fileName === "CreateDB.java")
+                        {
+                        var tempWarning = {id:ruleId , lineNumber: line, type:"error"};
+                        warnings.push(tempWarning);
+                        tempLocation = [];
+                        uri = "";
+                        startLine = "";
+                        ruleId = "";
+                        shortMessage = "";
+                        tempFileName = [];
+                        fileName = "";
+                            
+                        }
+                    }
+                    
+                }
 
-    // ABCOptions editor data
-    fileContents: getTextFromFile("code/ABCOptions.java"),
-    warnings: [
-        // TODO(rashmi): retrieve list of warnings from database.
-        {id:"1234", lineNumber: 2, type:"error"},
-        {id:"6783", lineNumber: 5, type:"error"},
-        {id:"1209", lineNumber: 5, type:"info"},
-        {id:"3497", lineNumber: 5, type:"error"},
-        {id:"1011", lineNumber: 22, type:"warning"},
-    ],
+            }
+        });
+        console.log("warnings ", warnings);
+        return warnings;
+    },
     codeEditorCallbacks(){
         return {
             iconClickCallback(){
