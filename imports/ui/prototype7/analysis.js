@@ -4,7 +4,7 @@
 // File
 
 import "./analysis.html";
-import {Projects} from "../../api/projects";
+import {Projects} from "../../../collections/projects.js";
 import {Template} from "meteor/templating";
 
 import "../table/table.html";
