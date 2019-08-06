@@ -39,6 +39,43 @@ function getDetailedWarningsInfo(ids){
     var i;
     for(i = 0; i<ids.length; i++){
         // TODO(rashmi): retrieve detailed warning info from database.
+        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        SarifData.map(function(tempSarifData) 
+        {
+            var runs = tempSarifData.runs;
+            for(var i=0;i<runs.length;i++)
+            {
+                var tempRun = runs[i];
+                var results = tempRun.results ;
+                for(var j=0;j<results.length;j++)
+                {
+                    var tempResult = results[j];
+                    var locations = tempResult.locations;
+                    for(var k=0;k<locations.length;k++)
+                    {
+                        var shortMessage  = tempResult.message;
+                        var tempFileName = uri.split("/");
+                        var fileName = tempFileName[tempFileName.length-1];
+                        fileName = fileName.replace("_",".");
+                        if(fileName === "CreateDB.java")
+                        {
+                        var tempWarning = {id:ruleId , lineNumber: line, type:"error"};
+                        warnings.push(tempWarning);
+                        tempLocation = [];
+                        uri = "";
+                        startLine = "";
+                        ruleId = "";
+                        shortMessage = "";
+                        tempFileName = [];
+                        fileName = "";
+                            
+                        }
+                    }
+                    
+                }
+
+            }
+        });
         info += "\n- " + ids[i];
     }
     return info;
@@ -134,7 +171,6 @@ Template.prototype1.helpers({
 
             }
         });
-        console.log("warnings ", warnings);
         return warnings;
     },
     codeEditorCallbacks(){
