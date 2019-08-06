@@ -261,6 +261,13 @@ mark.brown {
   width: 300px;
 }
 
+.bargraph {
+  position: absolute;
+  top: 130px;
+  right: 50px;
+  height: 400px;
+  width: 1200px;
+}
 
 /*CSS for Piechart*/
 .wrapper {
