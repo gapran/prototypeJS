@@ -1,6 +1,7 @@
 
 import {Projects} from "../../api/projects.js";
 import {Template} from "meteor/templating";
+import { Session } from 'meteor/session'
 
 import "./categorize.html";
 import "../table/table.html";
