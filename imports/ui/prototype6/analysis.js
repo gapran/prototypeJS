@@ -6,6 +6,7 @@
 import "./analysis.html";
 import {Projects} from "../../api/projects";
 import {Template} from "meteor/templating";
+import { Session } from "meteor/session";
 
 import "../table/table.html";
 import "../table/table.js";
