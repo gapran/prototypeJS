@@ -32,7 +32,7 @@ Template.prototype6_analysis.helpers({
     filterIds: ["status", "progress"],
 
     theBug() {
-        return Session.get('cellClicked');
+        return Session.get("cellClicked");
     }
     
    
