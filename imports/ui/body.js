@@ -23,6 +23,14 @@ import "./prototype6/leader.js";
 import "./prototype6/project.js";
 import "./prototype6/settings.js";
 import "./prototype6/analysis.js";
+// Pages of prototype 7
+import "./prototype7/prototype7.js";
+import "./prototype7/profile.js";
+import "./prototype7/activity.js";
+import "./prototype7/community.js";
+import "./prototype7/project.js";
+import "./prototype7/settings.js";
+import "./prototype7/analysis.js";
 
 // Helper for navigation
 Template.body.helpers({
@@ -83,6 +91,27 @@ Template.body.events({
   },
   "click .link_prototype6_leader"() {
     Session.set("templateName", "prototype6_leader");
+  },
+  // Navigation rules for prototype 7
+  "click .link_prototype7"() {
+    Session.set("templateName", "prototype7");
+  },
+  "click .link_prototype7_project"() {
+    Session.set("templateName", "prototype7_project");
+  },
+  "click .link_prototype7_analysis"() {
+    Session.set("templateName", "prototype7_analysis");
+  },
+  "click .link_prototype7_settings"() {
+    Session.set("templateName", "prototype7_settings");
+  },
+  "click .link_prototype7_profile"() {
+    Session.set("templateName", "prototype7_profile");
+  },
+  "click .link_prototype7_activity"() {
+    Session.set("templateName", "prototype7_activity");
+  },
+  "click .link_prototype7_community"() {
+    Session.set("templateName", "prototype7_community");
   }
-
 });
