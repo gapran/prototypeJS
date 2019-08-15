@@ -33,49 +33,10 @@ import "../codeEditor/codeEditor.js";
 import "./prototype1.html";
 
 // Prototype 1
-
 function getDetailedWarningsInfo(ids){
     var info = ids.length + " warning" + (ids.length === 1 ? "" : "s") + ":";
     var i;
     for(i = 0; i<ids.length; i++){
-        // TODO(rashmi): retrieve detailed warning info from database.
-        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
-        SarifData.map(function(tempSarifData) 
-        {
-            var runs = tempSarifData.runs;
-            for(var i=0;i<runs.length;i++)
-            {
-                var tempRun = runs[i];
-                var results = tempRun.results ;
-                for(var j=0;j<results.length;j++)
-                {
-                    var tempResult = results[j];
-                    var locations = tempResult.locations;
-                    for(var k=0;k<locations.length;k++)
-                    {
-                        var shortMessage  = tempResult.message;
-                        var tempFileName = uri.split("/");
-                        var fileName = tempFileName[tempFileName.length-1];
-                        fileName = fileName.replace("_",".");
-                        if(fileName === "CreateDB.java")
-                        {
-                        var tempWarning = {id:ruleId , lineNumber: line, type:"error"};
-                        warnings.push(tempWarning);
-                        tempLocation = [];
-                        uri = "";
-                        startLine = "";
-                        ruleId = "";
-                        shortMessage = "";
-                        tempFileName = [];
-                        fileName = "";
-                            
-                        }
-                    }
-                    
-                }
-
-            }
-        });
         info += "\n- " + ids[i];
     }
     return info;
@@ -128,48 +89,55 @@ Template.prototype1.helpers({
     filterIds: ["status", "progress"],
     fileContents: getTextFromFile("code/CreateDB.java"),
     warnings(){
-        var warnings = [];
+        var warnings =[];
         var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
         SarifData.map(function(tempSarifData) 
         {
-            var runs = tempSarifData.runs;
+            var runs, tempRun,results ,tempResult,locations,shortMessage,longMessage, tempFileName;
+            var fileName, tempWarning, uri, lineNumber, line, ruleId;
+
+            runs = tempSarifData.runs;
             for(var i=0;i<runs.length;i++)
             {
-                var tempRun = runs[i];
-                var results = tempRun.results ;
+                tempRun = runs[i];
+                results = tempRun.results ;
                 for(var j=0;j<results.length;j++)
                 {
-                    var tempResult = results[j];
-                    var locations = tempResult.locations;
+                    tempResult = results[j];
+                    locations = tempResult.locations;
                     for(var k=0;k<locations.length;k++)
                     {
-                        var tempLocation = locations[k];
-                        var uri = tempLocation.analysisTarget.uri;
-                        var startLine = tempLocation.analysisTarget.region.startLine ;
-                        var line = parseInt(startLine);
-                        var ruleId = tempResult.ruleId;
-                        var shortMessage  = tempResult.message;
-                        var tempFileName = uri.split("/");
-                        var fileName = tempFileName[tempFileName.length-1];
+                        shortMessage  = tempResult.message;
+                        longMessage = tempResult.message;
+                        uri = locations[k].analysisTarget.uri;
+                        lineNumber = locations[k].analysisTarget.region.startLine;
+                        line = parseInt(lineNumber, 10);
+                        ruleId = tempResult.ruleId ;
+                        tempFileName = uri.split("/");
+                        fileName = tempFileName[tempFileName.length-1];
                         fileName = fileName.replace("_",".");
                         if(fileName === "CreateDB.java")
                         {
-                        var tempWarning = {id:ruleId , lineNumber: line, type:"error"};
-                        warnings.push(tempWarning);
-                        tempLocation = [];
-                        uri = "";
-                        startLine = "";
-                        ruleId = "";
-                        shortMessage = "";
-                        tempFileName = [];
-                        fileName = "";
-                            
+                            tempWarning = {id:ruleId , lineNumber: line, type:"error"};
+                            warnings.push(tempWarning);
+                            tempLocation = null;
+                            uri = null;
+                            startLine = null;
+                            ruleId = null;
                         }
+                        shortMessage = null;
+                        tempFileName = null;
+                        fileName = null;
                     }
+                    tempResult = null;
+                    locations = null;
                     
                 }
+                tempRun = null;
+                results = null;
 
             }
+
         });
         return warnings;
     },
