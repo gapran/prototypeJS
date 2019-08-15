@@ -120,14 +120,16 @@ Template.prototype1.helpers({
                         {
                             tempWarning = {id:ruleId , lineNumber: line, type:"error"};
                             warnings.push(tempWarning);
-                            tempLocation = null;
+                            shortMessage = null;
+                            longMessage = null;
                             uri = null;
-                            startLine = null;
+                            lineNumber = null;
+                            line = null;
                             ruleId = null;
+                            tempFileName = null;
+                            fileName = null;
                         }
-                        shortMessage = null;
-                        tempFileName = null;
-                        fileName = null;
+
                     }
                     tempResult = null;
                     locations = null;
@@ -137,6 +139,7 @@ Template.prototype1.helpers({
                 results = null;
 
             }
+            runs = null;
 
         });
         return warnings;
