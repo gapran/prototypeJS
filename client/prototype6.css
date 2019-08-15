@@ -2,7 +2,7 @@
 .progress{
     position: absolute;
     right: 500px;
-    top: 100px;
+    top: 110px;
     width: 300px;
 }
 
@@ -24,10 +24,6 @@ mark.green {
 mark.brown {
   color: brown;
   background: none;
-}
-
-.progressHighlights{
-    width: 300px;
 }
 
 /*Header Style*/
@@ -329,29 +325,6 @@ input[type=text], input[type=password] {
     position: absolute;
     right: 370px;
     top: 350px;
-}
-
-
-.progress{
-  position: absolute;
-  right: 500px;
-  top: 180px;
-  width: 300px;
-}
-
-mark.red {
-  color:#ff0000;
-  background: none;
-}
-
-mark.blue {
-  color:#0000A0;
-  background: none;
-}
-
-mark.green {
-  color:rgb(255, 4, 192);
-  background: none;
 }
 
 
