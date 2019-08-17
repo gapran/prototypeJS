@@ -1,14 +1,17 @@
 // Libraries
-// ...
 
-// File
+import {Projects} from "../../api/projects.js";
+import {getTextFromFile} from "../../api/files.js";
+import {Template} from "meteor/templating";
 
-import "./project.html";
-import {getTextFromFile} from "../../api/files";
+import "./editor.html";
+
+import "../image/image.html";
+import "../image/image.js";
 
 import "../codeEditor/codeEditor.html";
 import "../codeEditor/codeEditor.js";
-import {Template} from "meteor/templating";
+
 
 function getDetailedWarningsInfo(ids){
     var info = ids.length + " warning" + (ids.length === 1 ? "" : "s") + ":";
@@ -20,9 +23,7 @@ function getDetailedWarningsInfo(ids){
     return info;
 }
 
-Template.prototype7_project.helpers({
-
-   //code view data
+Template.editor.helpers({
 
     // ABCOptions editor data
     fileContents: getTextFromFile("code/ABCOptions.java"),
@@ -63,10 +64,9 @@ Template.prototype7_project.helpers({
             }
         };
     }
-
 });
 
-Template.prototype7_project.events({
+Template.editor.events({
     "click .close"(e) {
         e.target.parentElement.style.display = "none";
     },

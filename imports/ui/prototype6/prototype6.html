@@ -1,0 +1,64 @@
+<template name="prototype6">
+    <div class="web-container">
+        <div class="web-sub-container">
+
+            <div class="header">
+                <a href="#default" class="logo">{{> badge id="icon" img="icons/gpa_logo.png" alt="Icon" title="This is hover for icon." label=""}}</a>
+
+                <div class="titleheader">
+                    <h1>Gamification of Program Analysis</h1>
+                </div>
+
+                <div class="header-right">
+                  <a class="active" href="#">Profile</a>
+                  <a href="#" class="link_categorize">Analyze</a>
+                  <a href="#" class="link_editor">Editor</a>
+                  <a href="#" class="link_highlights">Highlights</a>
+                  <a href="#" class="link_visualize">Visualize</a>
+                </div>
+            </div>
+
+            <div class="bodysection">
+
+                <div class="imageComponent">
+                    <img style="height: 180px; width: 180px; border-radius: 50%;" src="icons/img_avatar.png" alt="Avatar">
+                </div>
+                                &nbsp;&nbsp;
+                <div class="imageStars">
+                        <img style="height: 55px; width: 200px;" src="/stars.jpg" alt="Avatar">
+                </div>
+                <div class="personalDetail">
+                    <h2>Name: <mark class="red">Haseeb Ahmad</mark></h2>
+                    <h2>Designation: <mark class="blue">Developer</mark></h2>
+                    <h2>Rank: <mark class="green">Bronze</mark></h2>
+                    <h2>DOB: <mark class="brown">16.04.2002</mark></h2>
+                </div>
+
+                <div class="imgcontainer">
+                    {{> badge id="levelImg" img="images/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
+                </div>
+
+                <div class="progress">
+                        <h1>Progress</h1>
+                    {{> progressBar id="progressBar" min="0" max="100" val="30"}}
+                </div>
+
+                <div class="achievements">
+                    <h1><b> &lt;&lt; Achievements &gt;&gt; </b></h1>
+                        <input type="image" src="Achievement1.png" alt="Hattrick Fixer Badge" title="You achieved this badge for fixing 3 bugs in 3 days." height="50px" width="50px">
+                        <input type="image" src="Achievement2.png" alt="A Badge" title="A Badge" height="50px" width="50px">
+                        <input type="image" src="Achievement3.png" alt="B Badge" title="B Badge" height="50px" width="50px">
+                        <input type="image" src="Achievement4.png" alt="C Badge" title="C Badge" height="50px" width="50px">
+                        <input type="image" src="Achievement5.png" alt="A Badge" title="A Badge" height="50px" width="50px">
+                </div>
+
+                <br>
+                <div class="chat">
+                {{> chat id="chat" }}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</template>
