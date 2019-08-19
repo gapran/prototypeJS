@@ -91,13 +91,13 @@
 }
 
 
-.image_outer_container {
+.image_outer_container_mobile {
     margin-top: auto;
     margin-bottom: auto;
     border-radius: 50%;
+    padding-left: 86px;
     position: relative;
-    width: 115px;
-    ;
+    width: 254px;
 }
 
 .image_inner_container {
@@ -158,12 +158,10 @@ mark.green {
     background: none;
 }
 
-
-.progressArea {
+.progressAreaMobile {
     position: relative;
     height: 10px;
     width: 200px;
-
 }
 
 .progressFrame {

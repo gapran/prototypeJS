@@ -107,8 +107,6 @@
     margin-top: auto;
     margin-bottom: auto;
     border-radius: 50%;
-    padding-top: 44px;
-    padding-left: 86px;
     position: relative;
     width: 254px;
 }
@@ -141,7 +139,7 @@
 
 .prototype6-form {
     /* Just to center the form on the page */
-    margin: 0 auto;
+    margin: 0px;
     width: 400px;
     /* To see the outline of the form */
     padding: 1em;
@@ -173,7 +171,6 @@ mark.green {
     position: relative;
     height: 10px;
     width: 200px;
-    padding-left: 100px;
 }
 
 .progressFrame {
