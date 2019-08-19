@@ -29,3 +29,11 @@ For cmd:
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 
 3. Run choco or choco -? now to see if chocolatey has installed properly.
+
+# Running the prototype
+
+1. Install meteor.
+2. Navigate to the root directory of the repository.
+3. Run `meteor`
+4. Set up the database (follow the instructions in imports/api/README.md)
+5. Navigate to localhost:3000
