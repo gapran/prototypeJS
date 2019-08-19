@@ -8,10 +8,13 @@ import {Template} from "meteor/templating";
 
 import "../progressBar/progressBar.html";
 import "../progressBar/progressBar.js";
+import { Session } from "meteor/session";
 // import "./activity.html";
 // import "./activity.js";
 Template.prototype6_profile.helpers({
-
+    points(){
+        return Session.get("fix");
+    }
 });
 
 Template.prototype6_profile.created = function () {

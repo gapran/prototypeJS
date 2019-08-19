@@ -14,16 +14,16 @@
                 <div style="padding-top: 0px; width: 206px; height: 140px;" class="filter-section">
                     {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
                 </div>
-                <button type="button" id="fix-btn" class="link_prototype6_project">Fix Now!</button>
+                <button type="button" id="fix-btn" class="fixedbutton">Fix Now!</button>
 
             </div>
             <div>
                 <form class="prototype6-bugform">
                     <br>
                     Bug Name:
-                    <input type="text" style="border: none;" name="bugName" value={{theBug}} readonly><br> <br>
+                    <input type="text" style="border: none;" name="bugName" value={{bugName}} readonly><br> <br>
                     Bug points:
-                    <input type="text" style="border: none;" name="bugPoints" value={{theBug}} readonly><br><br> 
+                    <input type="text" style="border: none;" name="bugPoints" value={{bugPoints}} readonly><br><br> 
                     <div class="row">
                         <div class="col-25">
                             <label for="bugDescription">Bug Description</label>

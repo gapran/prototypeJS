@@ -13,8 +13,8 @@ import "../table/table.js";
 
 import "../filter/filter.html";
 import "../filter/filter.js";
-
-
+import "./profile.html";
+import "./profile.js";
 
 Template.prototype6_analysis.helpers({
 // Table data
@@ -32,17 +32,22 @@ Template.prototype6_analysis.helpers({
     // Ids on which to filter from a table. Must match the ones in resultsTableColumns
     filterIds: ["status", "progress"],
 
-    theBug() {
-        return Session.get("cellClicked");
+    bugName() {
+        return Session.get("bugName");
+    },
+    bugPoints() {
+        return Session.get("bugPoints");
     }
-    
-   
 
 });
 
 Template.prototype6_analysis.events({
     // Retrieve the clicked cell
     "click td"(e) {
-        Session.set("cellClicked", e.target.innerText);
-        }
+        Session.set("bugName", "name of the bug");
+        Session.set("bugPoints",123 );  
+    },
+    "click.fixedbutton"() {
+        Session.set("fix", 123);
+      }
 });
