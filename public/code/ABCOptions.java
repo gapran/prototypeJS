@@ -50,7 +50,7 @@ public class ABCOptions
      * each of With CSE, With Array Ref, With Field Ref, With Class 
      * Field, and With Rectangular Array to true.
      */
-    public boolean with_all() {
+    public boolean withAll() {
         return soot.PhaseOptions.getBoolean( options, "with-all" );
     }
     
@@ -65,7 +65,7 @@ public class ABCOptions
      * as r1. Experiments show that this option can improve the result 
      * slightly.
      */
-    public boolean with_cse() {
+    public boolean withCse() {
         return soot.PhaseOptions.getBoolean( options, "with-cse" );
     }
     
@@ -81,7 +81,7 @@ public class ABCOptions
      * assume that an array element may not be changed by other threads 
      * between two array references.
      */
-    public boolean with_arrayref() {
+    public boolean withArrayref() {
         return soot.PhaseOptions.getBoolean( options, "with-arrayref" );
     }
     
@@ -97,7 +97,7 @@ public class ABCOptions
      * synchronized block. That is, we assume that a field may not be 
      * changed by other threads between two field references.
      */
-    public boolean with_fieldref() {
+    public boolean withFieldref() {
         return soot.PhaseOptions.getBoolean( options, "with-fieldref" );
     }
     
@@ -111,7 +111,7 @@ public class ABCOptions
      * In an application using lots of array fields, this option can 
      * improve the analysis results dramatically.
      */
-    public boolean with_classfield() {
+    public boolean withClassfield() {
         return soot.PhaseOptions.getBoolean( options, "with-classfield" );
     }
     
@@ -125,7 +125,7 @@ public class ABCOptions
      * time. If the application uses rectangular arrays, these options 
      * can improve the analysis result. 
      */
-    public boolean with_rectarray() {
+    public boolean withRectarray() {
         return soot.PhaseOptions.getBoolean( options, "with-rectarray" );
     }
     
@@ -149,7 +149,7 @@ public class ABCOptions
      * Add color tags to the results of the array bounds check 
      * analysis.
      */
-    public boolean add_color_tags() {
+    public boolean addColorTags() {
         return soot.PhaseOptions.getBoolean( options, "add-color-tags" );
     }
     
