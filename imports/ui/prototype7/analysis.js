@@ -41,6 +41,6 @@ Template.prototype7_analysis.helpers({
 Template.prototype7_analysis.events({
     // Retrieve the clicked cell
     "click td"(e) {
-        Session.set("cellClicked", e.target.innerText)
+        Session.set("cellClicked", e.target.innerText);
         }
 });
