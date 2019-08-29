@@ -12,6 +12,8 @@ import "../image/image.js";
 import "../codeEditor/codeEditor.html";
 import "../codeEditor/codeEditor.js";
 
+import "./categorize.html";
+import "./categorize.js";
 
 function getDetailedWarningsInfo(ids){
     var info = ids.length + " warning" + (ids.length === 1 ? "" : "s") + ":";
@@ -69,5 +71,9 @@ Template.editor.helpers({
 Template.editor.events({
     "click .close"(e) {
         e.target.parentElement.style.display = "none";
+    },
+    "click .fixedbtn"(e) {
+        sAlert.info("You got 50 points");
+        Session.set('fixed',  Session.get('fixed') + 50);
     },
 });

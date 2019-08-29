@@ -13,3 +13,12 @@ import "./prototype6.html";
 
 // Prototype 6
 
+Session.setDefault('fixed', 0);
+
+Template.prototype6.helpers({
+
+    thePoints() {
+        return Session.get('fixed');
+    }
+
+});
