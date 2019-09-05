@@ -12,7 +12,7 @@ import "../table/table.js";
 
 import "../filter/filter.html";
 import "../filter/filter.js";
-
+import { Session } from "meteor/session";
 
 
 Template.prototype7_analysis.helpers({
@@ -32,7 +32,7 @@ Template.prototype7_analysis.helpers({
     filterIds: ["status", "progress"],
 
     theBug() {
-        return Session.get('cellClicked');
+        return Session.get("cellClicked");
     }
 
 
@@ -41,6 +41,6 @@ Template.prototype7_analysis.helpers({
 Template.prototype7_analysis.events({
     // Retrieve the clicked cell
     "click td"(e) {
-        Session.set("cellClicked", e.target.innerText)
+        Session.set("cellClicked", e.target.innerText);
         }
 });

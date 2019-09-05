@@ -103,7 +103,7 @@
 }
 
 
-.image_outer_container {
+.image_outer_container_ide {
     margin-top: auto;
     margin-bottom: auto;
     border-radius: 50%;
@@ -125,13 +125,13 @@
     border: 5px solid white;
 }
 
-.image_outer_container .green_icon {
+.image_outer_container_ide .green_icon {
     background-color: #4cd137;
     position: absolute;
-    right: 30px;
+    right: 85px;
     bottom: 10px;
     height: 30px;
-    width: 30px;
+    width: 28px;
     border: 5px solid white;
     border-radius: 50%;
 }
