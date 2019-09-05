@@ -50,7 +50,6 @@ function getDetailedWarningsInfo(ids){
                 for(var key in rules)
                 {
                     var keyValue = rules[key];
-                    console.log(keyValue.id);
                     if(keyValue.id === ids[i]){
                         var message = keyValue.description;
                         info += "\n- " + message;
@@ -69,9 +68,7 @@ function getDetailedWarningsInfo(ids){
 
 function getTooltipData(ids)
 {
-    var info = "test";
-    console.log("ids", ids);
-    
+    var info = "";
     for(var i = 0; i<ids.length; i++)
     {
         var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
@@ -86,7 +83,8 @@ function getTooltipData(ids)
                 {
                     var tempResult = results[k];
                     if(tempResult.ruleId === ids[i]){
-                        info = tempResult.message ;
+                        var adds = (info === "" ? "" : "\n");
+                        info = info + adds + tempResult.message ;
                     }
                 }
             }
@@ -225,10 +223,7 @@ Template.prototype1.helpers({
             
             },
             iconTooltipCallback(){
-
-                var tooltip = getTooltipData(this.ids);
-               // TODO(rashmi): retrieve basic warning info from database.
-                return "Tooltip for " + tooltip;
+                return getTooltipData(this.ids);
             }
         };
     }
