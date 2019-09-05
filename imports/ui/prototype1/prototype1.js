@@ -36,11 +36,67 @@ import "./prototype1.html";
 function getDetailedWarningsInfo(ids){
     var info = ids.length + " warning" + (ids.length === 1 ? "" : "s") + ":";
     var i;
-    for(i = 0; i<ids.length; i++){
-        info += "\n- " + ids[i];
+    for(i = 0; i<ids.length; i++)
+    {
+        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        SarifData.map(function(tempSarifData) 
+        {
+            var runs = tempSarifData.runs;
+            for(var j=0;j<runs.length;j++)
+            {
+                var tempRun = runs[j];
+                var rules = tempRun.rules;
+                var tempId = ids[i];
+                for(var key in rules)
+                {
+                    var keyValue = rules[key];
+                    console.log(keyValue.id);
+                    if(keyValue.id === ids[i]){
+                        var message = keyValue.description;
+                        info += "\n- " + message;
+                    }
+                }
+            }
+
+        });
+        
+        
+
     }
     return info;
 }
+
+
+function getTooltipData(ids)
+{
+    var info = "test";
+    console.log("ids", ids);
+    
+    for(var i = 0; i<ids.length; i++)
+    {
+        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        SarifData.map(function(tempSarifData) 
+        {
+            var runs = tempSarifData.runs;
+            for(var j=0;j<runs.length;j++)
+            {
+                var tempRun = runs[j];
+                var results = tempRun.results;
+                for(var k=0; k<results.length ; k++)
+                {
+                    var tempResult = results[k];
+                    if(tempResult.ruleId === ids[i]){
+                        info = tempResult.message ;
+                    }
+                }
+            }
+
+        });
+    }
+
+    return info;
+}
+
 
 Template.prototype1.helpers({
 
@@ -166,10 +222,13 @@ Template.prototype1.helpers({
                 // Add warning data to warningInfo popup.
                 var textElem = warningInfoElem.getElementsByTagName("DIV")[0];
                 textElem.innerText = getDetailedWarningsInfo(this.data.ids);
+            
             },
             iconTooltipCallback(){
-                // TODO(rashmi): retrieve basic warning info from database.
-                return "Tooltip for " + this.ids;
+
+                var tooltip = getTooltipData(this.ids);
+               // TODO(rashmi): retrieve basic warning info from database.
+                return "Tooltip for " + tooltip;
             }
         };
     }
