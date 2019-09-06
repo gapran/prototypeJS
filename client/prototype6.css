@@ -351,6 +351,12 @@ input[type=text], input[type=password] {
     top: 350px;
 }
 
+.loginBlock{
+  position: absolute;
+  right: 370px;
+  top: 350px;
+}
+
 
 /*CSS for Piechart*/
 .wrapper {
