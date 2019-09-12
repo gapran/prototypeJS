@@ -15,14 +15,14 @@ import "./prototype2/prototype2.js";
 // Pages of prototype 3
 import "./prototype3/prototype3.js";
 
-// Pages of prototype 6
-import "./prototype6/prototype6.js";
-import "./prototype6/profile.js";
-import "./prototype6/activity.js";
-import "./prototype6/leader.js";
-import "./prototype6/project.js";
-import "./prototype6/settings.js";
-import "./prototype6/analysis.js";
+// Pages of prototype 8
+import "./prototype8/prototype8.js";
+import "./prototype8/profile.js";
+import "./prototype8/activity.js";
+import "./prototype8/leader.js";
+import "./prototype8/project.js";
+import "./prototype8/settings.js";
+import "./prototype8/analysis.js";
 // Pages of prototype 7
 import "./prototype7/prototype7.js";
 import "./prototype7/profile.js";
@@ -70,27 +70,27 @@ Template.body.events({
     Session.set("templateName", "prototype3");
   },
 
-  // Navigation rules for prototype 6
-  "click .link_prototype6"() {
-    Session.set("templateName", "prototype6");
+  // Navigation rules for prototype 8
+  "click .link_prototype8"() {
+    Session.set("templateName", "prototype8");
   },
-  "click .link_prototype6_project"() {
-    Session.set("templateName", "prototype6_project");
+  "click .link_prototype8_project"() {
+    Session.set("templateName", "prototype8_project");
   },
-  "click .link_prototype6_analysis"() {
-    Session.set("templateName", "prototype6_analysis");
+  "click .link_prototype8_analysis"() {
+    Session.set("templateName", "prototype8_analysis");
   },
-  "click .link_prototype6_settings"() {
-    Session.set("templateName", "prototype6_settings");
+  "click .link_prototype8_settings"() {
+    Session.set("templateName", "prototype8_settings");
   },
-  "click .link_prototype6_profile"() {
-    Session.set("templateName", "prototype6_profile");
+  "click .link_prototype8_profile"() {
+    Session.set("templateName", "prototype8_profile");
   },
-  "click .link_prototype6_activity"() {
-    Session.set("templateName", "prototype6_activity");
+  "click .link_prototype8_activity"() {
+    Session.set("templateName", "prototype8_activity");
   },
-  "click .link_prototype6_leader"() {
-    Session.set("templateName", "prototype6_leader");
+  "click .link_prototype8_leader"() {
+    Session.set("templateName", "prototype8_leader");
   },
   // Navigation rules for prototype 7
   "click .link_prototype7"() {

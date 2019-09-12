@@ -145,7 +145,7 @@
     border: 5px solid white;
 }
 
-.image_outer_container .green_icon {
+.image_outer_container-mbl .green_icon {
     background-color: #4cd137;
     position: absolute;
     right: -38px;
