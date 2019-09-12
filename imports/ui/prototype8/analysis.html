@@ -1,0 +1,62 @@
+<template name="prototype8_analysis">
+    <div class="ide-new-container">
+        <div class="ide-new-sub-container">
+
+            <div class="ide-mid-container">
+
+                <div class="table-section">
+                    {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData }}
+                </div>
+                
+                <div >
+                    <button type="button" id="setting-btn" class="link_prototype8_settings">IDE Settings</button>
+                </div>
+                <div style="padding-top: 0px; width: 206px; height: 140px;" class="filter-section">
+                    {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
+                </div>
+                <button type="button" id="fix-btn" class="fixedbutton">Fix Now!</button>
+
+            </div>
+            <div>
+                <form class="prototype8-bugform">
+                    <br>
+                    Bug Name:
+                    <input type="text" style="border: none;" name="bugName" value={{bugName}} readonly><br> <br>
+                    Bug points:
+                    <input type="text" style="border: none;" name="bugPoints" value={{bugPoints}} readonly><br><br> 
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="bugDescription">Bug Description</label>
+                        </div> <br>
+                        <div class="col-75">
+                    <textarea style="border: none; width:700px" name="bugDescription" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus varius dictum. Cras massa risus, sodales ac condimentum cursus, ultricies placerat nulla. Duis a est eget nunc iaculis iaculis dapibus dictum nisl. Ut pretium volutpat cursus. Ut sed mi non tellus bibendum convallis. Aliquam tempus sodales efficitur. In tempor mauris et risus porta ultrices. " readonly></textarea>
+                        </div></div>
+                </form>
+            </div>
+            <div>
+                <form class="prototype8-suggestion">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="bugDescription">Suggestion</label>
+                        </div> <br>
+                        <div class="col-75">
+                    <textarea style="border: none; width:223px" name="bugSuggestion" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus varius dictum. Cras massa risus, sodales ac condimentum cursus, ultricies placerat nulla. Duis a est eget nunc iaculis iaculis dapibus dictum nisl. Ut pretium volutpat cursus. Ut sed mi non tellus bibendum convallis. Aliquam tempus sodales efficitur. In tempor mauris et risus porta ultrices. " readonly></textarea>
+                        </div></div>
+                </form>
+            </div>
+
+            <div>
+                <div  class="btn-left-group">
+                    <button style ="width: 90px ; height: 260px;" class="link_prototype8_project">Code View</button>
+                    <button style ="width: 90px;  height: 260px;" class="link_prototype8_analysis">Analysis</button>
+                </div>
+            </div>
+            <div class="right-button-section">
+                <div class="btn-right-group">
+                    <button style ="width: 90px ; height: 260px;" class="link_prototype8_profile">User Profile</button>
+                    <button style ="width: 90px ;  height: 260px;" class="link_prototype8_leader">Leader Board</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
