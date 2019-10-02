@@ -1,6 +1,7 @@
 // Libraries
 
 import {Projects} from "../../api/projects.js";
+import {SarifFiles} from "../../api/sarifFiles.js";
 import {getTextFromFile} from "../../api/files.js";
 import {Template} from "meteor/templating";
 
@@ -32,16 +33,68 @@ import "../codeEditor/codeEditor.js";
 import "./prototype1.html";
 
 // Prototype 1
-
 function getDetailedWarningsInfo(ids){
     var info = ids.length + " warning" + (ids.length === 1 ? "" : "s") + ":";
     var i;
-    for(i = 0; i<ids.length; i++){
-        // TODO(rashmi): retrieve detailed warning info from database.
-        info += "\n- " + ids[i];
+    for(i = 0; i<ids.length; i++)
+    {
+        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        SarifData.map(function(tempSarifData) 
+        {
+            var runs = tempSarifData.runs;
+            for(var j=0;j<runs.length;j++)
+            {
+                var tempRun = runs[j];
+                var rules = tempRun.rules;
+                var tempId = ids[i];
+                for(var key in rules)
+                {
+                    var keyValue = rules[key];
+                    if(keyValue.id === ids[i]){
+                        var message = keyValue.description;
+                        info += "\n- " + message;
+                    }
+                }
+            }
+
+        });
+        
+        
+
     }
     return info;
 }
+
+
+function getTooltipData(ids)
+{
+    var info = "";
+    for(var i = 0; i<ids.length; i++)
+    {
+        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        SarifData.map(function(tempSarifData) 
+        {
+            var runs = tempSarifData.runs;
+            for(var j=0;j<runs.length;j++)
+            {
+                var tempRun = runs[j];
+                var results = tempRun.results;
+                for(var k=0; k<results.length ; k++)
+                {
+                    var tempResult = results[k];
+                    if(tempResult.ruleId === ids[i]){
+                        var adds = (info === "" ? "" : "\n");
+                        info = info + adds + tempResult.message ;
+                    }
+                }
+            }
+
+        });
+    }
+
+    return info;
+}
+
 
 Template.prototype1.helpers({
 
@@ -88,17 +141,63 @@ Template.prototype1.helpers({
     // Filter data
     // Ids on which to filter from a table. Must match the ones in resultsTableColumns
     filterIds: ["status", "progress"],
-
-    // ABCOptions editor data
     fileContents: getTextFromFile("code/CreateDB.java"),
-    warnings: [
-        // TODO(rashmi): retrieve list of warnings from database.
-        {id:"1234", lineNumber: 2, type:"error"},
-        {id:"6783", lineNumber: 5, type:"error"},
-        {id:"1209", lineNumber: 5, type:"info"},
-        {id:"3497", lineNumber: 5, type:"error"},
-        {id:"1011", lineNumber: 22, type:"warning"},
-    ],
+    warnings(){
+        var warnings =[];
+        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        SarifData.map(function(tempSarifData) 
+        {
+            var runs, tempRun,results ,tempResult,locations,shortMessage,longMessage, tempFileName;
+            var fileName, tempWarning, uri, lineNumber, line, ruleId;
+
+            runs = tempSarifData.runs;
+            for(var i=0;i<runs.length;i++)
+            {
+                tempRun = runs[i];
+                results = tempRun.results ;
+                for(var j=0;j<results.length;j++)
+                {
+                    tempResult = results[j];
+                    locations = tempResult.locations;
+                    for(var k=0;k<locations.length;k++)
+                    {
+                        shortMessage  = tempResult.message;
+                        longMessage = tempResult.message;
+                        uri = locations[k].analysisTarget.uri;
+                        lineNumber = locations[k].analysisTarget.region.startLine;
+                        line = parseInt(lineNumber, 10);
+                        ruleId = tempResult.ruleId ;
+                        tempFileName = uri.split("/");
+                        fileName = tempFileName[tempFileName.length-1];
+                        fileName = fileName.replace("_",".");
+                        if(fileName === "CreateDB.java")
+                        {
+                            tempWarning = {id:ruleId , lineNumber: line, type:"error"};
+                            warnings.push(tempWarning);
+                            shortMessage = null;
+                            longMessage = null;
+                            uri = null;
+                            lineNumber = null;
+                            line = null;
+                            ruleId = null;
+                            tempFileName = null;
+                            fileName = null;
+                        }
+
+                    }
+                    tempResult = null;
+                    locations = null;
+                    
+                }
+                tempRun = null;
+                results = null;
+
+            }
+            runs = null;
+
+        });
+        return warnings;
+    },
     codeEditorCallbacks(){
         return {
             iconClickCallback(){
@@ -121,10 +220,10 @@ Template.prototype1.helpers({
                 // Add warning data to warningInfo popup.
                 var textElem = warningInfoElem.getElementsByTagName("DIV")[0];
                 textElem.innerText = getDetailedWarningsInfo(this.data.ids);
+            
             },
             iconTooltipCallback(){
-                // TODO(rashmi): retrieve basic warning info from database.
-                return "Tooltip for " + this.ids;
+                return getTooltipData(this.ids);
             }
         };
     }

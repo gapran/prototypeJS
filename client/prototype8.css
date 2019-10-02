@@ -139,7 +139,7 @@
 
 .prototype8-form {
     /* Just to center the form on the page */
-    margin: 71px;
+    margin: 0px;
     width: 400px;
     /* To see the outline of the form */
     padding: 1em;
@@ -182,9 +182,9 @@ mark.green {
     position: absolute;
     height: 140px;
     width: 690px;
-    top: 291px;
+    top: 220px;
     left: 134px;
-    padding: 1em;
+    padding: 32px;;
     border: 1px solid #CCC;
     border-radius: 1em;
 }
@@ -314,7 +314,7 @@ input, select {
 
 .recent-list {
 
-    margin: 60px;
+    margin: 0px;
 }
 
 .settings-form {

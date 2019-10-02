@@ -1,0 +1,48 @@
+<template name="highlights">
+    <div class="web-container">
+        <div class="web-sub-container">
+    
+            <div class="header">
+                <a href="#default" class="logo">{{> badge id="icon" img="icons/gpa_logo.png" alt="Icon" title="This is hover for icon." label=""}}</a>
+                <div class="titleheader">
+                    <h1>Gamification of Program Analysis</h1>
+                </div>
+    
+                <div class="header-right">
+                    <a href="#" class="link_profile" >Profile</a>
+                    <a href="#" class="link_categorize">Analyze</a>
+                    <a href="#" class="link_editor">Editor</a>
+                    <a href="#" class="active">Highlights</a>
+                    <a href="#" class="link_visualize">Visualize</a>
+                </div>
+            </div>
+    
+            <div class="activitySection">
+                <h3> <b>Recent Activity: </b></h3><br>
+                <ul>
+                    <li>You are rewarded <mark class="green">+20</mark> for fixing <mark class="red">XSS_Config</mark>.</li> <br><br>
+                    <li>New badge is unlocked - <mark class="blue">Hattrick Fixer</mark>.</li> <br><br>
+                    <li>Elina awarded you <mark class="green">+10</mark> as peer bonus.</li> <br><br>
+                </ul>
+            </div>
+
+            <div class="bodysection">
+                <div class="highlights">
+                    <h2>Fixed Bugs:40</h2>
+                    <div class="wrapper">
+                        <div class="pie start-0 end-20"></div>
+                        <div class="pie big start-20 end-80"></div>
+                        <div class="pie over"><span>20%</span></div>
+                    </div>
+                    <h2>Remaining Bugs:160</h2>
+                    <div class="wrapper">
+                        <div class="pie big start-0 end-80"></div>
+                        <div class="pie start-80 end-20"></div>
+                        <div class="pie over"><span>80%</span></div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</template>

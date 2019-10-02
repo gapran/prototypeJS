@@ -9,10 +9,8 @@ import {Template} from "meteor/templating";
 
 import "../table/table.html";
 import "../table/table.js";
-
 import "../filter/filter.html";
 import "../filter/filter.js";
-import { Session } from "meteor/session";
 
 
 Template.prototype7_analysis.helpers({

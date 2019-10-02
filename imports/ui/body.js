@@ -1,7 +1,7 @@
 import "../api/templates.js";
 import "./body.html";
 
-import { Template } from "meteor/templating";
+import {Template} from "meteor/templating";
 import { Meteor } from "meteor/meteor";
 import { Session } from "meteor/session";
 
@@ -31,6 +31,14 @@ import "./prototype7/community.js";
 import "./prototype7/project.js";
 import "./prototype7/settings.js";
 import "./prototype7/analysis.js";
+// Pages of prototype 6
+import "./prototype6/login.js";
+import "./prototype6/prototype6.js";
+import "./prototype6/editor.js";
+import "./prototype6/categorize.js";
+import "./prototype6/highlights.js";
+import "./prototype6/visualize.js";
+
 
 // Helper for navigation
 Template.body.helpers({
@@ -93,25 +101,52 @@ Template.body.events({
     Session.set("templateName", "prototype8_leader");
   },
   // Navigation rules for prototype 7
-  "click .link_prototype7"() {
-    Session.set("templateName", "prototype7");
+ // Navigation rules for prototype 7
+ "click .link_prototype7"() {
+  Session.set("templateName", "prototype7");
+},
+"click .link_prototype7_project"() {
+  Session.set("templateName", "prototype7_project");
+},
+"click .link_prototype7_analysis"() {
+  Session.set("templateName", "prototype7_analysis");
+},
+"click .link_prototype7_settings"() {
+  Session.set("templateName", "prototype7_settings");
+},
+"click .link_prototype7_profile"() {
+  Session.set("templateName", "prototype7_profile");
+},
+"click .link_prototype7_activity"() {
+  Session.set("templateName", "prototype7_activity");
+},
+"click .link_prototype7_community"() {
+  Session.set("templateName", "prototype7_community");
+},
+  // Navigation rules for prototype 6
+  "click .link_prototype6"() {
+    Session.set("templateName", "loginPage");
   },
-  "click .link_prototype7_project"() {
-    Session.set("templateName", "prototype7_project");
+  "click .loginbutton"() {
+    Session.set("templateName", "prototype6");
   },
-  "click .link_prototype7_analysis"() {
-    Session.set("templateName", "prototype7_analysis");
+  "click .link_editor"() {
+    Session.set("templateName", "editor");
   },
-  "click .link_prototype7_settings"() {
-    Session.set("templateName", "prototype7_settings");
+  "click .link_categorize"() {
+    Session.set("templateName", "categorize");
   },
-  "click .link_prototype7_profile"() {
-    Session.set("templateName", "prototype7_profile");
+  "click .link_highlights"() {
+    Session.set("templateName", "highlights");
   },
-  "click .link_prototype7_activity"() {
-    Session.set("templateName", "prototype7_activity");
+  "click .link_visualize"() {
+    Session.set("templateName", "visualize");
   },
-  "click .link_prototype7_community"() {
-    Session.set("templateName", "prototype7_community");
-  }
+  "click .link_profile"() {
+    Session.set("templateName", "prototype6");
+  },
+  "click .fixbutton"() {
+    Session.set("templateName", "editor");
+  },
+
 });
