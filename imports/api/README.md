@@ -7,16 +7,22 @@
 		(ii)	Run Powershell using administrator rights and go to the directory where .meteor folder is available
 		(iii)	Run "meteor mongo" from the powershell. MongoDB would be connected to the application.
 		(iv)	Run db.createCollection("SarifFiles")
-		(v)	For each Sarif File, Run db.SarifFiles.insert(filecontents), with the filecontents being a copy-paste of any .json file from  imports/api/sarifFiles/
+		(v)	For each Sarif File, run the following command in the same line:
 
-		Disclaimer : For Powershell users :: Since the length of sarif file might be long , please type "db.SarifFiles.insert(" and then copy the contents of the file and paste and then put the ")" at the end. 
+```
+var file=cat('/path/to/sarif/file.json'); var o=JSON.parse(file); db.SarifFiles.insert(o);
+```
 
-	4.	Please remove autopublish feature from meteor. To do so, go to the directory where .meteor folder is available from Windows Powershell using Administrator rights.
+If the command does not successfully insert the data in the SarifFiles table, run `db.SarifFiles.insert(filecontents)`, with the filecontents being a copy-paste of any .json file from  imports/api/sarifFiles/
+
+		Note: For Powershell users :: Since the length of sarif file might be long , please type "db.SarifFiles.insert(" and then copy the contents of the file and paste and then put the ")" at the end. 
+
+	4.	Remove autopublish feature from meteor. To do so, go to the directory where .meteor folder is available from Windows Powershell using Administrator rights.
 	Run the command :  "meteor remove autopublish"
 
-	5.	There were some changes made in the sarif file that was parsed previously and all the changes are listed below : 
+	5.	Changes were made from the original sarif files to remove MongoDB-specific characters. The changes are listed below : 
 
-		Sarif File Changes for 
+		Sarif file changes for 
 
 			1.	FindBugs 
 
