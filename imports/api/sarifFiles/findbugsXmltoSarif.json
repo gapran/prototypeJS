@@ -2881,7 +2881,6 @@
                 }
             },
             "rules": {
-                "rules": {
                     "de:upb:gpa:findbugs:MS_PKGPROTECT": {
                         "description": "A mutable static field could be changed by malicious code or by accident. The field could be made package protected to avoid this vulnerability.",
                         "id": "de:upb:gpa:findbugs:MS_PKGPROTECT"
@@ -3066,7 +3065,6 @@
                         "description": "The method creates a database resource (such as a database connectionor row set), does not assign it to anyfields, pass it to other methods, or return it, and does not appear to closethe object on all paths out of the method.&nbsp; Failure toclose database resources on all paths out of a method mayresult in poor performance, and could cause the application tohave problems communicating with the database.",
                         "id": "de:upb:gpa:findbugs:ODR_OPEN_DATABASE_RESOURCE"
                     }
-                }
             },
             "results": [
                 {

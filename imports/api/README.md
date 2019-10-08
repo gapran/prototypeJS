@@ -7,7 +7,9 @@
 		(ii)	Run Powershell using administrator rights and go to the directory where .meteor folder is available
 		(iii)	Run "meteor mongo" from the powershell. MongoDB would be connected to the application.
 		(iv)	Run db.createCollection("SarifFiles")
-		(v)	Run db.SarifFiles.insert(filecontents), with the filecontents being a copy-paste of any .json file from  imports/api/sarifFiles/
+		(v)	For each Sarif File, Run db.SarifFiles.insert(filecontents), with the filecontents being a copy-paste of any .json file from  imports/api/sarifFiles/
+
+		Disclaimer : For Powershell users :: Since the length of sarif file might be long , please type "db.SarifFiles.insert(" and then copy the contents of the file and paste and then put the ")" at the end. 
 
 	4.	Please remove autopublish feature from meteor. To do so, go to the directory where .meteor folder is available from Windows Powershell using Administrator rights.
 	Run the command :  "meteor remove autopublish"

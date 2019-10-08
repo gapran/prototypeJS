@@ -38,7 +38,7 @@ function getDetailedWarningsInfo(ids){
     var i;
     for(i = 0; i<ids.length; i++)
     {
-        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        var SarifData = SarifFiles.find({});
         SarifData.map(function(tempSarifData) 
         {
             var runs = tempSarifData.runs;
@@ -71,7 +71,7 @@ function getTooltipData(ids)
     var info = "";
     for(var i = 0; i<ids.length; i++)
     {
-        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        var SarifData = SarifFiles.find({});
         SarifData.map(function(tempSarifData) 
         {
             var runs = tempSarifData.runs;
@@ -144,7 +144,7 @@ Template.prototype1.helpers({
     fileContents: getTextFromFile("code/CreateDB.java"),
     warnings(){
         var warnings =[];
-        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
+        var SarifData = SarifFiles.find({});
         SarifData.map(function(tempSarifData) 
         {
             var runs, tempRun,results ,tempResult,locations,shortMessage,longMessage, tempFileName;
