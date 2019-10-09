@@ -38,7 +38,7 @@ function getDetailedWarningsInfo(ids){
     var i;
     for(i = 0; i<ids.length; i++)
     {
-        var SarifData = SarifFiles.find({});
+        var SarifData = SarifFiles.find({"runs.tool.name":{"$in":["Checkmarx","FindBugs","CheckStyle"]}});
         SarifData.map(function(tempSarifData) 
         {
             var runs = tempSarifData.runs;
@@ -58,9 +58,6 @@ function getDetailedWarningsInfo(ids){
             }
 
         });
-        
-        
-
     }
     return info;
 }
@@ -68,10 +65,12 @@ function getDetailedWarningsInfo(ids){
 
 function getTooltipData(ids)
 {
+    console.log("ids", ids);
     var info = "";
+    
     for(var i = 0; i<ids.length; i++)
     {
-        var SarifData = SarifFiles.find({});
+        var SarifData = SarifFiles.find({"runs.tool.name":{"$in":["Checkmarx","FindBugs","CheckStyle"]}});
         SarifData.map(function(tempSarifData) 
         {
             var runs = tempSarifData.runs;
@@ -82,9 +81,23 @@ function getTooltipData(ids)
                 for(var k=0; k<results.length ; k++)
                 {
                     var tempResult = results[k];
-                    if(tempResult.ruleId === ids[i]){
-                        var adds = (info === "" ? "" : "\n");
-                        info = info + adds + tempResult.message ;
+                    var locations = tempResult.locations;
+                    for(var l=0;l<locations.length;l++)
+                    {
+                        var uri = locations[l].analysisTarget.uri;
+                        var tempFileName = uri.split("/");
+                        var fileName = tempFileName[tempFileName.length-1];
+                        fileName = fileName.replace("_",".");
+                        var ruleId = tempResult.ruleId;
+
+                        if(fileName === "CreateDB.java")
+                        {
+                            if( ruleId === ids[i])
+                            {
+                                var adds = (info === "" ? "" : "\n");
+                                info = info + adds + tempResult.message ; 
+                            }
+                        }
                     }
                 }
             }
@@ -94,7 +107,6 @@ function getTooltipData(ids)
 
     return info;
 }
-
 
 Template.prototype1.helpers({
 
@@ -144,7 +156,7 @@ Template.prototype1.helpers({
     fileContents: getTextFromFile("code/CreateDB.java"),
     warnings(){
         var warnings =[];
-        var SarifData = SarifFiles.find({});
+        var SarifData = SarifFiles.find({"runs.tool.name":{"$in":["Checkmarx","FindBugs","CheckStyle"]}});
         SarifData.map(function(tempSarifData) 
         {
             var runs, tempRun,results ,tempResult,locations,shortMessage,longMessage, tempFileName;
