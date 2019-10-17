@@ -5,6 +5,8 @@ import {SarifFiles} from "../../api/sarifFiles.js";
 import {getTextFromFile} from "../../api/files.js";
 import {Template} from "meteor/templating";
 import { Session } from "meteor/session";
+import { Mongo } from 'meteor/mongo'
+
 
 import "./editor.html";
 
@@ -126,5 +128,22 @@ Template.editor.events({
     "click .fixedbtn"(e,t) {
         sAlert.info("You got 50 points");
         Session.set("fixed",  Session.get("fixed") + 50);
+        
+        
+        //sAlert.info(Session.get("cellClicked"));
+        
+        var session_value= Session.get("cellClicked"); 
+        sAlert.info(session_value); 
+        //db.Projects.remove(test1);
+        var value = Projects.find({name: "test1"});
+        window.alert(value);
+        sAlert.info(Projects.find({name: "test1"}));
+
+        const query = { name: "test1" };
+
+        Projects.deleteOne(query);
+        Projects.remove(query);
+        //Projects.remove({ name: session_value});
+
     }
 });
