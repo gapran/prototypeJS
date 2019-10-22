@@ -1,5 +1,4 @@
 import {Projects} from "../imports/api/projects.js";
-import {SarifFiles} from "../imports/api/sarifFiles.js";
-
+import {Warnings} from "../imports/api/warnings.js";
 
 

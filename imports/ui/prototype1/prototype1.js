@@ -1,9 +1,11 @@
 // Libraries
 
 import {Projects} from "../../api/projects.js";
-import {SarifFiles} from "../../api/sarifFiles.js";
+//import {SarifFiles} from "../../api/sarifFiles.js";
 import {getTextFromFile} from "../../api/files.js";
 import {Template} from "meteor/templating";
+import {Warnings} from "../../api/warnings.js";
+
 
 import "../progressBar/progressBar.html";
 import "../progressBar/progressBar.js";
@@ -38,29 +40,16 @@ function getDetailedWarningsInfo(ids){
     var i;
     for(i = 0; i<ids.length; i++)
     {
-        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
-        SarifData.map(function(tempSarifData) 
+        var warningData = Warnings.find({"fileName" : "CreateDB_java"});
+        warningData.map(function(tempWarningData)
         {
-            var runs = tempSarifData.runs;
-            for(var j=0;j<runs.length;j++)
+            var ruleId = tempWarningData.ruleId;
+            if(ruleId === ids[i])
             {
-                var tempRun = runs[j];
-                var rules = tempRun.rules;
-                var tempId = ids[i];
-                for(var key in rules)
-                {
-                    var keyValue = rules[key];
-                    if(keyValue.id === ids[i]){
-                        var message = keyValue.description;
-                        info += "\n- " + message;
-                    }
-                }
+                var message = tempWarningData.longMessage;
+                info += "\n- " + message;
             }
-
         });
-        
-        
-
     }
     return info;
 }
@@ -69,32 +58,22 @@ function getDetailedWarningsInfo(ids){
 function getTooltipData(ids)
 {
     var info = "";
+    
     for(var i = 0; i<ids.length; i++)
     {
-        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
-        SarifData.map(function(tempSarifData) 
+        var warningData = Warnings.find({"fileName":"CreateDB_java"});
+        warningData.map(function(tempWarningData)
         {
-            var runs = tempSarifData.runs;
-            for(var j=0;j<runs.length;j++)
+            var ruleId = tempWarningData.ruleId ;
+            if(ruleId === ids[i])
             {
-                var tempRun = runs[j];
-                var results = tempRun.results;
-                for(var k=0; k<results.length ; k++)
-                {
-                    var tempResult = results[k];
-                    if(tempResult.ruleId === ids[i]){
-                        var adds = (info === "" ? "" : "\n");
-                        info = info + adds + tempResult.message ;
-                    }
-                }
+                var adds = (info === "" ? "" : "\n");
+                info = info + adds + tempWarningData.shortMessage ;
             }
-
         });
     }
-
     return info;
 }
-
 
 Template.prototype1.helpers({
 
@@ -143,58 +122,16 @@ Template.prototype1.helpers({
     filterIds: ["status", "progress"],
     fileContents: getTextFromFile("code/CreateDB.java"),
     warnings(){
-        var warnings =[];
-        var SarifData = SarifFiles.find({"runs.tool.name":"Checkmarx"});
-        SarifData.map(function(tempSarifData) 
-        {
-            var runs, tempRun,results ,tempResult,locations,shortMessage,longMessage, tempFileName;
-            var fileName, tempWarning, uri, lineNumber, line, ruleId;
+       var warnings =[];
+       var warningData = Warnings.find({"fileName": "CreateDB_java"});
+       warningData.map(function(tempWarningData){
+            var startLine, ruleId;
+            var tempWarning;
+            startLine = tempWarningData.startLine ;
 
-            runs = tempSarifData.runs;
-            for(var i=0;i<runs.length;i++)
-            {
-                tempRun = runs[i];
-                results = tempRun.results ;
-                for(var j=0;j<results.length;j++)
-                {
-                    tempResult = results[j];
-                    locations = tempResult.locations;
-                    for(var k=0;k<locations.length;k++)
-                    {
-                        shortMessage  = tempResult.message;
-                        longMessage = tempResult.message;
-                        uri = locations[k].analysisTarget.uri;
-                        lineNumber = locations[k].analysisTarget.region.startLine;
-                        line = parseInt(lineNumber, 10);
-                        ruleId = tempResult.ruleId ;
-                        tempFileName = uri.split("/");
-                        fileName = tempFileName[tempFileName.length-1];
-                        fileName = fileName.replace("_",".");
-                        if(fileName === "CreateDB.java")
-                        {
-                            tempWarning = {id:ruleId , lineNumber: line, type:"error"};
-                            warnings.push(tempWarning);
-                            shortMessage = null;
-                            longMessage = null;
-                            uri = null;
-                            lineNumber = null;
-                            line = null;
-                            ruleId = null;
-                            tempFileName = null;
-                            fileName = null;
-                        }
-
-                    }
-                    tempResult = null;
-                    locations = null;
-                    
-                }
-                tempRun = null;
-                results = null;
-
-            }
-            runs = null;
-
+            ruleId = tempWarningData.ruleId; 
+            tempWarning = {id: ruleId , lineNumber: parseInt(startLine,10) , type:"error"};
+            warnings.push(tempWarning);       
         });
         return warnings;
     },
