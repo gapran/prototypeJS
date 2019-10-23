@@ -40,15 +40,13 @@ function getDetailedWarningsInfo(ids){
     var i;
     for(i = 0; i<ids.length; i++)
     {
-        var warningData = Warnings.find({"fileName" : "CreateDB_java"});
+        var warningData = Warnings.find({"ruleId" : ids[i]});
         warningData.map(function(tempWarningData)
         {
             var ruleId = tempWarningData.ruleId;
-            if(ruleId === ids[i])
-            {
-                var message = tempWarningData.longMessage;
-                info += "\n- " + message;
-            }
+            var message = tempWarningData.longMessage;
+            info += "\n- " + message;
+            
         });
     }
     return info;
@@ -61,15 +59,13 @@ function getTooltipData(ids)
     
     for(var i = 0; i<ids.length; i++)
     {
-        var warningData = Warnings.find({"fileName":"CreateDB_java"});
+        var warningData = Warnings.find({"ruleId":ids[i]});
         warningData.map(function(tempWarningData)
         {
             var ruleId = tempWarningData.ruleId ;
-            if(ruleId === ids[i])
-            {
-                var adds = (info === "" ? "" : "\n");
-                info = info + adds + tempWarningData.shortMessage ;
-            }
+            var adds = (info === "" ? "" : "\n");
+            info = info + adds + tempWarningData.shortMessage ;
+            
         });
     }
     return info;
