@@ -131,23 +131,23 @@ Template.editor.events({
         
         //sAlert.info(Session.get("cellClicked"));
         
-        var session_value= Session.get("cellClicked"); 
+        var sessionValue= Session.get("cellClicked"); 
 
-        var value = Projects.find({name: session_value});
-        console.log("value of test1", value);
+        var value = Projects.find({name: sessionValue});
+        //Console.log("value of test1", value);
 
         value.map(function (tempValue){
             var name = tempValue.name;
             var id = tempValue._id;
-            console.log("status", name);
+            //Console.log("status", name);
 
-            if(name === session_value )
+            if(name === sessionValue )
             {
-                console.log("IDD", id);
+                //Console.log("IDD", id);
                 Projects.remove({_id:id});
             }
 
-        })
+        });
 
     }
 });
