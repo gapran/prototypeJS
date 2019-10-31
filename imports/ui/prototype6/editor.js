@@ -132,30 +132,22 @@ Template.editor.events({
         //sAlert.info(Session.get("cellClicked"));
         
         var session_value= Session.get("cellClicked"); 
-        sAlert.info(session_value); 
-        //db.Projects.remove(test1);
-        var value = Projects.find({});
+
+        var value = Projects.find({name: session_value});
         console.log("value of test1", value);
+
         value.map(function (tempValue){
             var name = tempValue.name;
             var id = tempValue._id;
             console.log("status", name);
 
-            if(name === "test1" )
+            if(name === session_value )
             {
                 console.log("IDD", id);
                 Projects.remove({_id:id});
             }
 
         })
-      //  window.alert(value);
-      //  sAlert.info(Projects.find({name: "test1"}));
-
-       // const query = { name: "test1" };
-
-        //Projects.deleteOne(query);
-       // Projects.remove(query);
-        //Projects.remove({ name: session_value});
 
     }
 });

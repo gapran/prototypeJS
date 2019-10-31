@@ -87,5 +87,8 @@ Template.body.events({
   "click .fixbutton"() {
     Session.set("templateName", "editor");
   },
+  "click .fixedbtn"() {
+    Session.set("templateName", "categorize");
+  },
 
 });
