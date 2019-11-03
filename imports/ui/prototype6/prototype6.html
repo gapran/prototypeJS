@@ -1,0 +1,66 @@
+<template name="prototype6">
+    <div class="web-container">
+        <div class="web-sub-container">
+
+            <div class="header">
+                <a href="#default" class="logo">{{> badge id="icon" img="icons/gpa_logo.png" alt="Icon" title="This is hover for icon." label=""}}</a>
+
+                <div class="titleheader">
+                    <h1>Gamification of Program Analysis</h1>
+                </div>
+
+                <div class="header-right">
+                  <a class="active" href="#">Profile</a>
+                  <a href="#" class="link_categorize">Analyze</a>
+                  <a href="#" class="link_editor">Editor</a>
+                  <a href="#" class="link_highlights">Highlights</a>
+                  <a href="#" class="link_visualize">Visualize</a>
+                </div>
+            </div>
+
+            <div class="bodysection">
+
+                <div class="imageComponent">
+                    <img style="height: 180px; width: 180px; border-radius: 50%;" src="icons/img_avatar.png" alt="Avatar">
+                </div>
+                                &nbsp;&nbsp;
+                <div class="imageStars">
+                        <img style="height: 55px; width: 200px;" src="/stars.jpg" alt="Avatar">
+                </div>
+                <div class="personalDetail">
+                    <h2>Name: <mark class="red">Haseeb Ahmad</mark></h2>
+                    <h2>Designation: <mark class="blue">Developer</mark></h2>
+                    <h2>DOB: <mark class="brown">16.04.2002</mark></h2>
+                    <h2>Rank: <mark class="pink">Bronze</mark></h2>
+                    <h2>Points: <b><input class ="pointBox" font= "" type="text" style="border: groove;" id="points" name="points" value={{thePoints}} readonly></b></h2>
+                    
+                </div>
+
+                <div class="imgcontainer">
+                    {{> badge id="levelImg" img="images/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
+                </div>
+
+                <div class="progress">
+                        <h1>Progress</h1>
+                    {{> progressBar id="progressBar" min="0" max="100" val="30"}}
+                </div>
+
+                <div class="achievements">
+                    <h1><b> &lt;&lt; Achievements &gt;&gt; </b></h1>
+                        <input type="image" id="badge1" src="Achievement1.png" alt="Beginner Badge" title="You achieved Beginner Badge" height="50px" width="50px" style="display: none">
+                        <input type="image" id="badge2" src="Achievement2.png" alt="Level 1 Badge" title="You achieved Level 1 Badge" height="50px" width="50px" style="display: none">
+                        <input type="image" id="badge3" src="Achievement3.png" alt="Level 2 Badge" title="You achieved Level 1 Badge" height="50px" width="50px" style="display: none">
+                        <input type="image" id="badge4" src="Achievement4.png" alt="Level 3 Badge" title="You achieved Level 1 Badge" height="50px" width="50px" style="display: none">
+                        <input type="image" id="badge5" src="Achievement5.png" alt="Level4 Badge" title="You achieved Level 1 Badge" height="50px" width="50px" style="display: none">
+                </div>
+
+                <br>
+                <div class="chat">
+                {{> chat id="chat" }}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</template>

@@ -1,4 +1,4 @@
-import { Template } from "meteor/templating";
+import {Template} from "meteor/templating";
 
 /* Sorts the table based on selected table header column value
 * @param columnNumber - The column number in a table.
@@ -69,6 +69,12 @@ Template.table.events({
                 sortTable(i, this.id);
                 break;
             }
+        }
+    },
+    "click td"(e, template) {
+        if(typeof template.data.callbacks !== "undefined" &&
+            typeof template.data.callbacks.cellClickCallback !== "undefined"){
+            template.data.callbacks.cellClickCallback.call(e.target);
         }
     },
 });

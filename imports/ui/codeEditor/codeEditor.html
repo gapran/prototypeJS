@@ -1,0 +1,26 @@
+<template name = "codeEditor">
+    <div class="editorContainer" style="{{style}}">
+        <table id="{{id}}" class="codeEditor">
+            {{#each line in fileContents}}
+                <tr>
+                    <td class="warningCell">
+                        {{#each icon in getWarningIcons @index}}
+                            {{ > warningIcon type=icon.type ids=icon.ids callbacks=callbacks }}
+                        {{/each}}
+                    </td>
+                    <td class="lineNumberCell">{{inc @index}}</td>
+                    <td class="editorCell"><pre>{{{syntaxHighlighting line}}}</pre></td>
+                </tr>
+            {{/each}}
+        </table>
+        <!-- Invisible component needed for the editor -->
+        <div class="codeEditorWarningInfo" id="{{warningInfoId}}">
+            <span class="close"></span>
+            <div></div>
+        </div>
+    </div>
+</template>
+
+<template name = "warningIcon">
+    <span class="warningIcon {{type}}" title="{{tooltipCallback}}"></span>
+</template>

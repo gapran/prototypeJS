@@ -1,11 +1,10 @@
 <template name="prototype1">
     <div class="ide-container">
         <div class="ide-sub-container">
-
             <div class="section1">
 
                 <div class="imageComponent">
-                    {{> badge id="levelImg" img="/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
+                    {{> badge id="levelImg" img="images/badge1.PNG" alt="Badge Level 1" title="This is hover for badge 1." label="Bronze"}}
                 </div>
 
                 <div class="progressComponent">
@@ -18,7 +17,7 @@
 
             <div class="section2">
                 <div class="TBL">
-                    {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData }}
+                    {{> table id="resultsTable" columns=resultsTableColumns data=resultsTableData callbacks=tableCallbacks }}
                 </div>
                 <div id="tabComponents">
                     <div>
@@ -40,15 +39,16 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
+                <br />
+                {{> codeEditor id="ABCOptionsCodeEditor" type="Java" fileContents=fileContents warnings=warnings callbacks=codeEditorCallbacks warningInfoId="ABCOptionsCodeEditorWarningInfo" }}
             </div>
 
             <div class="section3">
                 {{> filter id="resultsTableFilter" filterIds=filterIds tableId="resultsTable" tableColumns=resultsTableColumns tableData=resultsTableData}}
+                <br />
+                {{> chat id="chat" }}
             </div>
-
         </div>
     </div>
 </template>
